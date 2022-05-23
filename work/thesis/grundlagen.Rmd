@@ -1,0 +1,264 @@
+# Grundlagen
+
+Dieses Kapitel beschäftigt sich zuerst mit den zur Bildvorbereitung betrachteten und verwendeten Algorithmen. Darauf folgt eine Beschreibung der getesteten Ansätze zur Flächen-Gruppierung um dann dazu überzugehen, die Implementation des Körner-Tools zu beschreiben.
+Im Anschluss werden die verwendeten Ansätze zur Stapelverarbeitung der Bilder beschrieben.
+
+
+## Bildvorverarbeitung
+
+Im folgenden werden die einzusetzenden Vorverarbeitungsalgorithmen beschrieben. Da das Augenmerk dieser Arbeit insbesondere auf der Erkennung von Körnern und weniger auf dem Preprocessing liegen soll, wurde sich hier vor allem auf bereits in der Kornvermessung eingesetzte Algorithmen gestützt.
+Alle diese Vorverarbeitungs-Schritte verfolgen zwei Ziele: 
+Zum Einen soll versucht werden, die Bildartefakte so gut wie möglich zu entfernen, zum Anderen sollen die Grautöne innerhalb eines Korns so sehr angeglichen werden, wie möglich.
+Die Reihenfolge der Algorithmen ist außerdem von entscheidender Bedeutung, ein Histogramm-Equalizer führt nach Anwendung eines Gauss-Filters zu einem deutlich anderen Effekt als davor. Auf diesen Punkt wird aber in der Beschreibung der Implementation noch umfangreicher eingegangen.
+
+```{r, include = F, eval=F}
+minmax <- function(x)(x-min(x))/(max(x)-min(x))
+n <- 200
+p <- tibble(
+  x = rep(1:n, times = n),
+  y = rep(1:n, each = n),
+  color =  case_when(
+    y < .25 * n  &  x < .5 * n~  as.integer(round(minmax(sin(sqrt(x^2 + y^2)/3) 
+                                                         + .5 * rnorm(n^2))*n)),
+    y < .25 * n  &  x >= .5 * n~  as.integer(round(minmax(sin(sqrt(x^2 + y^2)/3) 
+                                                         + .5 * rf(n^2,2,23))*n)),
+    y < .5 * n ~ as.integer((1 - x %/% (n / 4 + 1) %% 2) * n),
+    y < .75 * n ~ as.integer(abs(x - n  - 1)),
+    T ~ as.integer(round(minmax(cos(x) * x) * n))
+)) %>%
+  ggplot(aes(x, y, fill = color, color = color)) +
+  geom_tile() +
+  coord_equal() +
+  theme_void() +
+  theme(legend.position = 'none') +
+  scale_fill_gradient(low = 'white',
+                      high = 'black')+
+  scale_color_gradient(low = 'white',
+                      high = 'black')
+
+ggsave(plot = p, filename = '../imgs/geometric.png', width = 5, height = 5,bg = 'white')
+
+```
+
+### Gauss-Filter
+
+Gauss-Filter sind häufig in Anwendungsbereichen mit stark multivariaten Untersuchungsgegenständen zu beobachten, so zum Beispiel in EEG- und fMRT-Analysen [@harishvijeyAutomatedTechniqueEEG2022; @winkDenoisingFunctionalMR2004], in Zeitreihenanalysen [@kitagawaTwofilterFormulaSmoothing1994] und nicht zuletzt weit verbreitet in der Bildverarbeitung [@basuGaussianbasedEdgedetectionMethodsa2002]. 
+
+Bei diesem Verfahren wird das Bild mit Hilfe einer zweidimensionalen Gauss-Verteilung gefaltet, wodurch jedes Pixel durch die gewichtete Summe der umherliegenden Pixel ersetzt wird. Die dabei eingesetzte zweidimensionale Dichte-Funktion wird häufig als der *Kernel* bezeichnet. In Abb. \@ref(fig:gaussFilter) ist beispielhaft das Ergebnis eines Gauss-Filters zu sehen, in der dessen primäre Funktion deutlich wird. 
+Dieser auch als Glättungs-Filter bezeichnete Vorverarbeitungs-Algorithmus wird mit dem Ziel eingesetzt, einzelne Pixel mit im Vergleich mit dem direkten Umfeld extremen Werte anzugleichen und so Bildartefakte zu entfernen.
+
+(ref:gaussFilterCap) Beispiel eines Gauss-Filters.
+
+(ref:gaussFilterSubCap) Beispiel eines Gauss-Filters. Links ist das Bild vor dem Filtern, in der Mitte nach dem Filtern mit einem Gausskernel mit Durchmesser von 15 Pixeln (1% der Bildkantenlänge) und rechts einem mit Durchmesser von 151 Pixeln (~10% der Kantenlänge) zu sehen.
+
+```{r gaussFilter, echo = F, fig.cap='(ref:gaussFilterSubCap)', fig.align='center',out.width='.32\\textwidth', fig.show='hold', fig.scap='(ref:gaussFilterCap)'}
+knitr::include_graphics(c('../imgs/geometric.png','../imgs/gauss15.png','../imgs/gauss150.png'))
+```
+
+
+### Histogramm-Equalizer
+
+Ein Histogramm-Equalizer gleicht die Helligkeitswerte eines Bilds so an, dass deren kumulative Häufigkeitsverteilung linear ansteigt [@princePartIVPreprocessing2012]. Je nach Bild kann es also passieren, dass Teile der Helligkeitswert-Verteilung gestreckt, andere Teile gestaucht werden. 
+Diese nicht-lineare Transformation führt dazu, dass bei ungleichen Helligkeitsverteilung, wie zum Beispiel im Falle eines Bildes mit vielen ähnlichen Grautönen, vorher kleine Unterschiede deutlicher Akzentuiert werden, während stark unterschiedliche Helligkeitswerte angenähert werden können.
+```{r, eval = F, include=F}
+p <- c('../imgs/geometric.png') %>% 
+  map_dfr(~as.data.frame(imager::load.image(.)),.id = 'image') %>% 
+  transmute(value = sort(value),
+            p = 1/length(value),
+            cs = cumsum(p)) %>% 
+  group_by(value) %>% 
+  summarise(cs = max(cs, na.rm=T)) %>% 
+  ggplot(aes(x = value, y = cs)) +
+  geom_point() +
+  theme_minimal() +
+  xlim(-0.1,1.1) +
+  ylim(-0.1,1.1) +
+  labs(y = 'Kummulative Häufigkeit',
+       x = 'Intensität')
+
+
+ggsave(plot = p, '../imgs/hist_kum1.png',width = 5, height = 5) # zwei Grafiken wären wohl besser...
+
+p <- c('../imgs/hist_equal.png') %>% 
+  map_dfr(~as.data.frame(imager::load.image(.)),.id = 'image') %>% 
+  transmute(value = sort(value),
+            p = 1/length(value),
+            cs = cumsum(p)) %>% 
+  group_by(value) %>% 
+  summarise(cs = max(cs, na.rm=T)) %>% 
+  ggplot(aes(x = value, y = cs)) +
+  geom_point() +
+  theme_minimal() +
+  xlim(-0.1,1.1) +
+  ylim(-0.1,1.1) +
+  labs(y = 'Kummulative Häufigkeit',
+       x = 'Intensität')
+
+ggsave(plot = p, '../imgs/hist_kum2.png',width = 5, height = 5)
+```
+
+In Abb. \@ref(fig:histEqual) ist der Effekt des Histogramm-Equalizers beispielhaft dargestellt.
+
+(ref:histEqualizerCap) Beispiel für die Anwendung eines Histogramm-Equalizers.
+
+(ref:histEqualizerSubCap) Beispiel für die Anwendung eines Histogramm-Equalizers. Links ist das Bild vor, rechts nach der Anpassung der Helligkeitsverteilung zu sehen. Der Farbverlauf wurde verdunkelt, genau wie die erste, auf dem Cosinus basierenden Zeile mit Ausnahme einer weißen Spalte. Unten sind die Helligkeitsverteilungen abgebildet, die Linearisierung ist deutlich zu erkennen.
+
+```{r histEqual, echo = F, fig.cap='(ref:histEqualizerSubCap)', fig.align='center',out.width='.48\\textwidth', fig.show='hold', fig.scap='(ref:histEqualizerCap)'}
+knitr::include_graphics(c('../imgs/geometric.png', '../imgs/hist_equal.png'), dpi = 300)
+knitr::include_graphics(c('../imgs/hist_kum1.png','../imgs/hist_kum2.png'),dpi = 300)
+```
+
+### Non-Local-Mean-Denoiser
+
+Ein Non-Local-Mean Denoiser versucht wie der Name schon sagt, Bildrauschen durch das Bilden nicht lokaler Mittelwerte zu bilden. Dazu wird in einem angegebenen Suchfenster für alle ähnlich grauen Pixel der Mittelwerte der Grauwerte gesetzt. Die Pixel müssen dabei explizit nicht lokal nebeneinander liegen, sondern nur einen ählichen Grauwert aufweisen [@buadesNonLocalMeansDenoising2011]. 
+
+Der Filter wird dabei über eine Filter-Stärke, die Größe des Suchfensters und die Größe des "Templates", also der Menge als gleich gezählter Pixel bestimmt.
+
+In Abb. \@ref(fig:nlMeans) ist der Effekt des Denoisers zu sehen, das Bildrauschen im Unteren Viertel wird deutlich reduziert, auch wenn das Muster dadurch leicht undeutlich wird. Der Denoiser stößt jedoch an seine Grenzen bei der Entfernung nicht-normalen Rauschens, wie zum Beispiel in der rechten Hälfte der letzten Zeile zu sehen ist. Dort wurde im Gegensatz zur linken Hälfte kein normalverteiltes, sonder F-verteiltes Rauschen auf das Bild addiert.
+
+(ref:nlMeansSubCap) Beispiel für die Anwedung eines Non-Local_Mean Denoisers.
+
+(ref:nlMeansCap) Beispiel für die Anwedung eines Non-Local_Mean Denoisers. Links ist das Bild, rechts nach dem Denoising mit einer Template-Größe von 7, einem Suchfenster von 21 zu sehen, der Filter wurde ziemlich stark gewichtet um den Einfluss deutlich zu machen. Das Rauschen wurde zwar reduziert, die konzentrischen Kreise aber auch unschärfer.
+
+```{r nlMeans, echo = F, fig.cap='(ref:nlMeansCap)', fig.align='center',out.width=paste0(.96/2,'\\textwidth'), fig.show='hold', fig.scap='(ref:nlMeansSubCap)'}
+knitr::include_graphics(c('../imgs/geometric.png', '../imgs/nlMean_30_7_21.png'), dpi = 300)
+```
+
+
+
+
+### Savitzky-Golay-Filter
+```{r, eval = F, include=F}
+p <- c('../imgs/savgol51_1.png') %>% 
+  map_dfr(~as.data.frame(imager::load.image(.)),.id = 'image') %>% 
+  transmute(value = sort(value),
+            p = 1/length(value),
+            cs = cumsum(p)) %>% 
+  group_by(value) %>% 
+  summarise(cs = max(cs, na.rm=T)) %>% 
+  ggplot(aes(x = value, y = cs)) +
+  geom_point() +
+  theme_minimal() +
+  xlim(-0.1,1.1) +
+  ylim(-0.1,1.1) +
+  labs(y = 'Kummulative Häufigkeit',
+       x = 'Intensität')
+
+ggsave(plot = p, '../imgs/savgol1.png',width = 5, height = 5)
+
+p <- c('../imgs/savgol51_5.png') %>% 
+  map_dfr(~as.data.frame(imager::load.image(.)),.id = 'image') %>% 
+  transmute(value = sort(value),
+            p = 1/length(value),
+            cs = cumsum(p)) %>% 
+  group_by(value) %>% 
+  summarise(cs = max(cs, na.rm=T)) %>% 
+  ggplot(aes(x = value, y = cs)) +
+  geom_point() +
+  theme_minimal() +
+  xlim(-0.1,1.1) +
+  ylim(-0.1,1.1) +
+  labs(y = 'Kummulative Häufigkeit',
+       x = 'Intensität')
+
+ggsave(plot = p, '../imgs/savgol5.png',width = 5, height = 5)
+
+p <- c('../imgs/savgol51_11.png') %>% 
+  map_dfr(~as.data.frame(imager::load.image(.)),.id = 'image') %>% 
+  transmute(value = sort(value),
+            p = 1/length(value),
+            cs = cumsum(p)) %>% 
+  group_by(value) %>% 
+  summarise(cs = max(cs, na.rm=T)) %>% 
+  ggplot(aes(x = value, y = cs)) +
+  geom_point() +
+  theme_minimal() +
+  xlim(-0.1,1.1) +
+  ylim(-0.1,1.1) +
+  labs(y = 'Kummulative Häufigkeit',
+       x = 'Intensität')
+
+ggsave(plot = p, '../imgs/savgol11.png',width = 5, height = 5)
+```
+
+Ein Savitzky-Golay-Filter wird in allen Bereichen der Signalverarbeitung zur Signalglättung eingesetzt. Dabei wird in einem Fenster mit vorgegebener Größe der Signalreihe Stück für Stück ein festgelegte Polynome Regression durchgeführt. Das Mittel der Vorhersagen über die Datenreihe wird dann zurückgegeben. Je nach Größe des Fensters und der Höhe des Polynoms wird dadurch unterschiedlich stark geglättet.
+
+In Abb. \@ref(fig:savgol) ist der Effekt des eines horizontalen und vertikalen Savitzky-Golay-Filter mit jeweils einer Fenstergröße von 51 Pixeln, und einem Polygon der 1., 5. und 11. Ordnung beispielhaft dargestellt. Wie zu sehen ist, schlägt sich der Filter bei niedrigen Polynomen eher als Unschärfe nieder, je höher die Polynome sind desto mehr Varianz im Signal wird nicht entfernt.
+
+(ref:savgolCap) Beispielhafte Darstellung eines Savitzky-Golay-Filters.
+
+(ref:savgolSubCap) Beispielhafte Darstellung eines Savitzky-Golay-Filters. Links ist das Bild vor, rechts nach der Glättung der Helligkeitsverteilung zu sehen. Unten sind die Helligkeitsverteilungen abgebildet.
+
+```{r savgol, echo = F, fig.cap='(ref:savgolSubCap)', fig.align='center',out.width='.24\\textwidth', fig.show='hold', fig.scap='(ref:savgolCap)'}
+knitr::include_graphics(c('../imgs/geometric.png', 
+                          '../imgs/savgol51_1.png', 
+                          '../imgs/savgol51_5.png', 
+                          '../imgs/savgol51_11.png'), dpi = 300)
+knitr::include_graphics(c('../imgs/hist_kum1.png','../imgs/savgol1.png',
+                          '../imgs/savgol5.png','../imgs/savgol11.png'),dpi = 300)
+```
+
+
+
+## Bild-Auswertung
+
+Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung der Kornflächen. 
+Für einen Überblick über Methoden zur Erkennung von Superpixeln und mögliche Architekturen zur Vermessung von Kornbildern.
+
+
+### DBSCAN
+
+Der ursprünglich zur Gruppierung großer Datenbanken entwickelte Density-based Spatial Clustering of Applications with Noise (DBSCAN) Algorithmus [@esterIncrementalClusteringMining1998] konnte bereits erfolgreich zur Superpixel-Segmentierung in Echtzeit eingesetzt werden [@shenRealTimeSuperpixelSegmentation2016]. 
+
+Der DBSCAN-Cluster-Algorithmus überprüft für jeden einzelnen Datenpunkt, wie viele Datenpunkte in einem vorgegebenen Radius oder *epsilon* um den betrachteten Punkt liegen. Das Verfahren sortiert so Datenpunkt für Datenpunkt lokal über den Radius verknüpfte Einträge zusammen, die als zu einem Cluster zugehörig erklärt werden, sobald eine angegebene Mindestanzahl an Samples erreicht ist.
+
+Durch das Schrittweise vorgehen bei diesem Verfahren, ist die Form der erkannten Cluster nicht festgelegt. Dadurch können auch komplexe Formen im Feature-Raum abgebildet wurden. Ein weiterer Vorteil ist die geringe Anfälligkeit für Ausreißer, da sich nicht im Radius um andere Punkte befindliche Datenpunkte einfach keinem Cluster zu sortiert werden.
+
+In Abb. \@ref(fig:dbscanExample) ist der Einfluss verschieden großer Radien und mindest-Clustergrößen dargestellt. Dazu ist jeweils die Laufzeit zur Erstellung der Clusterlösung abgetragen. Die Werte sind so skaliert, x- und y-Achse sowie die Farbwerte des ursprünglichen Bilds zwischen 0 und 100 liegen.
+
+(ref:dbscanExampleSubCap) Beispiel für Ergebnisse des DBSCAN-Algorithmus.
+
+(ref:dbscanExampleCap) Beispiel für Ergebnisse des DBSCAN-Algorithmus. Die Graphen stellen dasselbe Muster dar, farblich sind die erkannten Cluster eingefärbt. Mit jeder Zeile wird der betrachtete Radius, mit jeder Spalte die minimale Anzahl an Datenpunkten in einem Cluster erhöht. Die Werte sind so skaliert, x- und y-Achse sowie die Luminanzwerte des ursprünglichen Bilds zwischen 0 und 100 liegen. Die eingetragene Zahl ist die Dauer der Berechnung in Sekunden.
+
+
+```{r dbscanExample, echo = F, fig.cap='(ref:dbscanExampleCap)', fig.align='center',out.width=paste0(.96/1,'\\textwidth'), fig.show='hold', fig.scap='(ref:dbscanExampleSubCap)'}
+knitr::include_graphics('../imgs/dbscan.png')
+```
+
+```{r, include=F, eval=F}
+library(tidyverse)
+img <- as.data.frame(imager::load.image('../imgs/geometric.png')) %>% 
+  filter(value != 1,
+         x %% 5 == 0,
+         y %% 5 == 0) %>% 
+  select(-cc) %>% 
+  mutate(y = max(y) - y,
+         across(where(is.numeric), ~100 * (.-min(.))/(max(.)-min(.))))
+
+settings <- expand.grid(seq(1.5,3,.5), seq(5,15,5))
+clustered <- lapply(1:9, 
+                    \(.x){
+                      start = Sys.time()  
+                      res = dbscan::dbscan(img, settings[.x,1], settings[.x,2])
+                      res$stop = Sys.time() - start
+                      return(res)})
+res <- map_dfr(clustered, ~mutate(img, cluster = .$cluster, eps = .$eps, minPts = .$minPts, time = .$stop))
+
+p <- res %>% 
+  mutate(cluster = ifelse(cluster %in% -1:0, NA, cluster),
+         cluster = as.factor(cluster%%8)) %>% 
+  ggplot(aes(x,y,color = cluster, fill = cluster)) +
+  geom_tile() +
+  geom_text(x = 50, y = 102,color = 'black', aes(label=round(time,2))) +
+  facet_grid(eps ~ minPts) +
+  coord_fixed() +
+  theme_minimal()+
+  theme(legend.position = 'none') +
+  scale_fill_brewer(palette='Dark2')+
+  scale_color_brewer(palette='Dark2')
+
+ggsave(filename = '../imgs/dbscan.png',
+       width = 12, height = 12, dpi = 150,bg = 'white')
+```
+
+
