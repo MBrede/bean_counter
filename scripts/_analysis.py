@@ -1,4 +1,5 @@
 from sklearn.cluster import DBSCAN  # , OPTICS
+import _nCuts as nc
 import pandas as pd
 import numpy as np
 import inspect
@@ -97,7 +98,11 @@ def _analysis_wrapper(self, model, color_weight):
                        .apply(lambda row: ratio(row['x'],row['y'],self.max_ratio))\
                        .reset_index()
 
-        self.generated_areas = ret_df.loc[ret_df.loc[:, 'cluster'].isin(ratios.loc[ratios.iloc[:, 1], 'cluster'])]\
+        self.generated_areas = ret_df\
+                                     .loc[ret_df.loc[:, 'cluster'].gt(-1)]\
+                                     .loc[ret_df.loc[:, 'cluster']\
+                                                .isin(ratios.loc[ratios.iloc[:, 1],
+                                                                 'cluster'])]\
                                      .groupby('cluster')\
                                      .apply(lambda cluster: cluster_summary(cluster, self.len_pro_pixel, self.calcElipses))\
                                      .reset_index()\
@@ -174,6 +179,29 @@ def _analyse_dbscan(self, eps=1, min_samples=10, color_weight=2):
     _analysis_wrapper(self, model, color_weight)
 
 
+def _analyse_SLIC(self, compactness=0.25):
+    """SLIC: Generate SLIC-Segmentation for image
+
+    Args:
+        compactness (float): Ratio of spatial to color-weighting. Higher values indicate higher spatial weights.
+    """
+    model = nc.SLIC(compactness=compactness)
+    _analysis_wrapper(self, model, color_weight=1)
+
+
+
+def _analyse_ncuts(self, compactness=0.25, thresh=.001, num_cuts=10, sigma=100):
+    """NCuts: Generate NCuts-Segmentation for image
+
+    Args:
+    compactness (float): Ratio of spatial to color-weighing. Higher values indicate higher spatial weights.
+    thresh (float): Stop-criterion for cuts on teh sub-graph.
+    num_cuts (int): Number of cuts to test to determine optimal one.
+    """
+    model = nc.NCuts(compactness=compactness, thresh=thresh, num_cuts=num_cuts, sigma=sigma)
+    _analysis_wrapper(self, model, color_weight=1)
+
+
 # def _analyse_optics(self, max_eps=2, min_samples=10, color_weight=2):
 #     pass
 #     """OPTICS: Generate OPTICS-Cluster for image
@@ -199,8 +227,10 @@ def analyse(self, type, *args, **kwargs):
     """
     if type == "dbscan":
         _analyse_dbscan(self, *args, **kwargs)
-    # elif type == "optics":
-    #     _analyse_optics(self, *args, **kwargs)
+    elif type == "SLIC":
+        _analyse_SLIC(self, *args, **kwargs)
+    elif type == "ncuts":
+        _analyse_ncuts(self, *args, **kwargs)
     else:
         raise ValueError("%s is not implemented yet" % type)
     if self.generated_areas[self.toDisplay]:
@@ -217,6 +247,6 @@ if __name__ == "__main__":
     from model import GrainImage
 
     self = GrainImage("../data/17 0 650 cbs 01_002.tif")
-    analyse(self, 'dbscan')
+    analyse(self, 'ncuts')
     data = self.generated_areas['size']
     dists = self.distros

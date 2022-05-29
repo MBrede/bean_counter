@@ -61,7 +61,7 @@ def build_app(distros):
                                        'diameter': 0},
                                       'displayedStatistic', 'Change statistic'),
                     [sg.Text("Max. grain side ratio:"),
-                     sg.Input('', key='max_ratio')]]
+                     sg.Input('', key='max_ratio', size=(6, 10))]]
 
     setting_block = [sg.Frame("Settings",
                               setting_rows,
