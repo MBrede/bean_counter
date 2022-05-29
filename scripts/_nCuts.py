@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from skimage import data, segmentation, color
 from skimage.future import graph
-from matplotlib import pyplot as plt
 import cv2
 
 def _analyse_dbscan(self, eps=1, min_samples=10, color_weight=2):
