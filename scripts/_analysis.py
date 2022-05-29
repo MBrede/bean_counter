@@ -195,8 +195,9 @@ def _analyse_ncuts(self, compactness=0.25, thresh=.001, num_cuts=10, sigma=100):
 
     Args:
     compactness (float): Ratio of spatial to color-weighing. Higher values indicate higher spatial weights.
-    thresh (float): Stop-criterion for cuts on teh sub-graph.
+    thresh (float): Stop-criterion for cuts on the sub-graph.
     num_cuts (int): Number of cuts to test to determine optimal one.
+    sigma(float): Maximum distance of two colors to be treated as similar.
     """
     model = nc.NCuts(compactness=compactness, thresh=thresh, num_cuts=num_cuts, sigma=sigma)
     _analysis_wrapper(self, model, color_weight=1)
