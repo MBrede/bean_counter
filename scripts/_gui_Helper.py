@@ -43,6 +43,12 @@ def build_function_row(fun, prefix, button_label="Add"):
                     size=(6, 10),
                 )
             )
+    if len(row) > 8:
+        dummy = [[] if i == 0 else [sg.Text("", size=(27, 1))] 
+                 for i in range(len(row) // 8 + int(len(row) % 8 > 0))]
+        for i in range(len(row)):
+            dummy[i // 8].append(row[i])
+        row = dummy
     return row
 
 

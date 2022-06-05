@@ -1,30 +1,19 @@
 # -*- coding: utf-8 -*-
-from skimage import data, segmentation, color
+from skimage import segmentation
 from skimage.future import graph
-import cv2
-
-def _analyse_dbscan(self, eps=1, min_samples=10, color_weight=2):
-    """DBSCAN: Generate DBSCAN-Cluster for image
-
-    Args:
-        eps (float): Maximum distance to be seen as neighbours.
-        min_samples (float): Minimum number of pixels in Cluster.
-        color_weight (float): Max-weight for color-values after scaling.
-    """
-    model = DBSCAN(eps=eps, min_samples=min_samples,
-                   n_jobs=-2)
-    _analysis_wrapper(self, model, color_weight)
 
 class SLIC:
     """Wrapper-Class to perform SLIC-Superpixel extraction with scikit-learn interface.
 
     Attributes:
         compactness (float): Ratio of spatial to color-weighting. Higher values indicate higher spatial weights.
+        n_segments (int): The (approximate) number of labels in the segmented output image.
     """
 
-    def __init__(self, compactness=0.25):
+    def __init__(self, compactness=0.25, n_segments=1000):
         """Prep model"""
         self.compactness=compactness
+        self.n_segments=n_segments
         self.start_label=0
 
     def fit_predict(self, img, flatten=True):
@@ -36,7 +25,8 @@ class SLIC:
         )
         out = segmentation.slic(out,
                                 compactness=self.compactness,
-                                start_label=self.start_label)
+                                start_label=self.start_label,
+                                n_segments=self.n_segments)
         if flatten:
             return(out.flatten())
         else:
@@ -53,10 +43,11 @@ class NCuts:
         sigma(float): Maximum distance of two colors to be treated as similar.
     """
 
-    def __init__(self, compactness=0.25, thresh=.001, num_cuts=10, sigma=100):
+    def __init__(self, compactness=0.25, n_segments=1000, thresh=.001, num_cuts=10, sigma=100):
         """Prep model"""
         self.compactness=compactness
         self.start_label=0
+        self.n_segments=n_segments
         self.thresh=thresh
         self.num_cuts=num_cuts
         self.sigma=sigma
@@ -68,7 +59,7 @@ class NCuts:
             .pivot(index="y", columns="x", values="value")
             .to_numpy()
         )
-        slic = SLIC(self.compactness)
+        slic = SLIC(self.compactness, self.n_segments)
         slic_results = slic.fit_predict(img, flatten=False)
         g = graph.rag_mean_color(out, slic_results, mode='similarity', sigma=self.sigma)
         out = graph.cut_normalized(slic_results, g,

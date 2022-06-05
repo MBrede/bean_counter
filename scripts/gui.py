@@ -9,10 +9,16 @@ import queue
 import json
 import scipy.stats
 import pandas as pd
-import numpy as np
 from matplotlib import cm
-from matplotlib.colors import ListedColormap
 
+def collapse_rows(rows):
+     dummy = []
+     for f in rows:
+         if isinstance(f[0], list):
+            dummy += f
+         else:
+             dummy.append(f)
+     return dummy
 
 def build_app(distros):
     precs = [f[1] for f in inspect.getmembers(_preprocess) if f[0][0:6] == "_prep_"]
@@ -32,10 +38,10 @@ def build_app(distros):
                                                      'outputFormat', 'Export')])
     ]
 
-    filter_rows = [gh.build_function_row(fun, "prep") for fun in precs]
+    filter_rows = collapse_rows([gh.build_function_row(fun, "prep") for fun in precs])
     filter_block = [sg.Frame("Filtering", filter_rows, element_justification="l")]
 
-    analysis_rows = [gh.build_function_row(fun, "analyse", "Run") for fun in analysis_funs]
+    analysis_rows = collapse_rows([gh.build_function_row(fun, "analyse", "Run") for fun in analysis_funs])
     analysis_block = [sg.Frame("Analysis", analysis_rows, element_justification="l")]
 
     batch_block = [

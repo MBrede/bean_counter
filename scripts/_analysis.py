@@ -179,18 +179,18 @@ def _analyse_dbscan(self, eps=1, min_samples=10, color_weight=2):
     _analysis_wrapper(self, model, color_weight)
 
 
-def _analyse_SLIC(self, compactness=0.25):
+def _analyse_SLIC(self, compactness=0.25, n_segments=1000):
     """SLIC: Generate SLIC-Segmentation for image
 
     Args:
         compactness (float): Ratio of spatial to color-weighting. Higher values indicate higher spatial weights.
     """
-    model = nc.SLIC(compactness=compactness)
+    model = nc.SLIC(compactness=compactness, n_segments=n_segments)
     _analysis_wrapper(self, model, color_weight=1)
 
 
 
-def _analyse_ncuts(self, compactness=0.25, thresh=.001, num_cuts=10, sigma=100):
+def _analyse_ncuts(self, compactness=0.25, n_segments=1000, thresh=.001, num_cuts=10, sigma=100):
     """NCuts: Generate NCuts-Segmentation for image
 
     Args:
@@ -199,7 +199,7 @@ def _analyse_ncuts(self, compactness=0.25, thresh=.001, num_cuts=10, sigma=100):
     num_cuts (int): Number of cuts to test to determine optimal one.
     sigma(float): Maximum distance of two colors to be treated as similar.
     """
-    model = nc.NCuts(compactness=compactness, thresh=thresh, num_cuts=num_cuts, sigma=sigma)
+    model = nc.NCuts(compactness=compactness,n_segments=n_segments, thresh=thresh, num_cuts=num_cuts, sigma=sigma)
     _analysis_wrapper(self, model, color_weight=1)
 
 
