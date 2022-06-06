@@ -262,8 +262,28 @@ ggsave(filename = '../imgs/dbscan.png',
 ```
 
 
-## SLIC
+### SLIC
 
 Beim als Superpixel-Segmentierungsansatz weit verbreiteten Simple Linear Iterative Clustering (SLIC) [@achantaSLICSuperpixelsCompared2012] wird ein k-Means basiertes Verfahren genutzt, um näherungsweise gleich große Superpixel im Bild zu detektieren.
-Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Der weitere Algorithmus ist im Prinzip der des normalen k-Means Clustering, das heißt Cluster-Kerne werden definiert (bei SLIC in regelmäßigen Abständen), Pixel werden den nächsten Clustern zugeordnet und die Zentroide dann auf die Zentroide der neuen Cluster verschoben.
-Im Gegensatz zum regulären k-Means wird bei Slic aber nicht im gesamten Datenraum nach möglichen Cluster-Angehörigen gesucht, sondern nur im doppelten Suchraum der vorgegebenen Clustergröße.
+Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von @achantaSLICSuperpixelsCompared2012 die räumliche Distanz gewichtet, wodurch mit hohen Werten des Hyperparameters *m* die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
+
+Der weitere Algorithmus ist im Prinzip der des normalen k-Means Clustering, das heißt Cluster-Kerne werden definiert (bei SLIC in regelmäßigen Abständen), Pixel werden den nächsten Clustern zugeordnet und die Zentroide dann auf die Zentroide der neuen Cluster verschoben.
+Im Gegensatz zum regulären k-Means wird bei SLIC aber nicht im gesamten Datenraum nach möglichen Cluster-Angehörigen gesucht, sondern nur im doppelten Suchraum der vorgegebenen Clustergröße.
+@achantaSLICSuperpixelsCompared2012 beschreiben außerdem eine Adaptive Version des SLIC, bei dem die Cluster-Größe (und Anzahl) und die Gewichtung von räumlicher und farblicher Distanz Clusterweise angepasst wird, indem in jeder Iteration an der maximalen Distanz der vorhergehenden Iteration normalisiert wird.
+In \@ref(fig:slicExample) ist ein Beispiel für den ASLIC-Algorithmus mit unterschiedlichen *m*-Gewichten und anfänglicher Cluster-Anzahl zu sehen.
+
+(ref:slicExampleSubCap) Beispiel für eine Superpixel-Segmentierung mit SLIC.
+
+(ref:slicExampleCap) Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für *m* zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei @achantaSLICSuperpixelsCompared2012 beschrieben eingesetzt.
+
+```{r slicExample, echo = F, fig.cap='(ref:slicExampleCap)', fig.align='center',out.width=paste0(.96/2,'\\textwidth'), fig.show='hold', fig.scap='(ref:slicExampleSubCap)'}
+knitr::include_graphics(c('../imgs/slic_5_250.png', 
+                          '../imgs/slic_5_500.png'), dpi = 300) 
+knitr::include_graphics(c('../imgs/slic_200_250.png', 
+                          '../imgs/slic_200_500.png'), dpi = 300)
+```
+
+
+### Normalized Cuts
+
+Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln [@shiNormalizedCutsImage2000] wird das Bild in einen Graphen übersetzt, bei dem jeder Pixel durch einen Knoten repräsentiert wird. Jeder dieser Knoten wird dann mit jedem anderen Knoten über einen Kante verbunden, die über ein Maß gewichtet wird, das die Wahrscheinlichkeit der 

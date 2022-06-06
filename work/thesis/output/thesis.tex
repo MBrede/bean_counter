@@ -125,7 +125,7 @@
 \makeatother
 \subtitle{Thesis Beschreibung dies das.}
 \author{Max Brede}
-\date{2022-05-21}
+\date{2022-06-05}
 
 \begin{document}
 \maketitle
@@ -196,7 +196,8 @@ Zusätzlich stören Kristalldefekte, Oberflächenartefakte und Spannungen im Mat
 Mit Training sind menschliche Bearbeiter zwar weiter in der Lage, Körner und ihre Grenzen zu detektieren und mit Linienschnittverfahren auszuwerten, bestehende Ansätze zur automatischen Detektion von Korngrenzen scheitern aber.
 
 Im Bereich der Mineral-Korn-Erkennung wurden aber bereits erfolgreich vielversprechende Ansätze berichtet (\protect\hyperlink{ref-latifDeepLearningBasedAutomaticMineral2022}{Latif et al., 2022}; \protect\hyperlink{ref-maitreMineralGrainsRecognition2019}{Maitre et al., 2019}). Diese neuen Ansätze haben gemeinsam, dass sie statt Korngrenzen deren Flächen auszumachen versuchen. Dabei werden Methoden der \emph{Superpixel Segmentation} eingesetzt, bei denen versucht wird, ein Bild in semantisch ähnliche Gruppen von Pixeln zu segmentieren. Das Aufteilen eines Bildes in Superpixel ist ein reduzieren der Bildkomplexität für folgende Analyseschritte (\protect\hyperlink{ref-wangSuperpixelSegmentationBenchmark2017}{Wang et al., 2017}). Eine Anwendung von Superpixel-basierten Ansätzen zur Segmentation von mikroskopischen Aufnahmen von Metallstrukturen sind entweder zu hochauflösend (\protect\hyperlink{ref-akersRapidFlexibleSegmentation2021}{Akers et al., 2021}), zu niedrig auflösend (\protect\hyperlink{ref-kimUnsupervisedMicrostructureSegmentation2020}{Kim et al., 2020}) oder auf andere Arten von Mineral bezogen (\protect\hyperlink{ref-decostHighThroughputQuantitative2019}{DeCost et al., 2019}; \protect\hyperlink{ref-latifDeepLearningBasedAutomaticMineral2022}{Latif et al., 2022}) oder nur auf Teile der Aufnahme bezogen (\protect\hyperlink{ref-liMetallographicImageSegmentation2020}{li et al., 2020}).
-Die Auswertung von Größe und Orientierung möglichst aller Körner über die gesamte elektronenmikroskopische Aufnahme ist von keinem dieser Ansätze bisher umgesetzt.
+
+Da die Vorbereitung und das spezifische ausgewertete Material stark die Art und Qualität der Bilder beeinflusst, lassen sich diese Ergebnisse nicht direkt auf Aufnahmen von dünnen Schichten übertragen - die Ansätze scheinen aber vielversprechend. Die Auswertung von Größe und Orientierung möglichst aller Körner über die gesamte elektronenmikroskopische Aufnahme dünner Schichten ist jedoch bisher noch von keinem dieser Ansätze gelöst.
 
 Die vorliegende Masterarbeit soll an diesem Punkt ansetzen und versuchen, auf Basis von Superpixel-Verfahren möglichst alle Körner in einer elektronenmikroskopisch aufgenommenen Gitterstruktur zu erkennen und diese zu vermessen.
 
@@ -206,7 +207,7 @@ Die vorliegende Masterarbeit soll an diesem Punkt ansetzen und versuchen, auf Ba
 Das Ziel dieser Abschlussarbeit ist die Entwicklung eines Tools, das mindestens die Auswertung von Kornbildern unterstützt und im besten Fall diese übernimmt.
 Als erster Schritt ist dafür eine Implementierung mit grafischer Oberfläche nötig, die das Einlesen und Verarbeiten von elektronenmikroskopischen Aufnahmen mit dahinter stehendem Datenmodell unterstützt.
 Dabei soll die Verarbeitung sowohl aus dem Vorverarbeiten, als auch der Kornerkennung und -vermessung bestehen.
-Der Nutzen des Tools soll in der Anwendung überprüft und mögliche Verbesserungsvorschläge implementiert werden.
+Der Nutzen des Tools soll durch Angehörige des Instituts getestet und dessen Nutzbarkeit überprüft werden. Die bei dieser Überprüfung entstehenden Wünsche an Verbesserungen und Anpassungen des Programms sollen so weit wie möglich umgesetzt werden.
 
 Im zweiten Schritt soll auf dem Datenmodell aufbauend versucht werden, mit Hilfe von Superpixel- und ML-Modellen die Auswertung durch Einstellungs-Empfehlungen zu unterstützen oder im besten Falle zu übernehmen.
 
@@ -324,15 +325,56 @@ In Abb. \ref{fig:savgol} ist der Effekt des eines horizontalen und vertikalen Sa
 \hypertarget{bild-auswertung}{%
 \section{Bild-Auswertung}\label{bild-auswertung}}
 
-Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung der Kornflächen. Zuerst wird knapp in den Bereich der Superpixel-Extraktion eingegangen, gefolgt von der genaueren Beschreibung einer Reihe von dazu eingesetzten Algorithmen.
-
-\hypertarget{section}{%
-\subsection{}\label{section}}
+Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung der Kornflächen.
+Für einen Überblick über Methoden zur Erkennung von Superpixeln und mögliche Architekturen zur Vermessung von Kornbildern.
 
 \hypertarget{dbscan}{%
 \subsection{DBSCAN}\label{dbscan}}
 
-Der ursprünglich zur Gruppierung großer Datenbanken entwickelte Algorithmus DBSCAN (\protect\hyperlink{ref-esterIncrementalClusteringMining1998}{Ester et al., 1998}) konnte bereits erfolgreich zur Superpixel-Segmentierung in Echtzeit eingesetzt werden (\protect\hyperlink{ref-shenRealTimeSuperpixelSegmentation2016}{Shen et al., 2016}).
+Der ursprünglich zur Gruppierung großer Datenbanken entwickelte Density-based Spatial Clustering of Applications with Noise (DBSCAN) Algorithmus (\protect\hyperlink{ref-esterIncrementalClusteringMining1998}{Ester et al., 1998}) konnte bereits erfolgreich zur Superpixel-Segmentierung in Echtzeit eingesetzt werden (\protect\hyperlink{ref-shenRealTimeSuperpixelSegmentation2016}{Shen et al., 2016}).
+
+Der DBSCAN-Cluster-Algorithmus überprüft für jeden einzelnen Datenpunkt, wie viele Datenpunkte in einem vorgegebenen Radius oder \emph{epsilon} um den betrachteten Punkt liegen. Das Verfahren sortiert so Datenpunkt für Datenpunkt lokal über den Radius verknüpfte Einträge zusammen, die als zu einem Cluster zugehörig erklärt werden, sobald eine angegebene Mindestanzahl an Samples erreicht ist.
+
+Durch das Schrittweise vorgehen bei diesem Verfahren, ist die Form der erkannten Cluster nicht festgelegt. Dadurch können auch komplexe Formen im Feature-Raum abgebildet wurden. Ein weiterer Vorteil ist die geringe Anfälligkeit für Ausreißer, da sich nicht im Radius um andere Punkte befindliche Datenpunkte einfach keinem Cluster zu sortiert werden.
+
+In Abb. \ref{fig:dbscanExample} ist der Einfluss verschieden großer Radien und mindest-Clustergrößen dargestellt. Dazu ist jeweils die Laufzeit zur Erstellung der Clusterlösung abgetragen. Die Werte sind so skaliert, x- und y-Achse sowie die Farbwerte des ursprünglichen Bilds zwischen 0 und 100 liegen.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{../imgs/dbscan} 
+
+}
+
+\caption[Beispiel für Ergebnisse des DBSCAN-Algorithmus.]{Beispiel für Ergebnisse des DBSCAN-Algorithmus. Die Graphen stellen dasselbe Muster dar, farblich sind die erkannten Cluster eingefärbt. Mit jeder Zeile wird der betrachtete Radius, mit jeder Spalte die minimale Anzahl an Datenpunkten in einem Cluster erhöht. Die Werte sind so skaliert, x- und y-Achse sowie die Luminanzwerte des ursprünglichen Bilds zwischen 0 und 100 liegen. Die eingetragene Zahl ist die Dauer der Berechnung in Sekunden.}\label{fig:dbscanExample}
+\end{figure}
+
+\hypertarget{slic}{%
+\subsection{SLIC}\label{slic}}
+
+Beim als Superpixel-Segmentierungsansatz weit verbreiteten Simple Linear Iterative Clustering (SLIC) (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{Achanta et al., 2012}) wird ein k-Means basiertes Verfahren genutzt, um näherungsweise gleich große Superpixel im Bild zu detektieren.
+Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) die räumliche Distanz gewichtet, wodurch mit hohen Werten des Hyperparameters \emph{m} die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
+
+Der weitere Algorithmus ist im Prinzip der des normalen k-Means Clustering, das heißt Cluster-Kerne werden definiert (bei SLIC in regelmäßigen Abständen), Pixel werden den nächsten Clustern zugeordnet und die Zentroide dann auf die Zentroide der neuen Cluster verschoben.
+Im Gegensatz zum regulären k-Means wird bei SLIC aber nicht im gesamten Datenraum nach möglichen Cluster-Angehörigen gesucht, sondern nur im doppelten Suchraum der vorgegebenen Clustergröße.
+Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschreiben außerdem eine Adaptive Version des SLIC, bei dem die Cluster-Größe (und Anzahl) und die Gewichtung von räumlicher und farblicher Distanz Clusterweise angepasst wird, indem in jeder Iteration an der maximalen Distanz der vorhergehenden Iteration normalisiert wird.
+In \ref{fig:slicExample} ist ein Beispiel für den ASLIC-Algorithmus mit unterschiedlichen \emph{m}-Gewichten und anfänglicher Cluster-Anzahl zu sehen.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.48\textwidth]{../imgs/slic_5_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_5_500} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_500} \includegraphics[width=0.48\textwidth]{../imgs/geometric} 
+
+}
+
+\caption[Beispiel für eine Superpixel-Segmentarisierung mit SLIC.]{Beispiel für eine Superpixel-Segmentarisierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für \emph{m} zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschrieben eingesetzt. Die Basis stellt wieder das Muster dar, das zum Vergleich noch einmal ganz unten dargestellt ist.}\label{fig:slicExample}
+\end{figure}
 
 \hypertarget{literatur}{%
 \chapter{Literatur}\label{literatur}}
@@ -341,6 +383,9 @@ Der ursprünglich zur Gruppierung großer Datenbanken entwickelte Algorithmus DB
 \begin{CSLReferences}{1}{0}
 \leavevmode\vadjust pre{\hypertarget{ref-abouelattaClassificationCopperAlloys2013}{}}%
 Abouelatta, O. B. (2013). Classification of copper alloys microstructure using image processing and neural network. \emph{Journal of American Science}, \emph{9}(6), 213--223.
+
+\leavevmode\vadjust pre{\hypertarget{ref-achantaSLICSuperpixelsCompared2012}{}}%
+Achanta, R., Shaji, A., Smith, K., Lucchi, A., Fua, P., \& Süsstrunk, S. (2012). {SLIC} superpixels compared to state-of-the-art superpixel methods. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, \emph{34}(11), 2274--2282.
 
 \leavevmode\vadjust pre{\hypertarget{ref-akersRapidFlexibleSegmentation2021}{}}%
 Akers, S., Kautz, E., Trevino-Gavito, A., Olszta, M., Matthews, B. E., Wang, L., Du, Y., \& Spurgeon, S. R. (2021). Rapid and flexible segmentation of electron microscopy data using few-shot machine learning. \emph{Npj Computational Materials}, \emph{7}(1, 1), 1--9. \url{https://doi.org/10.1038/s41524-021-00652-z}
