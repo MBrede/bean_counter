@@ -35,7 +35,7 @@ def build_prep_stack(config):
 
 
 def build_clust_settings(config):
-    poss_cluster = f'analyse.SLIC.(compactness={config["SLIC.compactness"]})'
+    poss_cluster = f'analyse.SLIC.(compactness={config["SLIC.compactness"]}, n_segments={config["SLIC.n_segments"]})'
     return poss_cluster
 
 
@@ -62,6 +62,7 @@ class MyWorker(Worker):
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.poly', lower=1, upper=11))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('max_grain_ratio', lower=1, upper=7, q=0.1))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('SLIC.compactness', lower=0.1, upper=0.5, q=0.1))
+        config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('SLIC.n_segments', lower=100, upper=10000, q = 100))
         return(config_space)
 
 

@@ -35,7 +35,7 @@ def build_prep_stack(config):
 
 
 def build_clust_settings(config):
-    poss_cluster = f'analyse.ncuts.(compactness={config["ncuts.compactness"]}, thresh={config["ncuts.thresh"]}, num_cuts={config["ncuts.num_cuts"]}, sigma={config["ncuts.sigma"]})'
+    poss_cluster = f'analyse.ncuts.(compactness={config["ncuts.compactness"]}, n_segments={config["ncuts.n_segments"]}, thresh={config["ncuts.thresh"]}, num_cuts={config["ncuts.num_cuts"]}, sigma={config["ncuts.sigma"]})'
     return poss_cluster
 
 
@@ -62,6 +62,7 @@ class MyWorker(Worker):
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.poly', lower=1, upper=11))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('max_grain_ratio', lower=1, upper=7, q=0.1))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.compactness', lower=0.1, upper=0.5, q=0.1))
+        config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('ncuts.n_segments', lower=100, upper=10000, q = 100))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.thresh', lower=0.00000001, upper=1, q=0.00000001))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('ncuts.num_cuts', lower=10, upper=10000, q=10))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.sigma', lower=0.01, upper=2, q=0.01))
