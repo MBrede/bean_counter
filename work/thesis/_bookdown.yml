@@ -10,6 +10,7 @@ rmd_files: [
   'index.Rmd',
   'intro.Rmd',
   'grundlagen.Rmd',
+  'anforderungen.Rmd',
   'references.Rmd'
 ]
 output_dir: "output"

@@ -61,7 +61,7 @@ class MyWorker(Worker):
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.window', lower=1, upper=51))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.poly', lower=1, upper=11))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('max_grain_ratio', lower=1, upper=7, q=0.1))
-        config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.compactness', lower=0.1, upper=0.5, q=0.1))
+        config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.compactness', lower=0.01, upper=0.3, q=0.01))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('ncuts.n_segments', lower=100, upper=10000, q = 100))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('ncuts.thresh', lower=0.00000001, upper=1, q=0.00000001))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('ncuts.num_cuts', lower=10, upper=10000, q=10))
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         NS.start()
 
         workers=[]
-        for i in range(16):
+        for i in range(32):
             w = MyWorker(image = os.path.join(path, p), nameserver='127.0.0.1',run_id='ncuts1', id=i)
             w.run(background=True)
             workers.append(w)
@@ -108,7 +108,7 @@ if __name__ == '__main__':
                       run_id = 'ncuts1', nameserver='127.0.0.1',
                       min_budget=0.45, max_budget=1.0
                    )
-        res = bohb.run(n_iterations=100, min_n_workers=len(workers))
+        res = bohb.run(n_iterations=10, min_n_workers=len(workers))
 
         bohb.shutdown(shutdown_workers=True)
         NS.shutdown()

@@ -286,4 +286,25 @@ knitr::include_graphics(c('../imgs/slic_200_250.png',
 
 ### Normalized Cuts
 
-Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln [@shiNormalizedCutsImage2000] wird das Bild in einen Graphen übersetzt, bei dem jeder Pixel durch einen Knoten repräsentiert wird. Jeder dieser Knoten wird dann mit jedem anderen Knoten über einen Kante verbunden, die über ein Maß gewichtet wird, das die Wahrscheinlichkeit der 
+Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln [@shiNormalizedCutsImage2000] wird das Bild in einen Graphen übersetzt, bei dem jeder Pixel durch einen Knoten repräsentiert wird. Jeder dieser Knoten wird dann mit jedem anderen Knoten über eine Kante verbunden, die über ein Maß gewichtet wird, das die Wahrscheinlichkeit der "Zugehörigkeit zu einem Objekt" [@shiNormalizedCutsImage2000] ausdrückt.
+Im Orginal-Paper wird die Wahrscheinlichkeit durch eine gewichtete Exponential-Funktion mit den Kontrastwerte und den geometrischen Distanzen im Exponenten ausgedrückt. Für beide Werte ist je eine Gewichtung vorgesehen, die angepasst werden kann - außerdem ein maximal zu berücksichtigender Radius für den geometrischen Abstand.
+
+Unabhängig von der genauen Gewichtung der Kanten wird anschließend derjenige Schnitt gesucht, der die geringste Summe an Kantengewichten "durchtrennt". Dieser *Normalized Cut* wird so bestimmt, dass die durch den Schnitt getrennten Gruppen möglichst unterschiedlich und die verbleibenden Gruppen in sich möglichst homogen sind.  Die Lösung dieses Problem für ein ganzes Bild kann sehr aufwendig sein, weswegen zur Optimierung nur im geometrischen Umfeld der betrachteten Nodes gesucht wird.
+Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von @shiNormalizedCutsImage2000 zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls[@NormalizedCutSkimage] präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von @shiNormalizedCutsImage2000 präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens $N_{Pixel}^2\over{2}$ Einträgen nötig.
+Da SLIC aber in gewisser Form auch eine "Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt" abdeckt, ist die Vorverarbeitung in diesem Sinne nicht wirklich gegen den intendierten Einsatz von NCuts.
+
+\@ref(fig:ncutsClassic) 
+
+(ref:ncutsClassicSubCap) Beispiel für eine Superpixel-Segmentierung mit NCuts
+
+(ref:ncutsClassicCap) Beispiel für eine Superpixel-Segmentierung mit NCuts mit vorgeschalteter SLIC-Segmentierung. Die Einstellungen wurden
+
+```{r ncutsClassic, echo = F, fig.cap='(ref:ncutsClassicCap)', fig.align='center',out.width=paste0(.96/1,'\\textwidth'), fig.show='hold', fig.scap='(ref:ncutsClassicSubCap)'}
+#knitr::include_graphics(path_to_image)
+```
+
+### 
+
+### Bayesian Optimization and Hyperband
+
+Nicht analytisch lösbare Optimierungsprobleme, insbesondere Hyperparameter-Auswahl, stellen einen zentralen Bestandteil der Data Science dar.

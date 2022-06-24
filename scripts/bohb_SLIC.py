@@ -61,7 +61,7 @@ class MyWorker(Worker):
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.window', lower=1, upper=51))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('sav.poly', lower=1, upper=11))
         config_space.add_hyperparameter(CS.UniformFloatHyperparameter('max_grain_ratio', lower=1, upper=7, q=0.1))
-        config_space.add_hyperparameter(CS.UniformFloatHyperparameter('SLIC.compactness', lower=0.1, upper=0.5, q=0.1))
+        config_space.add_hyperparameter(CS.UniformFloatHyperparameter('SLIC.compactness', lower=0.01, upper=0.3, q=0.01))
         config_space.add_hyperparameter(CS.UniformIntegerHyperparameter('SLIC.n_segments', lower=100, upper=10000, q = 100))
         return(config_space)
 
@@ -71,15 +71,11 @@ class MyWorker(Worker):
         stack = build_prep_stack(config)
         for op in stack:
             self.mod.add_batch_op(op)
-        try:
             self.mod.sample_window(budget)
             self.mod.set_max_ratio(config['max_grain_ratio'])
             self.mod.run_batch()
             self.mod.run_analysis(build_clust_settings(config))
             ks = self.mod.calc_KS_gen()
-        except Exception:
-            print('Bad Settings!')
-            ks = 1.5
 
         return({
                     'loss': float(ks),  # this is the a mandatory field to run hyperband
@@ -96,7 +92,7 @@ if __name__ == '__main__':
         NS.start()
 
         workers=[]
-        for i in range(16):
+        for i in range(64):
             w = MyWorker(image = os.path.join(path, p), nameserver='127.0.0.1',run_id='slic1', id=i)
             w.run(background=True)
             workers.append(w)
@@ -105,7 +101,7 @@ if __name__ == '__main__':
                       run_id = 'slic1', nameserver='127.0.0.1',
                       min_budget=0.45, max_budget=1.0
                    )
-        res = bohb.run(n_iterations=100, min_n_workers=len(workers))
+        res = bohb.run(n_iterations=500, min_n_workers=len(workers))
 
         bohb.shutdown(shutdown_workers=True)
         NS.shutdown()

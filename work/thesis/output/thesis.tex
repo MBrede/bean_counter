@@ -125,7 +125,7 @@
 \makeatother
 \subtitle{Thesis Beschreibung dies das.}
 \author{Max Brede}
-\date{2022-06-05}
+\date{2022-06-23}
 
 \begin{document}
 \maketitle
@@ -369,12 +369,36 @@ In \ref{fig:slicExample} ist ein Beispiel für den ASLIC-Algorithmus mit untersc
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.48\textwidth]{../imgs/slic_5_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_5_500} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_500} \includegraphics[width=0.48\textwidth]{../imgs/geometric} 
+{\centering \includegraphics[width=0.48\textwidth]{../imgs/slic_5_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_5_500} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_250} \includegraphics[width=0.48\textwidth]{../imgs/slic_200_500} 
 
 }
 
-\caption[Beispiel für eine Superpixel-Segmentarisierung mit SLIC.]{Beispiel für eine Superpixel-Segmentarisierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für \emph{m} zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschrieben eingesetzt. Die Basis stellt wieder das Muster dar, das zum Vergleich noch einmal ganz unten dargestellt ist.}\label{fig:slicExample}
+\caption[Beispiel für eine Superpixel-Segmentierung mit SLIC.]{Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für \emph{m} zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschrieben eingesetzt.}\label{fig:slicExample}
 \end{figure}
+
+\hypertarget{normalized-cuts}{%
+\subsection{Normalized Cuts}\label{normalized-cuts}}
+
+Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{Shi \& Malik, 2000}) wird das Bild in einen Graphen übersetzt, bei dem jeder Pixel durch einen Knoten repräsentiert wird. Jeder dieser Knoten wird dann mit jedem anderen Knoten über eine Kante verbunden, die über ein Maß gewichtet wird, das die Wahrscheinlichkeit der ``Zugehörigkeit zu einem Objekt'' (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{Shi \& Malik, 2000}) ausdrückt.
+Im Orginal-Paper wird die Wahrscheinlichkeit durch eine gewichtete Exponential-Funktion mit den Kontrastwerte und den geometrischen Distanzen im Exponenten ausgedrückt. Für beide Werte ist je eine Gewichtung vorgesehen, die angepasst werden kann - außerdem ein maximal zu berücksichtigender Radius für den geometrischen Abstand.
+
+Unabhängig von der genauen Gewichtung der Kanten wird anschließend derjenige Schnitt gesucht, der die geringste Summe an Kantengewichten ``durchtrennt''. Dieser \emph{Normalized Cut} wird so bestimmt, dass die durch den Schnitt getrennten Gruppen möglichst unterschiedlich und die verbleibenden Gruppen in sich möglichst homogen sind. Die Lösung dieses Problem für ein ganzes Bild kann sehr aufwendig sein, weswegen zur Optimierung nur im geometrischen Umfeld der betrachteten Nodes gesucht wird.
+Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls(\protect\hyperlink{ref-NormalizedCutSkimage}{\emph{Normalized {Cut} --- Skimage V0.20.0.Dev0 Docs}, n.d.}) präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens \(N_{Pixel}^2\over{2}\) Einträgen nötig.
+Da SLIC aber in gewisser Form auch eine ``Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt'' abdeckt, ist die Vorverarbeitung in diesem Sinne nicht wirklich gegen den intendierten Einsatz von NCuts.
+
+\ref{fig:ncutsClassic}
+
+
+
+
+
+\hypertarget{section}{%
+\subsection{}\label{section}}
+
+\hypertarget{bayesian-optimization-and-hyperband}{%
+\subsection{Bayesian Optimization and Hyperband}\label{bayesian-optimization-and-hyperband}}
+
+Nicht analytisch lösbare Optimierungsprobleme, insbesondere Hyperparameter-Auswahl, stellen einen zentralen Bestandteil der Data Science dar.
 
 \hypertarget{literatur}{%
 \chapter{Literatur}\label{literatur}}
@@ -441,6 +465,9 @@ Maitre, J., Bouchard, K., \& Bédard, L. P. (2019). Mineral grains recognition u
 \leavevmode\vadjust pre{\hypertarget{ref-MetallographieRostfreiemStahl}{}}%
 \emph{Metallographie von rostfreiem {Stahl}}. (n.d.). Retrieved December 14, 2021, from \url{https://www.struers.com/de-DE/Knowledge/Materials/Stainless-Steel\#etching}
 
+\leavevmode\vadjust pre{\hypertarget{ref-NormalizedCutSkimage}{}}%
+\emph{Normalized {Cut} --- skimage v0.20.0.Dev0 docs}. (n.d.). Retrieved June 23, 2022, from \url{https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_ncut.html?highlight=normalization}
+
 \leavevmode\vadjust pre{\hypertarget{ref-offentlichkeitsarbeitPersonalGeorgAugustUniversitatGottingen}{}}%
 Öffentlichkeitsarbeit, G.-A.-U. G.-. (n.d.-a). \emph{Personal - Georg-August-Universität Göttingen}. Retrieved May 9, 2022, from \url{https://www.uni-goettingen.de/de/652520.html}
 
@@ -452,6 +479,9 @@ Prince, S. J. (2012). Part {IV}: {Preprocessing}. In \emph{Computer vision: Mode
 
 \leavevmode\vadjust pre{\hypertarget{ref-shenRealTimeSuperpixelSegmentation2016}{}}%
 Shen, J., Hao, X., Liang, Z., Liu, Y., Wang, W., \& Shao, L. (2016). Real-{Time Superpixel Segmentation} by {DBSCAN Clustering Algorithm}. \emph{IEEE Transactions on Image Processing}, \emph{25}(12), 5933--5942. \url{https://doi.org/10.1109/TIP.2016.2616302}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shiNormalizedCutsImage2000}{}}%
+Shi, J., \& Malik, J. (2000). Normalized cuts and image segmentation. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, \emph{22}(8), 888--905. \url{https://doi.org/10.1109/34.868688}
 
 \leavevmode\vadjust pre{\hypertarget{ref-StandardTestMethods2021}{}}%
 \emph{Standard {Test Methods} for {Determining Average Grain Size}}. (2021, November 17). \url{https://www.astm.org/e0112-13.html}

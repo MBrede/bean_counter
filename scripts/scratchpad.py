@@ -74,17 +74,100 @@ out = (
 )
 g = graph.rag_mean_color(img, out, mode='similarity', sigma=0.1)
 import networkx as nx
-from matplotlib import pyplot as plt
-def display(g, title):
-    """Displays a graph with the given title."""
-    pos = nx.circular_layout(g)
-    plt.figure()
-    plt.title(title)
-    nx.draw(g, pos)
-    nx.draw_networkx_labels(g, pos)
-    nx.draw_networkx_edge_labels(g, pos, font_size=20)
+# from matplotlib import pyplot as plt
+# import math
+# from tqdm import tqdm
+# import multiprocessing
+import numpy as np
+import pandas as pd
+import cv2
 
-display(g, 'test')
+path = "../work/imgs/geom_small.png"
+img = cv2.imread(path, 0)
+
+df = pd.DataFrame(
+    {
+        "value": img.flatten(),
+        "x": np.tile(range(1, img.shape[1] + 1, 1), img.shape[0]),
+        "y": np.repeat(range(1, img.shape[0] + 1, 1), img.shape[1])
+    }
+)
+df = df.to_numpy()
+
+def mat_dist(df, r, Sx, Si):
+    X = np.array([df.T[1]])
+    X = np.repeat(X, len(df), axis = 0)
+    X = (X - X.T)**2
+    
+    Y = np.array([df.T[2]])
+    Y = np.repeat(Y, len(df), axis = 0)
+    Y = (Y - Y.T)**2
+    
+    Xij = np.sqrt(X + Y)
+    del X,Y
+    
+    F = np.array([df.T[0]])
+    F = np.repeat(F, len(df), axis = 0)
+    F = np.abs(F - F.T)
+    
+    out = np.exp(-F**2/Si) * np.exp(-Xij**2/Sx)
+    out[Xij>r] = 0
+    del F
+    return out
+
+
+g = nx.Graph()
+dists = mat_dist(df,5,4,4)
+for i in range(len(df)):
+    for j in range(len(df)):
+        if i>j:
+            g.add_edge(i, j, weight = dists[i][j])
 
 out = graph.cut_normalized(out, g,thresh=.01, num_cuts=10)
 cv2.imwrite("../work/imgs/ncuts.png",out)
+
+
+
+
+
+
+# path = "../work/imgs/geom_small.png"
+# img = cv2.imread(path, 0)
+
+# df = pd.DataFrame(
+#     {
+#         "value": img.flatten(),
+#         "x": np.tile(range(1, img.shape[1] + 1, 1), img.shape[0]),
+#         "y": np.repeat(range(1, img.shape[0] + 1, 1), img.shape[1])
+#     }
+# )
+# global df
+# global i
+# i = 0
+# df = df.to_numpy()
+
+# def calc_wij(j):
+#     global pars
+#     global df
+#     global i
+#     if i > j:
+#         I = df[i]
+#         J = df[j]
+#         xij = np.sqrt(np.sum((I[1:] - J[1:])**2))
+#         if xij < pars[2]:
+#             wij = math.exp(-math.sqrt((I[0] - J[0])**2)**2/pars[0])
+#             wij = wij * math.exp(-xij**2/pars[1])
+#             return(i,j,wij)
+
+# def calc_edge_weights(df, sI, sX, r):
+#     mat = []
+#     global pars
+#     pars = (sI, sX, r)
+#     pool_obj = multiprocessing.Pool()
+#     global i
+#     for i in tqdm(range(len(df))):
+#         mat += pool_obj.map(calc_wij,range(len(df)))
+#         mat = [m for m in mat if mat]
+#     return(mat)
+
+# calc_edge_weights(df,0.1, 4.0, 5)

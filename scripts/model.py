@@ -214,7 +214,7 @@ class GrainImage:
         try:
             ks = ks_2samp(self.generated_areas['size'], self.existing_areas['size'])[0]
         except (ValueError, KeyError):
-            print(self.generated_areas['size'], self.existing_areas['size'])
+            raise KeyError(self.generated_areas['size'], self.existing_areas['size'])
             ks = 99
         return ks
 
