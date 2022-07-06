@@ -1,0 +1,9 @@
+# Anforderungsanalyse
+
+In enger Abstimmung mit dem Lehrstuhl für Materialphysik der Georg-August-Universität Göttingen wurde eine Reihe von Anforderungen an das Tool aufgestellt. 
+So soll die endgültige Lösung damit sie als Ersatz für das Linienschnitt-Verfahren eingesetzt werden kann, vergleichbare Ergebnisse wie das traditionelle Verfahren liefern. Vergleichbar heißt hier, dass die gefundenen Kornverteilungen in Form und Verteilungsklasse für jedes Bild so gut wie identisch zu den händisch gefundenen sein sollen, der Abstand zwischen den empirischen Verteilungsfunktionen der Korngrößen soll also minimal sein.
+Außerdem wäre wünschenswert, dass die Verarbeitung mit Hilfe des Tools einen deutlichen zeitlichen Vorteil gegenüber der mühsamen händischen Auswertung bedeutet.
+Um das Erreichen dieser Ergebnisse komfortabler zu gestalten, sollen in einer grafischen Oberfläche mindestens die Vorverarbeitungsschritte implementiert werden, die bereits zur Vorbereitung der Linienschnitte genutzt werden. Außerdem sollte zur Überprüfung der Ergebnisgüte eine Möglichkeit dazu bestehen, Ergebnisse händischer Auswertungen zu importieren und mit den mit Unterstützung generierten zu vergleichen.
+Neben diesen Grundfunktionalitäten soll das Programm in der Lage sein, verschiedene Dichtefunktionen an die gefundenen Korngrößen oder Radien anzupassen. Des weiteren ist natürlich erforderlich, dass generierte Ergebnisse und Größen-Verteilungen exportiert werden können.
+
+Das ganze Tool soll dabei in Python implementiert und so einfach erweiterbar wie möglich sein - sollten weitere Algorithmen zur Vorbereitung oder Auswertung hinzukommen, sollte einfach nur eine Funktion hinzugefügt, nicht das ganze Skript angepasst werden müssen. Python ist deswegen die Sprache der Wahl, da sie bereits breit am Lehrstuhl für Materialphysik eingesetzt wird und so eventuelle Erweiterungen erleichtert werden.
