@@ -70,15 +70,6 @@
   publisher = {{Spektrum Akad. Verlag}}
 }
 
-@online{AutoMLBOHBRobust,
-  title = {{{AutoML}} | {{BOHB}}: {{Robust}} and {{Efficient Hyperparameter Optimization}} at {{Scale}}},
-  shorttitle = {{{AutoML}} | {{BOHB}}},
-  url = {https://www.automl.org/blog_bohb/},
-  urldate = {2022-05-16},
-  langid = {english},
-  file = {/home/brede/Zotero/storage/TMA8YYDD/blog_bohb.html}
-}
-
 @article{basuGaussianbasedEdgedetectionMethodsa2002,
   title = {Gaussian-Based Edge-Detection Methods-a Survey},
   author = {Basu, M.},
@@ -93,6 +84,31 @@
   eventtitle = {{{IEEE Transactions}} on {{Systems}}, {{Man}}, and {{Cybernetics}}, {{Part C}} ({{Applications}} and {{Reviews}})},
   keywords = {Computer vision,Detectors,Filters,Gaussian processes,Image edge detection,Image processing,Layout,Object recognition,Smoothing methods},
   file = {/home/brede/Zotero/storage/3DGBR6W9/Basu - 2002 - Gaussian-based edge-detection methods-a survey.pdf;/home/brede/Zotero/storage/CXCHD73Y/1097737.html}
+}
+
+@inproceedings{bergstraAlgorithmsHyperParameterOptimization2011,
+  title = {Algorithms for {{Hyper-Parameter Optimization}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Bergstra, James and Bardenet, Rémi and Bengio, Yoshua and Kégl, Balázs},
+  date = {2011},
+  volume = {24},
+  publisher = {{Curran Associates, Inc.}},
+  url = {https://proceedings.neurips.cc/paper/2011/hash/86e8f7ab32cfd12577bc2619bc635690-Abstract.html},
+  urldate = {2022-06-28},
+  abstract = {Several recent advances to the state of the art in image classification benchmarks have come from better configurations of existing techniques rather than novel approaches to feature learning. Traditionally, hyper-parameter optimization has been the job of humans because they can be very efficient in regimes where only a few trials are possible. Presently, computer clusters and GPU processors make it possible to run more trials and we show that algorithmic approaches can find better results. We present hyper-parameter optimization results on tasks of training neural networks and deep belief networks (DBNs). We optimize hyper-parameters using random search and two new greedy sequential methods based on the expected improvement criterion. Random search has been shown to be sufficiently efficient for learning neural networks for several datasets, but we show it is unreliable for training DBNs. The sequential algorithms are applied to the most difficult DBN learning problems from [Larochelle et al., 2007] and find significantly better results than the best previously reported. This work contributes novel techniques for making response surface models P (y|x) in which many elements of hyper-parameter assignment (x) are known to be irrelevant given particular values of other elements.},
+  file = {/home/brede/Zotero/storage/HUY3JGV2/Bergstra et al. - 2011 - Algorithms for Hyper-Parameter Optimization.pdf}
+}
+
+@online{biedenkappAutoMLBOHBRobust2018,
+  title = {{{AutoML}} | {{BOHB}}: {{Robust}} and {{Efficient Hyperparameter Optimization}} at {{Scale}}},
+  shorttitle = {{{AutoML}} | {{BOHB}}},
+  author = {Biedenkapp, André and Hutter, Frank},
+  date = {2018-07-26},
+  url = {https://www.automl.org/blog_bohb/},
+  urldate = {2022-05-16},
+  langid = {english},
+  organization = {{AutoML.org}},
+  file = {/home/brede/Zotero/storage/TMA8YYDD/blog_bohb.html}
 }
 
 @article{buadesNonLocalMeansDenoising2011,
@@ -194,6 +210,7 @@
   urldate = {2022-06-24},
   abstract = {To achieve peak predictive performance, hyperparameter optimization (HPO) is a crucial component of machine learning and its applications. Over the last years, the number of efficient algorithms and tools for HPO grew substantially. At the same time, the community is still lacking realistic, diverse, computationally cheap, and standardized benchmarks. This is especially the case for multi-fidelity HPO methods. To close this gap, we propose HPOBench, which includes 7 existing and 5 new benchmark families, with a total of more than 100 multi-fidelity benchmark problems. HPOBench allows to run this extendable set of multi-fidelity HPO benchmarks in a reproducible way by isolating and packaging the individual benchmarks in containers. It also provides surrogate and tabular benchmarks for computationally affordable yet statistically sound evaluations. To demonstrate HPOBench's broad compatibility with various optimization tools, as well as its usefulness, we conduct an exemplary large-scale study evaluating 13 optimizers from 6 optimization tools. We provide HPOBench here: https://github.com/automl/HPOBench.},
   archiveprefix = {arXiv},
+  langid = {english},
   keywords = {Computer Science - Machine Learning},
   file = {/home/brede/Zotero/storage/4EWCM7QL/Eggensperger et al. - 2021 - HPOBench A Collection of Reproducible Multi-Fidel.pdf;/home/brede/Zotero/storage/3JX7V5GS/2109.html}
 }
@@ -209,6 +226,25 @@
   location = {{San Francisco, CA, USA}},
   isbn = {978-1-55860-566-4},
   file = {/home/brede/MEGA/Library/paper/VLDB-98-IncDBSCAN.pdf}
+}
+
+@misc{falknerBOHBRobustEfficient2018,
+  title = {{{BOHB}}: {{Robust}} and {{Efficient Hyperparameter Optimization}} at {{Scale}}},
+  shorttitle = {{{BOHB}}},
+  author = {Falkner, Stefan and Klein, Aaron and Hutter, Frank},
+  date = {2018-07-04},
+  number = {arXiv:1807.01774},
+  eprint = {1807.01774},
+  eprinttype = {arxiv},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1807.01774},
+  url = {http://arxiv.org/abs/1807.01774},
+  urldate = {2022-06-28},
+  abstract = {Modern deep learning methods are very sensitive to many hyperparameters, and, due to the long training times of state-of-the-art models, vanilla Bayesian hyperparameter optimization is typically computationally infeasible. On the other hand, bandit-based configuration evaluation approaches based on random search lack guidance and do not converge to the best configurations as quickly. Here, we propose to combine the benefits of both Bayesian optimization and bandit-based methods, in order to achieve the best of both worlds: strong anytime performance and fast convergence to optimal configurations. We propose a new practical state-of-the-art hyperparameter optimization method, which consistently outperforms both Bayesian optimization and Hyperband on a wide range of problem types, including high-dimensional toy functions, support vector machines, feed-forward neural networks, Bayesian neural networks, deep reinforcement learning, and convolutional neural networks. Our method is robust and versatile, while at the same time being conceptually simple and easy to implement.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/brede/Zotero/storage/V5XXIYB3/Falkner et al. - 2018 - BOHB Robust and Efficient Hyperparameter Optimiza.pdf;/home/brede/Zotero/storage/8PI7HXNC/1807.html}
 }
 
 @inreference{GefugeWerkstoffkunde2021,
@@ -298,6 +334,17 @@
   file = {/home/brede/Zotero/storage/QNGMS4TA/s11661-020-06008-4.html}
 }
 
+@software{HpBandSter2022,
+  title = {{{HpBandSter}}},
+  date = {2022-06-20T17:45:18Z},
+  origdate = {2017-12-17T20:28:20Z},
+  url = {https://github.com/automl/HpBandSter},
+  urldate = {2022-07-04},
+  abstract = {a distributed Hyperband implementation on Steroids},
+  organization = {{AutoML-Freiburg-Hannover}},
+  keywords = {automated-machine-learning,automl,bayesian-optimization,hyperparameter-optimization,neural-architecture-search}
+}
+
 @article{kimUnsupervisedMicrostructureSegmentation2020,
   title = {Unsupervised Microstructure Segmentation by Mimicking Metallurgists’ Approach to Pattern Recognition},
   author = {Kim, Hoheok and Inoue, Junya and Kasuya, Tadashi},
@@ -351,6 +398,16 @@
   file = {/home/brede/Zotero/storage/VE5436KW/Latif et al. - 2022 - Deep-Learning-Based Automatic Mineral Grain Segmen.pdf;/home/brede/Zotero/storage/XZZSK6VL/455.html}
 }
 
+@inproceedings{liHyperbandBanditbasedConfiguration2017,
+  title = {Hyperband: {{Bandit-based}} Configuration Evaluation for Hyperparameter Optimization},
+  shorttitle = {Hyperband},
+  booktitle = {{{ICLR}} ({{Poster}})},
+  author = {Li, Lisha and Jamieson, Kevin G. and DeSalvo, Giulia and Rostamizadeh, Afshin and Talwalkar, Ameet},
+  date = {2017},
+  langid = {english},
+  file = {/home/brede/Zotero/storage/YKWY3A83/forum.html}
+}
+
 @inproceedings{liMetallographicImageSegmentation2020,
   title = {Metallographic {{Image Segmentation Method Based}} on {{Superpixels Algorithm}} and {{Transfer Learning}}},
   booktitle = {2020 {{Chinese Control And Decision Conference}} ({{CCDC}})},
@@ -390,10 +447,22 @@
   file = {/home/brede/Zotero/storage/5TPWYKT5/Maitre et al. - 2019 - Mineral grains recognition using computer vision a.pdf;/home/brede/Zotero/storage/U69UYL9D/S0098300419301037.html}
 }
 
+@software{MatplotlibMatplotlib2022,
+  title = {Matplotlib/Matplotlib},
+  date = {2022-07-03T12:31:08Z},
+  origdate = {2011-02-19T03:17:12Z},
+  url = {https://github.com/matplotlib/matplotlib},
+  urldate = {2022-07-03},
+  abstract = {matplotlib: plotting with Python},
+  organization = {{Matplotlib Developers}},
+  keywords = {data-science,data-visualization,gtk,hacktoberfest,matplotlib,plotting,python,qt,tk,wx}
+}
+
 @online{MetallographieRostfreiemStahl,
-  title = {Metallographie von Rostfreiem {{Stahl}}},
+  title = {Metallographie von rostfreiem Stahl},
   url = {https://www.struers.com/de-DE/Knowledge/Materials/Stainless-Steel#etching},
   urldate = {2021-12-14},
+  langid = {german},
   file = {/home/brede/Zotero/storage/7VXWV587/Stainless-Steel.html}
 }
 
@@ -419,6 +488,7 @@
   title = {Normalized {{Cut}} — Skimage v0.20.0.Dev0 Docs},
   url = {https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_ncut.html?highlight=normalization},
   urldate = {2022-06-23},
+  langid = {english},
   file = {/home/brede/Zotero/storage/PL6T2RSN/plot_ncut.html}
 }
 
@@ -440,6 +510,28 @@
   abstract = {Webseiten der Georg-August-Universität Göttingen},
   langid = {german},
   file = {/home/brede/Zotero/storage/DKVFVINQ/626487.html}
+}
+
+@software{OpencvpythonWrapperPackage,
+  title = {Opencv-Python: {{Wrapper}} Package for {{OpenCV}} Python Bindings.},
+  shorttitle = {Opencv-Python},
+  url = {https://github.com/skvark/opencv-python},
+  urldate = {2022-07-01},
+  version = {4.6.0.66},
+  keywords = {Scientific/Engineering,Scientific/Engineering - Image Recognition,Software Development},
+  file = {/home/brede/Zotero/storage/E3KU3ZAZ/opencv-python.html}
+}
+
+@software{PandasPowerfulPython2022,
+  title = {Pandas: Powerful {{Python}} Data Analysis Toolkit},
+  shorttitle = {Pandas},
+  date = {2022-07-03T14:52:06Z},
+  origdate = {2010-08-24T01:37:33Z},
+  url = {https://github.com/pandas-dev/pandas},
+  urldate = {2022-07-03},
+  abstract = {Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more},
+  organization = {{pandas}},
+  keywords = {alignment,data-analysis,flexible,pandas,python}
 }
 
 @article{podorSEraMicSemiautomaticMethod2021,
@@ -480,6 +572,38 @@
   publisher = {{Cambridge University Press}}
 }
 
+@software{pysimpleguiPySimpleGUIPythonGUIs,
+  title = {{{PySimpleGUI}}: {{Python GUIs}} for {{Humans}}. {{Launched}} in 2018. {{It}}'s 2022 \& {{PySimpleGUI}} Is an {{ACTIVE}} \& Supported Project. {{Super-simple}} to Create Custom {{GUI}}'s. 325+ {{Demo}} Programs \& {{Cookbook}} for Rapid Start. {{Extensive}} Documentation. {{Main}} Docs at Www.{{PySimpleGUI}}.Org. {{Fun}} \& Your Success Are the Focus. {{Examples}} Using {{Machine Learning}} ({{GUI}}, {{OpenCV Integration}}), {{Rainmeter Style Desktop Widgets}}, {{Matplotlib}} + {{Pyplot}}, {{PIL}} Support, Add {{GUI}} to Command Line Scripts, {{PDF}} \& {{Image Viewers}}. {{Great}} for Beginners \& Advanced {{GUI}} Programmers.},
+  shorttitle = {{{PySimpleGUI}}},
+  author = {PySimpleGUI},
+  url = {https://github.com/PySimpleGUI/PySimpleGUI},
+  urldate = {2022-07-02},
+  version = {4.60.1},
+  keywords = {beginner;,easy;,graphics;,GUI;,Multimedia - Graphics,novice;,progressbar;,progressmeter,Qt;,Remi;,simple;,student;,tkinter;,UI;,wrapper;,WxPython;},
+  file = {/home/brede/Zotero/storage/YAINTAXU/PySimpleGUI.html}
+}
+
+@article{rodriguezClusteringAlgorithmsComparative2019a,
+  title = {Clustering Algorithms: {{A}} Comparative Approach},
+  shorttitle = {Clustering Algorithms},
+  author = {Rodriguez, Mayra Z. and Comin, Cesar H. and Casanova, Dalcimar and Bruno, Odemir M. and Amancio, Diego R. and Costa, Luciano da F. and Rodrigues, Francisco A.},
+  date = {2019-01-15},
+  journaltitle = {PLOS ONE},
+  shortjournal = {PLOS ONE},
+  volume = {14},
+  number = {1},
+  pages = {e0210236},
+  publisher = {{Public Library of Science}},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0210236},
+  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210236},
+  urldate = {2020-11-12},
+  abstract = {Many real-world systems can be studied in terms of pattern recognition tasks, so that proper use (and understanding) of machine learning methods in practical applications becomes essential. While many classification methods have been proposed, there is no consensus on which methods are more suitable for a given dataset. As a consequence, it is important to comprehensively compare methods in many possible scenarios. In this context, we performed a systematic comparison of 9 well-known clustering methods available in the R language assuming normally distributed data. In order to account for the many possible variations of data, we considered artificial datasets with several tunable properties (number of classes, separation between classes, etc). In addition, we also evaluated the sensitivity of the clustering methods with regard to their parameters configuration. The results revealed that, when considering the default configurations of the adopted methods, the spectral approach tended to present particularly good performance. We also found that the default configuration of the adopted implementations was not always accurate. In these cases, a simple approach based on random selection of parameters values proved to be a good alternative to improve the performance. All in all, the reported approach provides subsidies guiding the choice of clustering algorithms.},
+  langid = {english},
+  keywords = {Algorithms,Clustering algorithms,Covariance,Hierarchical clustering,Language,Machine learning algorithms,Normal distribution,Optimization},
+  file = {/home/brede/Zotero/storage/7ZIWM2PW/Rodriguez et al. - 2019 - Clustering algorithms A comparative approach.pdf;/home/brede/Zotero/storage/6KBVUCM2/article.html}
+}
+
 @inproceedings{roelsSuperpixelQualityMicroscopy2016,
   title = {Superpixel {{Quality}} in {{Microscopy Images}}: {{The Impact}} of {{Noise}} \& {{Denoising}}},
   shorttitle = {Superpixel {{Quality}} in {{Microscopy Images}}},
@@ -499,6 +623,40 @@
   file = {/home/brede/Zotero/storage/NWM4MSZI/Roels et al. - 2016 - Superpixel Quality in Microscopy Images The Impac.pdf}
 }
 
+@software{ScikitimageImageProcessing2022,
+  title = {Scikit-Image: {{Image}} Processing in {{Python}}},
+  shorttitle = {Scikit-Image},
+  date = {2022-07-02T21:23:41Z},
+  origdate = {2011-07-07T22:07:20Z},
+  url = {https://github.com/scikit-image/scikit-image},
+  urldate = {2022-07-03},
+  abstract = {Image processing in Python},
+  organization = {{Image Processing Toolbox for SciPy}},
+  keywords = {computer-vision,hacktoberfest,image-processing,python}
+}
+
+@software{ScikitlearnScikitlearn2022,
+  title = {Scikit-Learn/Scikit-Learn},
+  date = {2022-07-03T14:30:23Z},
+  origdate = {2010-08-17T09:43:38Z},
+  url = {https://github.com/scikit-learn/scikit-learn},
+  urldate = {2022-07-03},
+  abstract = {scikit-learn: machine learning in Python},
+  organization = {{scikit-learn}},
+  keywords = {data-analysis,data-science,machine-learning,python,statistics}
+}
+
+@software{ScipyScipy2022,
+  title = {Scipy/Scipy},
+  date = {2022-07-03T09:48:06Z},
+  origdate = {2011-03-09T18:52:03Z},
+  url = {https://github.com/scipy/scipy},
+  urldate = {2022-07-03},
+  abstract = {SciPy library main repository},
+  organization = {{SciPy}},
+  keywords = {algorithms,closember,python,scientific-computing,scipy}
+}
+
 @article{shenRealTimeSuperpixelSegmentation2016,
   title = {Real-{{Time Superpixel Segmentation}} by {{DBSCAN Clustering Algorithm}}},
   author = {Shen, Jianbing and Hao, Xiaopeng and Liang, Zhiyuan and Liu, Yu and Wang, Wenguan and Shao, Ling},
@@ -511,6 +669,7 @@
   doi = {10.1109/TIP.2016.2616302},
   abstract = {In this paper, we propose a real-time image superpixel segmentation method with 50 frames/s by using the density-based spatial clustering of applications with noise (DBSCAN) algorithm. In order to decrease the computational costs of superpixel algorithms, we adopt a fast two-step framework. In the first clustering stage, the DBSCAN algorithm with color-similarity and geometric restrictions is used to rapidly cluster the pixels, and then, small clusters are merged into superpixels by their neighborhood through a distance measurement defined by color and spatial features in the second merging stage. A robust and simple distance function is defined for obtaining better superpixels in these two steps. The experimental results demonstrate that our real-time superpixel algorithm (50 frames/s) by the DBSCAN clustering outperforms the state-of-the-art superpixel segmentation methods in terms of both accuracy and efficiency.},
   eventtitle = {{{IEEE Transactions}} on {{Image Processing}}},
+  langid = {english},
   keywords = {Clustering algorithms,Computational efficiency,DBSCAN,Image color analysis,Image segmentation,Optimization,Real-time,Real-time systems,segmentation,Shape,superpixel},
   file = {/home/brede/Zotero/storage/4PFE5AZ8/Shen et al. - 2016 - Real-Time Superpixel Segmentation by DBSCAN Cluste.pdf;/home/brede/Zotero/storage/LDWVBJQQ/7588062.html}
 }
@@ -519,6 +678,7 @@
   title = {Shi: {{Normalized}} Cuts and Image Segmentation - {{Google Scholar}}},
   url = {https://scholar.google.com/scholar_lookup?title=Normalized%20cuts%20and%20image%20segmentation&author=J.%20Shi&publication_year=2000&pages=888-905},
   urldate = {2022-05-22},
+  langid = {english},
   file = {/home/brede/Zotero/storage/JWLAH9DQ/scholar_lookup.html}
 }
 
@@ -538,6 +698,16 @@
   file = {/home/brede/Zotero/storage/CUA9XZT5/Shi and Malik - 2000 - Normalized cuts and image segmentation.pdf;/home/brede/Zotero/storage/A4DN87XA/868688.html}
 }
 
+@article{snoekPracticalBayesianOptimization2012,
+  title = {Practical Bayesian Optimization of Machine Learning Algorithms},
+  author = {Snoek, Jasper and Larochelle, Hugo and Adams, Ryan P.},
+  date = {2012},
+  journaltitle = {Advances in neural information processing systems},
+  volume = {25},
+  langid = {english},
+  file = {/home/brede/Zotero/storage/HXQ7V4I3/Snoek et al. - 2012 - Practical bayesian optimization of machine learnin.pdf;/home/brede/Zotero/storage/7GLFZCQ4/05311655a15b75fab86956663e1819cd-Abstract.html}
+}
+
 @online{StandardTestMethods2021,
   title = {Standard {{Test Methods}} for {{Determining Average Grain Size}}},
   date = {2021-11-17},
@@ -546,6 +716,24 @@
   abstract = {4.1 These test methods cover procedures for estimating and rules for expressing the average grain size of all metals consisting entirely, or principally, of a single phase. The grain size of specimens with two phases, or a phase and a constituent, can be},
   langid = {english},
   file = {/home/brede/Zotero/storage/E2KM4SF7/e0112-13.html}
+}
+
+@article{stephensEDFStatisticsGoodness1974,
+  title = {{{EDF Statistics}} for {{Goodness}} of {{Fit}} and {{Some Comparisons}}},
+  author = {Stephens, M. A.},
+  date = {1974-09-01},
+  journaltitle = {Journal of the American Statistical Association},
+  volume = {69},
+  number = {347},
+  pages = {730--737},
+  publisher = {{Taylor \& Francis}},
+  issn = {0162-1459},
+  doi = {10.1080/01621459.1974.10480196},
+  url = {https://www.tandfonline.com/doi/abs/10.1080/01621459.1974.10480196},
+  urldate = {2022-06-28},
+  abstract = {This article offers a practical guide to goodness-of-fit tests using statistics based on the empirical distribution function (EDF). Five of the leading statistics are examined—those often labelled D, W 2, V, U 2, A 2—and three important situations: where the hypothesized distribution F(x) is completely specified and where F(x) represents the normal or exponential distribution with one or more parameters to be estimated from the data. EDF statistics are easily calculated, and the tests require only one line of significance points for each situation. They are also shown to be competitive in terms of power.},
+  annotation = {\_eprint: https://www.tandfonline.com/doi/pdf/10.1080/01621459.1974.10480196},
+  file = {/home/brede/Zotero/storage/L9NDJEGI/01621459.1974.html}
 }
 
 @article{stutzSuperpixelsEvaluationStateoftheart2018,

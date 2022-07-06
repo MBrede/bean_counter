@@ -125,7 +125,7 @@
 \makeatother
 \subtitle{Thesis Beschreibung dies das.}
 \author{Max Brede}
-\date{2022-06-23}
+\date{2022-07-03}
 
 \begin{document}
 \maketitle
@@ -164,7 +164,7 @@ Die Charakterisierung dieser Mikrostruktur ist die Aufgabe des Ausbildungsberufs
 
 }
 
-\caption[Lichtmikroskopische Aufnahme von Austenitischem Stahl.]{Lichtmikroskopische Aufnahme von poliertem und geätztem Austenitischem Stahl, Bild von \emph{Metallographie von Rostfreiem {Stahl}} (\protect\hyperlink{ref-MetallographieRostfreiemStahl}{n.d.}).}\label{fig:baseGrain}
+\caption[Lichtmikroskopische Aufnahme von Austenitischem Stahl.]{Lichtmikroskopische Aufnahme von poliertem und geätztem Austenitischem Stahl, Bild von \emph{Metallographie von rostfreiem Stahl} (\protect\hyperlink{ref-MetallographieRostfreiemStahl}{n.d.}).}\label{fig:baseGrain}
 \end{figure}
 
 Um diese Aufnahmen der Schnittbilder zu nutzen, um zu einer quantitativen Beschreibung des Materials zu kommen, wurde traditionell und auch mitunter bis heute eins der vielen ``Linienschnittverfahren'' eingesetzt, wie es zum Beispiel bei Heyn (\protect\hyperlink{ref-heynShortReportsMetallurgical1903}{1903}) beschrieben und als Richtlinienverfahren von der Standardisierungsorganisation ASTM international empfohlen wird (\protect\hyperlink{ref-StandardTestMethods2021}{\emph{Standard {Test Methods} for {Determining Average Grain Size}}, 2021}).
@@ -228,7 +228,7 @@ Der Nutzen des Tools wird im vorletzten Kapitel evaluiert, wonach Abschließend 
 \chapter{Grundlagen}\label{grundlagen}}
 
 Dieses Kapitel beschäftigt sich zuerst mit den zur Bildvorbereitung betrachteten und verwendeten Algorithmen. Darauf folgt eine Beschreibung der getesteten Ansätze zur Flächen-Gruppierung um dann dazu überzugehen, die Implementation des Körner-Tools zu beschreiben.
-Im Anschluss werden die verwendeten Ansätze zur Stapelverarbeitung der Bilder beschrieben.
+Im Anschluss werden die notwendigen Ansätze zur Extraktion der Kornstrukturen und ihrer Automatisierung erklärt.
 
 \hypertarget{bildvorverarbeitung}{%
 \section{Bildvorverarbeitung}\label{bildvorverarbeitung}}
@@ -322,11 +322,10 @@ In Abb. \ref{fig:savgol} ist der Effekt des eines horizontalen und vertikalen Sa
 \caption[Beispielhafte Darstellung eines Savitzky-Golay-Filters.]{Beispielhafte Darstellung eines Savitzky-Golay-Filters. Links ist das Bild vor, rechts nach der Glättung der Helligkeitsverteilung zu sehen. Unten sind die Helligkeitsverteilungen abgebildet.}\label{fig:savgol}
 \end{figure}
 
-\hypertarget{bild-auswertung}{%
-\section{Bild-Auswertung}\label{bild-auswertung}}
+\hypertarget{extraktion-der-kornstrukturen}{%
+\section{Extraktion der Kornstrukturen}\label{extraktion-der-kornstrukturen}}
 
-Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung der Kornflächen.
-Für einen Überblick über Methoden zur Erkennung von Superpixeln und mögliche Architekturen zur Vermessung von Kornbildern.
+Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung und Extraktion der Kornflächen.
 
 \hypertarget{dbscan}{%
 \subsection{DBSCAN}\label{dbscan}}
@@ -356,7 +355,7 @@ In Abb. \ref{fig:dbscanExample} ist der Einfluss verschieden großer Radien und 
 \subsection{SLIC}\label{slic}}
 
 Beim als Superpixel-Segmentierungsansatz weit verbreiteten Simple Linear Iterative Clustering (SLIC) (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{Achanta et al., 2012}) wird ein k-Means basiertes Verfahren genutzt, um näherungsweise gleich große Superpixel im Bild zu detektieren.
-Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) die räumliche Distanz gewichtet, wodurch mit hohen Werten des Hyperparameters \emph{m} die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
+Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) die räumliche Distanz gewichtet, wodurch mit hohen Werten des Parameters \emph{m} die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
 
 Der weitere Algorithmus ist im Prinzip der des normalen k-Means Clustering, das heißt Cluster-Kerne werden definiert (bei SLIC in regelmäßigen Abständen), Pixel werden den nächsten Clustern zugeordnet und die Zentroide dann auf die Zentroide der neuen Cluster verschoben.
 Im Gegensatz zum regulären k-Means wird bei SLIC aber nicht im gesamten Datenraum nach möglichen Cluster-Angehörigen gesucht, sondern nur im doppelten Suchraum der vorgegebenen Clustergröße.
@@ -373,7 +372,7 @@ In \ref{fig:slicExample} ist ein Beispiel für den ASLIC-Algorithmus mit untersc
 
 }
 
-\caption[Beispiel für eine Superpixel-Segmentierung mit SLIC.]{Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für \emph{m} zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschrieben eingesetzt.}\label{fig:slicExample}
+\caption[Beispiel für eine Superpixel-Segmentierung mit SLIC.]{Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .05, unten mit 2 als Wert für \emph{m} zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei Achanta et al. (\protect\hyperlink{ref-achantaSLICSuperpixelsCompared2012}{2012}) beschrieben eingesetzt.}\label{fig:slicExample}
 \end{figure}
 
 \hypertarget{normalized-cuts}{%
@@ -383,22 +382,218 @@ Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln (\protect\hyperlin
 Im Orginal-Paper wird die Wahrscheinlichkeit durch eine gewichtete Exponential-Funktion mit den Kontrastwerte und den geometrischen Distanzen im Exponenten ausgedrückt. Für beide Werte ist je eine Gewichtung vorgesehen, die angepasst werden kann - außerdem ein maximal zu berücksichtigender Radius für den geometrischen Abstand.
 
 Unabhängig von der genauen Gewichtung der Kanten wird anschließend derjenige Schnitt gesucht, der die geringste Summe an Kantengewichten ``durchtrennt''. Dieser \emph{Normalized Cut} wird so bestimmt, dass die durch den Schnitt getrennten Gruppen möglichst unterschiedlich und die verbleibenden Gruppen in sich möglichst homogen sind. Die Lösung dieses Problem für ein ganzes Bild kann sehr aufwendig sein, weswegen zur Optimierung nur im geometrischen Umfeld der betrachteten Nodes gesucht wird.
-Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls(\protect\hyperlink{ref-NormalizedCutSkimage}{\emph{Normalized {Cut} --- Skimage V0.20.0.Dev0 Docs}, n.d.}) präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens \(N_{Pixel}^2\over{2}\) Einträgen nötig.
-Da SLIC aber in gewisser Form auch eine ``Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt'' abdeckt, ist die Vorverarbeitung in diesem Sinne nicht wirklich gegen den intendierten Einsatz von NCuts.
+Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls(\protect\hyperlink{ref-NormalizedCutSkimage}{\emph{Normalized {Cut} --- Skimage V0.20.0.Dev0 Docs}, n.d.}) präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von Shi \& Malik (\protect\hyperlink{ref-shiNormalizedCutsImage2000}{2000}) präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens \(\frac{N_{Pixel}^2}{2}\) Einträgen nötig.
+Da SLIC aber in gewisser Form auch eine ``Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt'' abdeckt und besonders bei großen Bildern die Findung einer Lösung für den optimalen Schnitt aufwendig wird, ist die Vorverarbeitung in diesem Sinne eine sinnvolle Optimierungs-Option.
+Bei der Findung der optimalen Lösung können eine Reihe von Einstellungen gesetzt werden. Neben den Einstellung für die SLIC-Vorsegmentierung kann die Anzahl der gesuchten Schnitte, die maximale Distanz zwischen zwei Farben um als ähnlich erkannt zu werden und zuletzt der minimale Wert , den ein Schnitt haben darf um durchgeführt zu werden.
 
-\ref{fig:ncutsClassic}
-
-
-
+In Abb. \ref{fig:ncutsClassic} sind Beispiele für NCuts-Anwendungen mit unterschiedlichen Einstellungen zu sehen.
 
 
-\hypertarget{section}{%
-\subsection{}\label{section}}
 
-\hypertarget{bayesian-optimization-and-hyperband}{%
-\subsection{Bayesian Optimization and Hyperband}\label{bayesian-optimization-and-hyperband}}
 
-Nicht analytisch lösbare Optimierungsprobleme, insbesondere Hyperparameter-Auswahl, stellen einen zentralen Bestandteil der Data Science dar.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.48\textwidth]{../imgs/ncuts_5_2000_1.0_10_20} \includegraphics[width=0.48\textwidth]{../imgs/ncuts_5_2000_1.0_100_100} \includegraphics[width=0.48\textwidth]{../imgs/ncuts_5_2000_500.0_10_100} \includegraphics[width=0.48\textwidth]{../imgs/ncuts_5_2000_500.0_100_20} 
+
+}
+
+\caption[Beispiel für eine Superpixel-Segmentierung mit NCuts]{Beispiel für eine Superpixel-Segmentierung mit NCuts mit vorgeschalteter SLIC-Segmentierung. Die SLIC-Segmentierung wurde mit .05 als geometrisches Gewicht und 2000 Start-Clustern durchgeführt. In der oberen Zeile wurde der minimale Schnittwert auf .001, in der unteren Zeile auf .5 gesetzt. Die linken Bilder wurden mit 10, die rechten mit 100 Schnitten geteilt. Zusätzlich sind die Bilder links oben und recht oben mit einer maximalen Farbdistanz von 20, die anderen beiden mit je 100 erstellt.}\label{fig:ncutsClassic}
+\end{figure}
+
+\hypertarget{hyperband-und-bayesianische-optimierung}{%
+\subsection{Hyperband und Bayesianische Optimierung}\label{hyperband-und-bayesianische-optimierung}}
+
+Die Performance von Verfahren des maschinellen Lernens, zu denen auch Cluster-Verfahren wie DBSCAN und k-Means zählen, ist stark abhängig von der Wahl der richtigen Einstellungen des Verfahrens (z.B. \protect\hyperlink{ref-snoekPracticalBayesianOptimization2012}{Snoek et al., 2012}). Rodriguez et al. (\protect\hyperlink{ref-rodriguezClusteringAlgorithmsComparative2019a}{2019}) konnten zum Beispiel zeigen, dass die zufällige Auswahl von Einstellungen in einer besseren Performance bei ihrem Test gängiger Clusterverfahren resultierte, als die Verfahren mit ihren Grundeinstellungen anzuwenden.
+Die zufällige Auswahl dieser auch \emph{Hyperparameter} genannter Einstellungen ist ein gängiges, auch \emph{random search} genanntes Verfahren zum Tuning, also der Verbesserung der Performance von Anwendungen im Deep Learning. Hier ist die Auswahl geeigneter Einstellungen für das Modell insbesondere wichtig aber auch zeitaufwändig, da die möglichen Stellschrauben für ein genügend komplexes Modell so viele mögliche Kombinationen bieten können, dass die geeignete Wahl an Parametern \emph{``more of an art than a science.''} ist , wie Bergstra et al. (\protect\hyperlink{ref-bergstraAlgorithmsHyperParameterOptimization2011}{2011}) schreiben. Das Problem wird zusätzlich erschwert, da Hyperparameter-Optimierungen in den meisten Fällen Black-Box Optimierungen sind, in denen keine verlässliche Annahmen über die Form und Art der Zielfunktion (zum Beispiel in Form eines Gütemaßes der Modellvorhersage) getroffen werden kann, außer durch die systematische Eingabe und Aufzeichnung der Ausgabe ausgewählter Hyperparameter. Neben dem Random Search, sind in diesem Forschungsbereich auch eine Reihe von wesentlich effizienteren Algorithmen zur Auswahl von Modell-Einstellungen publiziert worden (\protect\hyperlink{ref-eggenspergerHPOBenchCollectionReproducible2021}{Eggensperger et al., 2021} für eine erste Übersicht).
+Ein Beispiel für eine solche Vorgehensweise zum Optimieren der Modelleinstellungen mit dem Ziel, die optimale Vorhersage zu treffen, ist die von Falkner et al. (\protect\hyperlink{ref-falknerBOHBRobustEfficient2018}{2018}) vorgeschlagene \emph{Bayesian Optimization and Hyperband} (BOHB)-Methode, die als Kombination von Hyperband- und Bayesianischen Hyperparameter-Optimierungslösungen eine effizientere Optimierungs-Alternative zur Random Search darstellt. Diese Methode hat im Gegenteil zur komplett Zwischen-Ergebnis-agnostischen Black Box-Methode Random Search unter anderem den großen Vorteil, dass Zwischenergebnisse genutzt und damit die Optimierungszeit mit gesteigerter Effizienz gesenkt werden kann.
+
+BOHB arbeitet dabei mit einer Kombination eines Tree-structured Parzen Estimators (\protect\hyperlink{ref-bergstraAlgorithmsHyperParameterOptimization2011}{Bergstra et al., 2011}) und eines durch dieses Bayesianische Schätzverfahren informierten Hyperband-Verfahrens (\protect\hyperlink{ref-liHyperbandBanditbasedConfiguration2017}{Li et al., 2017}). Beim Tree-structured Parzen Estimators (TPE) wird der Parameter-Raum als Entscheidungsbaum formalisiert. Aus diesem Baum werden dann die Äste ausgewählt, für die ein möglichst minimaler Wert der Zielfunktion mit dem nicht-parametrischen Parzen-Fenster-Kerndichteschätzer vorhergesagt wird. Die so ausgewählte Parameter-Kombination wird genutzt um das Modell zu trainieren und die Performance des Ergebnisses genutzt, um die Dichteschätzung zu aktualisieren.
+An dem Punkt des nötigen Modelltrainings zur Aktualisierung der Performance-Prognose setzt der Hyperband-Teil des BOHB-Verfahrens an. Statt für jede zu testende Parameterkombination das ganze Modell zu trainieren, führen Li et al. (\protect\hyperlink{ref-liHyperbandBanditbasedConfiguration2017}{2017}) ein Budget als weiteren Parameter ein. Dieses Budget ist so definiert, dass geringere Werte zu einem Modell führen, dass zeitlich und computational weniger aufwendig ist, dabei aber eine Idee für die Performance eines Modells auf Basis dieser Werte gibt. Bei Modellen aus dem Deep Learning kann das Budget zum Beispiel als die Anzahl der Trainingsepochen operationalisiert werden, bei Cluster-Algorithmen zum Beispiel als eine Beschränkung der jeweils zur Distanzberechnung genutzten Datenpunkte. Beim Hyperband-Verfahren wird also auf niedrigem Budget zuerst eine Reihe an schnellen, ``nicht vollständigen'' Tests durchgeführt, deren Settings im Original zufällig ausgewählt wurden. Die Settings der besten \emph{n} dieser Tests wird im folgenden genutzt, um eine Reihe höher budgetierter Tests durchzuführen. Diese fortschreitende Verkleinerung des Suchraums auf größerem Budget wird fortgeführt, bis eine kleine Anzahl von Modellen bei vollem Budget mit den vielversprechendsten Parametern getestet wird.
+Im Gegensatz zum Original nutzt nun BOHB nicht Zufallsauswahl zur Auswahl der jeweiligen Parameter pro Budget, sondern die mit dem Parzen-Kernel als optimal vorhergesagten Parameter - braucht dafür aber nicht wie die reine Bayesianische Optimierung das gesamte Budget für jeden Test.
+Um eine Über-Betonung eines Teils des Parameter-Raums zu verhindern wird außerdem ein festgelegter Anteil der im Hyperband-Teil versuchten Kombinationen wie im Originalverfahren zufällig gezogen wird.
+
+In Abb. \ref{fig:bohb} ist die Performance von BOHB im Vergleich zu Random Search, Hyperband und TPE zu sehen. In Biedenkapp \& Hutter (\protect\hyperlink{ref-biedenkappAutoMLBOHBRobust2018}{2018}) führen einige der Autoren von BOHB als Grenzen des Algorithmus zwei Einschränkungen ein. Zum Einen muss die Optimierungsaufgabe ein sinnvolles Budget möglich machen. Sollte kein sinnvolles Budget zu definieren sein, sei BOHB im schlimmsten Fall um die Anzahl der Halbierungen schlechter als die einfache TPE-Optimierung.
+Zum Anderen ist das Verfahren in dem eher akademischen Fall schlechter als Hyperband, in dem das globale Optimum so liegt, dass es in einer sonst sehr schlechten Parameter-Region liegt. In diesem Fall konvergiert BOHB dank des festen Anteils zufälliger Parameterkombinationen aber auch zur selben Lösung wie Hyperband allein, braucht aber um den den Kehrwert des Faktors an zufälligen Kombinationen länger.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{../imgs/bohb} 
+
+}
+
+\caption[Performance von BOHB.]{Performance von BOHB im Vergleich mit anderen Hyperparameter-Optimierungs-Methoden. Abbildung aus Biedenkapp \& Hutter (\protect\hyperlink{ref-biedenkappAutoMLBOHBRobust2018}{2018}). Zu sehen ist der Vergleich von BOHB mit Random Search, dem TPE allein und Hyperband allein. BOHB ist durch den Einsatz von Hyperband wesentlich schneller (x-Achse) zu Beginn der Optimierung als Random Search und TPE und dabei deutlich besser im Ergebnis als alle anderen Verfahren (Ziel-Funktion auf der y-Achse).}\label{fig:bohb}
+\end{figure}
+
+\hypertarget{kolmogorov-smirnov-teststatistik}{%
+\subsection{Kolmogorov-Smirnov Teststatistik}\label{kolmogorov-smirnov-teststatistik}}
+
+Die Kolmogorov-Smirnov (KS) Teststatistik ist die Grundlage für den nonparametrischen KS-Test. Dieses Verfahren ist dafür konstruiert, eine Stichprobe auf die Verträglichkeit mit einer gegebenen Verteilung zu überprüfen. Auch wenn das Verfahren nur noch selten als Voraussetzungstest eingesetzt wird, da er im Vergleich zu anderen Verfahren eine relativ geringe Power aufweist (\protect\hyperlink{ref-stephensEDFStatisticsGoodness1974}{Stephens, 1974}).
+Die Teststatistik \(D\) ist aber als die maximale vertikale Distanz zweier Verteilungsfunktionen ein sehr praktisches Werkzeug zum Anpassen einer geschätzten Verteilung, da es im Gegensatz zu zum Beispiel der \(\chi^2\)-Statistik die gesamte beobachtete Häufigkeistverteilung berücksichtigt. Außerdem ist \(D\) relativ einfach zu berechnen. In \ref{fig:KSExample} ist \(D\) illustriert.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{thesis_files/figure-latex/KSExample-1} 
+
+}
+
+\caption[Beispiel zur Illustration der KS-Teststatistik \(D\).]{Beispiel zur Illustration der KS-Teststatistik \(D\). Dargestellt ist eine zufällig generierte empirische Verteilungsfunktion (rot), verglichen mit der Verteilungsfunktion anhand der sie generiert wurde (blau). \(D\) ist in schwarz eingezeichnet.}\label{fig:KSExample}
+\end{figure}
+
+\hypertarget{maximum-likelihood-methode}{%
+\subsection{Maximum-Likelihood-Methode}\label{maximum-likelihood-methode}}
+
+Bei der Maximum-Likelihood-Methode wird versucht, für empirische Werte einer Zufallsvariable die Verteilung zu finden, die am wahrscheinlichsten die wahre Verteilung der Zufallsvariable ist. Dazu wird für eine festgelegte Verteilungsklasse nach den beschreibenden Parametern gesucht, die das Auftreten der beobachteten Daten unter der Voraussetzung der Verteilung mit den gegebenen Parametern maximiert. Beispielsweise könnte unter Voraussetzung von Normalverteiltheit nach denjenigen Parametern \(\mu\) und \(\sigma\) gesucht werden, die eine Normalverteilung beschreiben, bei der das Auftreten der beobachteten Ausprägungen der Zufallsvariable mit maximalen Dichtewerten einhergehen.
+Um eine Maximum-Likelihood-Methode einzusetzen muss vorausgesetzt werden, dass die Beobachtungen alle unabhängig und alle auf Basis derselben Verteilung geschehen sind. Diese Unabhängigkeit heißt aber für das Schätzverfahren auch, dass die Wahrscheinlichkeit aller Beobachtungen zusammen als Produkt der Einzelwahrscheinlichkeiten ausgedrückt werden kann. Dieses Produkt der Einzelwahrscheinlichkeiten gilt es nun zu maximieren. Da das Finden eines Maximums im relativ komplexen Fall von Dichten mit mehreren Ziel-Parametern aber relativ komplex ist, wird stattdessen zum natürlichen Logarithmus des Produkts gegriffen, der zwischen 0 und 1 eine monotone Funktion ist. Da durch diese Transformation die Lokalisation des Maximums nicht verändert und das Finden dieses Maximum dadurch vereinfacht wird, kann von diesem Ergebnis einfach der Wendepunkt der
+
+\hypertarget{anforderungsanalyse}{%
+\chapter{Anforderungsanalyse}\label{anforderungsanalyse}}
+
+In enger Abstimmung mit dem Lehrstuhl für Materialphysik der Georg-August-Universität Göttingen wurde eine Reihe von Anforderungen an das Tool aufgestellt.
+So soll die endgültige Lösung damit sie als Ersatz für das Linienschnitt-Verfahren eingesetzt werden kann, vergleichbare Ergebnisse wie das traditionelle Verfahren liefern. Vergleichbar heißt hier, dass die gefundenen Kornverteilungen in Form und Verteilungsklasse für jedes Bild so gut wie identisch zu den händisch gefundenen sein sollen, der Abstand zwischen den empirischen Verteilungsfunktionen der Korngrößen soll also minimal sein.
+Außerdem wäre wünschenswert, dass die Verarbeitung mit Hilfe des Tools einen deutlichen zeitlichen Vorteil gegenüber der mühsamen händischen Auswertung bedeutet.
+Um das Erreichen dieser Ergebnisse komfortabler zu gestalten, sollen in einer grafischen Oberfläche mindestens die Vorverarbeitungsschritte implementiert werden, die bereits zur Vorbereitung der Linienschnitte genutzt werden. Außerdem sollte zur Überprüfung der Ergebnisgüte eine Möglichkeit dazu bestehen, Ergebnisse händischer Auswertungen zu importieren und mit den mit Unterstützung generierten zu vergleichen.
+Neben diesen Grundfunktionalitäten soll das Programm in der Lage sein, verschiedene Dichtefunktionen an die gefundenen Korngrößen oder Radien anzupassen. Des weiteren ist natürlich erforderlich, dass generierte Ergebnisse und Größen-Verteilungen exportiert werden können.
+
+Das ganze Tool soll dabei in Python implementiert und so einfach erweiterbar wie möglich sein - sollten weitere Algorithmen zur Vorbereitung oder Auswertung hinzukommen, sollte einfach nur eine Funktion hinzugefügt, nicht das ganze Skript angepasst werden müssen. Python ist deswegen die Sprache der Wahl, da sie bereits breit am Lehrstuhl für Materialphysik eingesetzt wird und so eventuelle Erweiterungen erleichtert werden.
+
+\hypertarget{design-und-entwurf}{%
+\chapter{Design und Entwurf}\label{design-und-entwurf}}
+
+Das Tool soll unter der grafischen Oberfläche eine Reihe von Features anbieten. Dies sind zum Einen Lösungen für Daten-Handling (Import von Kornbildern und Linienschnitt-Ergebnissen, Export von Resultaten), dann Vorverarbeitungs-Schritte und zuletzt die eigentliche Korn-Detektion. Das Tool soll deshalb in vier Modulen aufgebaut werden:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Einem Kornbild-Modul, dass eine Klasse zur Abbildung der Kornbilder und je ein Interface zur Vorverarbeitung und Auswertung bietet
+\item
+  Einem Vorverarbeitungs-Modul, dass leicht erweiterbar die Vorverarbeitungen in einem möglichst einheitlichen Interface definiert
+\item
+  Einem Analyse-Modul, dass auch leicht erweiterbar wieder mit einem einheitlichen Interface Analysemethoden definiert
+\item
+  Einem GUI-Modul, dass die Darstellung der Kornbilder, der Korngrößen und die Interaktion mit dem Kornbild ermöglicht
+\end{enumerate}
+
+In Abb. \ref{fig:designGraph} ist das geplante Tool-Design zur Abbildung der Anforderungen an einem Beispiel dargestellt.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{../imgs/design} 
+
+}
+
+\caption[Illustration des Tool-Designs.]{Illustration des Tool-Designs.}\label{fig:designGraph}
+\end{figure}
+
+Die von Objekten der Kornbild-Klasse aufrufbaren Interfaces zu den Analyse- und Vorverarbeitungsmodulen sollen dabei über je eine zentrale Funktion ablaufen, die die jeweiligen Auswertungs- oder Vorverabreitungsschritte bei Weiterreichen der gegebenen Argumente als Unterfunktionen aufrufen. So kann zur Erweiterung des Funktionsumfangs einfach im entsprechenden Modul eine Funktion hinzugefügt und der zentrale Wrapper erweitert werden, ohne dass das Kornbild-Modul angepasst werden muss. Solange die Funktionen dabei in einem standardisierten System benannt und dokumentiert werden, können die Funktionsumfänge der Analyse- und Vorverarbeitungsmodule dann auch zur flexiblen Erstellung von GUI-Schaltflächen genutzt werden, so dass auch hier bei einer Erweiterung des Funktionsumfangs ein Minimum an Anpassungen nötig wird.
+
+Objekte der Kornbild-Klasse sollen außerdem Methoden zum Einlesen der vom Elektronenmikroskop gelieferten .tif-Bilder und der etwaig vorliegenden Linienschnitt-Auswertungen liefern. Für beide Inhalte muss je ein Attribut in der Klasse vorgehalten werden. Um verschiedene Auswertungsschritte und -reihenfolgen ausprobieren zu können, muss für Bilder und Korngrößen-Verteilung außerdem je ein Attribut für die veränderten und ausgemessenen Größen angelegt werden.
+
+Da die bei der Vorverarbeitung die Reihenfolge der angewandten Algorithmen entscheidend ist, sollen die geplanten Vorverarbeitungen außerdem nicht einfach bei Aufruf ausgeführt werden, sondern in Form eines Stapels geplant und dann auf Wunsch hintereinander ausgeführt werden. Ein Beispiel für den Einfluss der Reihenfolge der Vorverarbeitung ist in Abb. \ref{fig:prepOrder} zu sehen. Auch dieser Stapel muss in der Kornbild-Klasse als Attribut angelegt werden.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.48\textwidth]{../imgs/gauss_hist} \includegraphics[width=0.48\textwidth]{../imgs/hist_gauss} 
+
+}
+
+\caption[Einfluss der Vorverarbeitungs-Reihenfolge.]{Einfluss der Vorverarbeitungs-Reihenfolge. Links ist zuerst ein Histogramm-Equalizer, dann ein Gauss-Filter angewandt worden, rechts dieselben Filter in umgekehrter Reihenfolge. Der Gauss-Filter hat mit seiner Kernelgröße von \(\approx\) 10\% der Bildgröße eine relativ extreme Einstellung, der Effekt der Reihenfolge ist aber deutlich zu erkennen.}\label{fig:prepOrder}
+\end{figure}
+
+Für die Analyse- und Vorverarbeitungsmodule gilt ein zentrales Design-Prinzip:
+
+Die eigentlichen Verarbeitungsschritte sollen, wie schon oben beschrieben, über je eine zentrale Funktion aufgerufen werden können. Das heißt im Detail, dass alle Verarbeitungsfunktionen zum Einen möglichst ähnliche Interfaces, zum Anderen dasselbe Outputformat aufweisen müssen. Im Idealfall sollten die einzelnen Verarbeitungsschritte jeweils in eine feste Pipeline integriert werden, um Lesbarkeit und Erweiterbarkeit der Lösungen zu verbessern.
+
+Alle Vorverarbeitungsschritte, die bisher durch das Institut für Materialwissenschaften standardmäßig eingesetzt werden, sollten in das Vorverarbeitungsmodul integriert werden. Für das Analysemodul sollen die in den Grundlagen diskutierten, vielversprechenden Superpixel-Methoden implementiert werden. Außerdem soll das Analysemodul für eine gegebene empirische Korngrößen-Verteilung die Möglichkeit bieten, eine Verteilungsfunktion anzupassen und die Verteilungsparameter zurückzugeben.
+
+Als letzter zu beschreibender Punkt bleibt die GUI. Neben dem Zugriff auf die oben genannten Funktionen zur Datenverarbeitung, stapelweisen Vorverarbeitung und der Analyse sollte die GUI über Grafiken Feedback zum vorliegenden Bild, dem Ergebnis der (Vor-)verarbeitung und der händischen oder ausgemessenen Korngrößen-Verteilungen bieten. Es ist also ein Kontroll-Bereich zur vollständigen Nutzung und Steuerung der Funktionalität und ein Feedback-Bereich mit grafischen Darstellungen der Verteilungs- und Bildattribute des Kornbild-Objekts einzuplanen.
+
+\hypertarget{umsetzung-und-entwicklung}{%
+\chapter{Umsetzung und Entwicklung}\label{umsetzung-und-entwicklung}}
+
+Wie vom Institut für Materialforschung gefordert, wurde das Tool in der Programmiersprache Python umgesetzt.
+Im folgenden Kapitel wird anhand der grafischen Oberfläche auf eine Reihe von Umsetzungsaspekten eingegangen. Eine Reihe von Designentscheidungen ist im Prozess nach Rücksprache mit den Mitarbeitenden der Uni Göttingen entstanden, dies wird an entsprechender Stelle erwähnt.
+
+Die GUI wurde mit \texttt{PySimpleGUI} (\protect\hyperlink{ref-pysimpleguiPySimpleGUIPythonGUIs}{PySimpleGUI, n.d.}) implementiert und exemplarisch im Einsatz für eine Kornauswerung in Abb. \ref{fig:grainGUI} zu sehen. Links sind die Steuerelemente für Datenhandling, Vorverarbeitung, Analyse und GUI zu sehen, rechts die Bilder- und Kornverteilungen vor und nach der Analyse.
+
+Mit der Import-Schnittstelle im File-Handling-Segment (in Abb. \ref{fig:grainGUI} blau umrandet) wird in einem Dialog der Pfad zu dem Kornbild angegeben, das geöffnet werden soll. Dieser Pfad wird dann, sollte er in `.tif' enden, mit Hilfe des OpenCV-Moduls (\protect\hyperlink{ref-OpencvpythonWrapperPackage}{\emph{Opencv-Python}, n.d.}) genutzt, um das gewählte Kornbild zu importieren. Beim Import werden die Datenfelder für die Höhe des Datenbalken und die Kantenlänge eines Pixels genutzt um zum Einen den Datenbalken auszublenden und zum Anderen den Umrechnungsfaktor von Pixelzahl in Fläche in \(\mu m^2\) in einem dafür vorgesehenen Attribut des beim Öffnen initialisierten Kornbild-Objektes abzulegen. Zusätzlich wird im angegebenen Pfad nach einer \texttt{.csv}-Datei gesucht, die dieselbe Probenbeschreibung im Namen trägt, wie das \texttt{tif}-Bild. Sollte eine solche Datei vorliegen, wird sie mit Hilfe des \texttt{pandas}-Moduls(\protect\hyperlink{ref-PandasPowerfulPython2022}{\emph{Pandas}, 2010/2022}) importiert und in einem dafür vorgesehen Attribut vorgehalten. Nach dem Import werden Kornbild und - wenn vorhanden - Korngrößenverteilungen außerdem rechts oben in der GUI mit Hilfe des \texttt{matplotlib}-Moduls(\protect\hyperlink{ref-MatplotlibMatplotlib2022}{\emph{Matplotlib/Matplotlib}, 2011/2022}) dargestellt.
+
+Die Vorverarbeitungs- und Analysetools (in Abb. \ref{fig:grainGUI} rot umrandet) sind beide nicht-statisch beim Programm-Start generiert. Dazu werden für beide Module mit Hilfe des \texttt{inspect}-Moduls alle Funktionen aufgelistet, die einer entsprechenden Namens-Konvention folgen. Deren Docstrings und Signaturen werden daraufhin ausgewertet, um Benennung und Argumentliste zu erstellen und als Text- und Input-Bausteine in die GUI einzufügen.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{../imgs/gui} 
+
+}
+
+\caption[GUI des Tools.]{GUI des Tools. Links sind die Steuer-Elemente, geteilt nach File-Handling, Bildvorverarbeitung, Analyse und generellen Einstellungen, rechts sind oben Bild vor Verarbeitung und händisch gemessene Korngrößen und unten das Bild nach Verarbeitung und gefundene Korngrößen im Vergleich mit den händisch gemessenen dargestellt.}\label{fig:grainGUI}
+\end{figure}
+
+Die Vorverarbeitungsschritte werden bei Klick auf ``Add'' als Zeichenkette nach einem standardisierten Format an einen Parser übergeben, der als Teil des Kornbild-Moduls ein \texttt{dict} erstellt und dieses der Batch-Stack Liste hinzufügt. So wird zum Beispiel ein Gauss-Filter mit 5 Pixeln horizontaler und vertikaler Kernel-Größe als ``\texttt{prep.gauss.(k\_size=(5,\ 5))}'' an den Parser übergeben und als ``\texttt{\{\textquotesingle{}category\textquotesingle{}:\ \textquotesingle{}prep\textquotesingle{},\ \textquotesingle{}type\textquotesingle{}:\ \textquotesingle{}gauss\textquotesingle{},\ \textquotesingle{}k\_size\textquotesingle{}:\ (5,\ 5)\}}'' zum Batch-Stapel hinzugefügt. Eine andere Methode des Kornbilds wird danach von der GUI aufgerufen, die den gesamten Batch-Stack in Menschen-lesbarer Form in der dafür vorgesehene Batch-Liste ausgibt (in Abb. \ref{fig:grainGUI} gelb umrandet). Das Gauss-Filter Beispiel wird so zu dem Eintrag:
+
+``\texttt{prep.gauss\ with\ the\ following\ settings:\ k\_size:\ (5,\ 5)}''
+
+Die Schaltflächen unter der Batch-Liste erlauben, die erstellte Liste als JSON zu exportieren (\texttt{Save\ Batch}), aus einer JSON zu laden (\texttt{Load\ Batch}), alle Einträge zu löschen (\texttt{Clear\ Batch}) und den Stapel an Vorverarbeitungsschritten auszuführen (\texttt{Run\ Batch}).
+Die Ausführung ist dann so umgesetzt, dass die Listeneinträge iterativ an die zentrale Funktion des Vorverarbeitungsmodul weitergegeben werden. Hier wird der ``type''-String im Aufrufs-\texttt{dict} genutzt um die richtige Funktion aufzurufen, die darauf folgenden Einträge werden der Funktion als \texttt{**kwargs} übergeben. Um neue Vorverarbeitungsmöglichkeiten anzufügen, muss dem Modul nur die Funktion hinzugefügt und der zentralen Funktion die Option eines neuen type-String hinzugefügt werden.
+In der letzten Version sind die folgenden Vorverarbeitungsschritte implementiert:
+
+\begin{itemize}
+\item
+  Savitzky-Golay-Filter in der Implementation aus dem scipy.signal-Modul (\protect\hyperlink{ref-ScipyScipy2022}{\emph{Scipy/Scipy}, 2011/2022}), so angepasst, dass das Polynom immer größer als das betrachtete Fenster und das Fenster immer eine ungerade Pixelgröße hat. Außerdem wird bei jeder Ausführung der Filter zweimal angewandt, einmal über die Bild-horizontale, dann über die Bild-vertikale,
+\item
+  Histogram-Equalizer in der Implementation aus dem OpenCV-Modul (\protect\hyperlink{ref-OpencvpythonWrapperPackage}{\emph{Opencv-Python}, n.d.}),
+\item
+  Gauss-Filter in der Implementation aus dem OpenCV-Modul (\protect\hyperlink{ref-OpencvpythonWrapperPackage}{\emph{Opencv-Python}, n.d.}), dabei um eine Überprüfung auf ungerade Pixelzahlen und entsprechender Anpassung in beiden Kernel-Dimensionen erweitert und
+\item
+  Non-Local-Means-Denoiser in der Implementation aus dem OpenCV-Modul (\protect\hyperlink{ref-OpencvpythonWrapperPackage}{\emph{Opencv-Python}, n.d.}).
+\end{itemize}
+
+Diese vier Vorverarbeitungsschritte und ihre Implementationen wurden deswegen ausgewählt, weil sie bereits zur Vorbereitung des Linienschnitt-Verfahrens im Institut für Materialforschung eingesetzt wurden. Dabei wird bei allen Vorbereitungsschritten das für das modifizierte Bild vorgesehene Attribut als numpy-Array eingelesen, gefiltert und abschließend überschrieben. Durch das Setzen dieses Attributs auf das Originalbild vor jeder Durchführung der Vorverarbeitungsliste wird sichergestellt, dass keine vorausgegangenen Analyseschritte das Ergebnis beeinflussen.
+
+Alle Analyse-Algorithmen wurden wieder über eine zentrale Funktion implementiert. Auch hier wird, wie im Fall der Vorverarbeitungs-Algorithmen, von der GUI ein String aus der Ausführungs-Aufforderung generiert, der nach der Umwandlung in ein \texttt{dict} an das Analyse-Modul weitergegeben wird, das nach dem ``Type''-String die entsprechende Funktion aufruft. Genau wie im Vorverarbeitungsschritt wird hier auch das modifizierte Kornbild aus dem Kornbild-Objekt ausgelesen, weiterverarbeitet und wieder eingefügt.
+Zur Analyse der Bilder wurde anfänglich nur DBSCAN aufgenommen, nach dem Test durch Studierende des Instituts für Materialphysik noch SLIC und eine Kombination von NCuts und vorangegangenem SLIC.
+Die Implementation des DBSCAN-Algorithmus erfolgte auf Basis des \texttt{scikit-learn\ cluster} Moduls (\protect\hyperlink{ref-ScikitlearnScikitlearn2022}{\emph{Scikit-Learn/Scikit-Learn}, 2010/2022}). Damit die Analysen möglichst reibungslos erweitert werden können, wurden hier die objektorientierten Interfaces von \texttt{scikit-learn} genutzt, um möglichst in der Analyse-Funktion nur das Model-Objekt zu erstellen und alle darauffolgenden Verarbeitungsschritte in verallgemeinerten Funktionen zu verpacken, die dann die \texttt{fit\_predict}-Methode des jeweiligen Modells aufrufen.
+Nach ersten Tests mit dem \texttt{DBSCAN}-Algorithmus stellte sich heraus, dass insbesondere für Bilder mit kleinen, regelmäßigen Kornmustern (für ein Beispiel siehe Abb. \ref{fig:michelGrains}), die Möglichkeiten dieses Algorithmus an ihre Grenzen kommen. Um diesem Problem zu begegnen wurde der Funktionsumfang nach Besprechung der bei Stutz et al. (\protect\hyperlink{ref-stutzSuperpixelsEvaluationStateoftheart2018}{2018}) diskutierten Superpixel-Methoden mit Mitarbeitern des Instituts für Materialforschung um \texttt{SLIC} und \texttt{Normalized\ Cuts} erweitert. Für beide Methoden wurde die Implementation aus dem \texttt{scikit-image}-Modul (\protect\hyperlink{ref-ScikitimageImageProcessing2022}{\emph{Scikit-Image}, 2011/2022}) genutzt, deren Interfaces aber leicht von den bisher genutzten \texttt{scikit-learn} Interfaces abweichen. Um die Analyse-Pipeline möglichst wenig anpassen zu mussen, wurde deshalb ein weiteres Modul geschrieben, dass je eine \texttt{NCuts}- und \texttt{SLIC}-Klasse anbietet, die die \texttt{fit\_predict} Methode an die bisherige Pipeline angepasst anbietet. Die Anpassung bedeutete insbesondere, dass aus dem standardmäßig von \texttt{scikit-image} zurückgegebenen Bild-Matrizen eine Liste mit Cluster-Labeln wird, wie sie von \texttt{scikit-learn} beim Einsatz von Cluster-Methoden zurückgegeben wird.
+
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\textwidth]{../imgs/michel} 
+
+}
+
+\caption[Kornbild mit besonders kleinen Strukturen.]{Kornbild mit besonders kleinen Strukturen.}\label{fig:michelGrains}
+\end{figure}
+
+Nach der Erstellung der Analyse-Modell-Objekte durch die Hilfsfunktionen werden so standardisiert bei allen Algorithmen Cluster-Labels generiert. Anschließend wird ein Post-Processing angestoßen, das eine Reihe von Beschreibungsgrößen berechnet, die von den Mitarbeitern der Uni Göttingen als hilfreich genannt wurden. Zum Einen sind das einfache Beschreibungen wie Anzahl an Pixeln, Größe des Clusters in \(\mu m^2\), X- und Y-Koordinaten des Cluster-Mittelpunkts, die Varianz der Farbe der im Cluster befindlichen Pixel und der Durchmesser des Kreises, der der Fläche entsprechen würde. Außerdem wurde die Möglichkeit eingebaut, mit Hilfe des \texttt{scikit-image}-Moduls (\protect\hyperlink{ref-ScikitimageImageProcessing2022}{\emph{Scikit-Image}, 2011/2022}) Ellipsen an das Cluster anzupassen, deren Winkel und Länge der Haupotachse und Länge der kürzeren Achse auch ausgegeben werden. Da dieses Fitten aber computational vor allem für Bilder von kleinen Körnern aufwändig ist, wurde im ``Settings''-Segment der GUI (in Abb. \ref{fig:grainGUI} grün umrandet) ein Steuerungselement eingebaut, mit der diese Berechnung als Boolsches Attribut im Kornbild-Objekt unterdrückt werden kann.
+Neben dieser Zusammenfassung wird nach erfolgreichem Durchlauf der Superpixel-Algorithmen außerdem ein Histogram und eine kumulierte Häufigkeitsverteilung der Korngrößen berechnet, an die außerdem per Maximum-Likelihood-Schätzung nach der Implementierung im scipy.stats-Modul (\protect\hyperlink{ref-ScipyScipy2022}{\emph{Scipy/Scipy}, 2011/2022}) eine Verteilungsfunktion angepasst wird. Die Klasse der Verteilungsfunktion, so wie die Auswahl der Korndurchmesser statt der -fläche können auf Wunsch der Mitarbeitenden auch im ``Settings''-Segment der GUI ausgewählt werden. Verschiedene Funktionsklassen als Auswahlmöglichkeiten können hierbei als \texttt{dict} bei Programmstart angegeben werden, auch hier ist eine Erweiterung über den bisherigen Umfang also ohne großen Aufwand möglich.
+Ein weiteres Ergebnis der Besprechungen mit der Uni Göttingen ist das \texttt{Max.\ grain\ side\ ratio}-Feld im \texttt{Settings}-Segment. Die vorherigen Versionen des Tools neigten, insbesondere bei Auswertung mit \texttt{DBSCAN}, zur Erstellung von Bildübergreifenden Clustern, die die Schatten an den Korngrenzen beinhalteten. Um diese Klassifikation nicht in die Ergebnisse einfließen zu lassen, kann mit dem Feld für das Maximale Seitenverhältnis aus den gefundenen Clustern die Menge herausgefiltert werden, die ein Seitenverhältnis größer als der angegebene Wert aufweisen. So kann über Vorwissen informiert eine Reihe von unmöglichen geometrischen Formen ausgeschlossen werden.
+
+Die generierten Korn-Verteilungen werden dann rechts unten in der GUI dargestellt. Um die gefundenen Cluster deutlicher hervorzuheben, wird das Ergebnis statt in Grautönen wie bei dem eingelesenen und dann beim vor-verarbeiteten Bild in einer viridis-Farbskala präsentiert. Außerdem können die Ergebnisse und dazu berechneten deskriptiven Statistiken mit dem Export-Tool im File-Handling-Segment (in Abb. \ref{fig:grainGUI} blau umrandet) exportiert werden. Dazu stehen der nutzenden Person zwei Export-Formate zur Auswahl - zum Einen eine CSV nur mit den deskriptiven Kornstatistiken, zum Anderen eine JSON mit zusätzlich Informationen über die vollzogene Vor-Verarbeitung und den Parametern der mit \texttt{scipy\ stats} angepassten Verteilung.
 
 \hypertarget{literatur}{%
 \chapter{Literatur}\label{literatur}}
@@ -423,6 +618,12 @@ Askeland, D. R. (1996). \emph{Materialwissenschaften: {Grundlagen}, {Übungen}, 
 \leavevmode\vadjust pre{\hypertarget{ref-basuGaussianbasedEdgedetectionMethodsa2002}{}}%
 Basu, M. (2002). Gaussian-based edge-detection methods-a survey. \emph{IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, \emph{32}(3), 252--260. \url{https://doi.org/10.1109/TSMCC.2002.804448}
 
+\leavevmode\vadjust pre{\hypertarget{ref-bergstraAlgorithmsHyperParameterOptimization2011}{}}%
+Bergstra, J., Bardenet, R., Bengio, Y., \& Kégl, B. (2011). Algorithms for {Hyper-Parameter Optimization}. \emph{Advances in {Neural Information Processing Systems}}, \emph{24}. \url{https://proceedings.neurips.cc/paper/2011/hash/86e8f7ab32cfd12577bc2619bc635690-Abstract.html}
+
+\leavevmode\vadjust pre{\hypertarget{ref-biedenkappAutoMLBOHBRobust2018}{}}%
+Biedenkapp, A., \& Hutter, F. (2018, July 26). \emph{{AutoML} \textbar{} {BOHB}: {Robust} and {Efficient Hyperparameter Optimization} at {Scale}}. {AutoML.org}. \url{https://www.automl.org/blog_bohb/}
+
 \leavevmode\vadjust pre{\hypertarget{ref-buadesNonLocalMeansDenoising2011}{}}%
 Buades, A., Coll, B., \& Morel, J.-M. (2011). Non-{Local Means Denoising}. \emph{Image Processing On Line}, \emph{1}, 208--212. \url{https://doi.org/10.5201/ipol.2011.bcm_nlm}
 
@@ -432,8 +633,14 @@ DeCost, B. L., Lei, B., Francis, T., \& Holm, E. A. (2019). High {Throughput Qua
 \leavevmode\vadjust pre{\hypertarget{ref-dengizGrainBoundaryDetection2005}{}}%
 Dengiz, O., Smith, A. E., \& Nettleship, I. (2005). Grain boundary detection in microstructure images using computational intelligence. \emph{Computers in Industry}, \emph{56}(8-9), 854--866. \url{https://doi.org/10.1016/j.compind.2005.05.012}
 
+\leavevmode\vadjust pre{\hypertarget{ref-eggenspergerHPOBenchCollectionReproducible2021}{}}%
+Eggensperger, K., Müller, P., Mallik, N., Feurer, M., Sass, R., Klein, A., Awad, N., Lindauer, M., \& Hutter, F. (2021). \emph{{HPOBench}: {A Collection} of {Reproducible Multi-Fidelity Benchmark Problems} for {HPO}} (No. arXiv:2109.06716). {arXiv}. \url{https://doi.org/10.48550/arXiv.2109.06716}
+
 \leavevmode\vadjust pre{\hypertarget{ref-esterIncrementalClusteringMining1998}{}}%
 Ester, M., Kriegel, H.-P., Sander, J., Wimmer, M., \& Xu, X. (1998). Incremental {Clustering} for {Mining} in a {Data Warehousing Environment}. \emph{Proceedings of the 24rd {International Conference} on {Very Large Data Bases}}, 323--333.
+
+\leavevmode\vadjust pre{\hypertarget{ref-falknerBOHBRobustEfficient2018}{}}%
+Falkner, S., Klein, A., \& Hutter, F. (2018). \emph{{BOHB}: {Robust} and {Efficient Hyperparameter Optimization} at {Scale}} (No. arXiv:1807.01774). {arXiv}. \url{https://doi.org/10.48550/arXiv.1807.01774}
 
 \leavevmode\vadjust pre{\hypertarget{ref-GefugeWerkstoffkunde2021}{}}%
 Gefüge (Werkstoffkunde). (2021). In \emph{Wikipedia}. \url{https://de.wikipedia.org/w/index.php?title=Gef\%C3\%BCge_(Werkstoffkunde)\&oldid=214385861}
@@ -456,14 +663,20 @@ Kitagawa, G. (1994). The two-filter formula for smoothing and an implementation 
 \leavevmode\vadjust pre{\hypertarget{ref-latifDeepLearningBasedAutomaticMineral2022}{}}%
 Latif, G., Bouchard, K., Maitre, J., Back, A., \& Bédard, L. P. (2022). Deep-{Learning-Based Automatic Mineral Grain Segmentation} and {Recognition}. \emph{Minerals}, \emph{12}(4, 4), 455. \url{https://doi.org/10.3390/min12040455}
 
+\leavevmode\vadjust pre{\hypertarget{ref-liHyperbandBanditbasedConfiguration2017}{}}%
+Li, L., Jamieson, K. G., DeSalvo, G., Rostamizadeh, A., \& Talwalkar, A. (2017). Hyperband: {Bandit-based} configuration evaluation for hyperparameter optimization. \emph{{ICLR} ({Poster})}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-liMetallographicImageSegmentation2020}{}}%
 li, M., Chen, D., Liu, S., \& Liu, F. (2020). Metallographic {Image Segmentation Method Based} on {Superpixels Algorithm} and {Transfer Learning}. \emph{2020 {Chinese Control And Decision Conference} ({CCDC})}, 1922--1926. \url{https://doi.org/10.1109/CCDC49329.2020.9164466}
 
 \leavevmode\vadjust pre{\hypertarget{ref-maitreMineralGrainsRecognition2019}{}}%
 Maitre, J., Bouchard, K., \& Bédard, L. P. (2019). Mineral grains recognition using computer vision and machine learning. \emph{Computers \& Geosciences}, \emph{130}, 84--93. \url{https://doi.org/10.1016/j.cageo.2019.05.009}
 
+\leavevmode\vadjust pre{\hypertarget{ref-MatplotlibMatplotlib2022}{}}%
+\emph{Matplotlib/matplotlib}. (2022). {Matplotlib Developers}. \url{https://github.com/matplotlib/matplotlib} (Original work published 2011)
+
 \leavevmode\vadjust pre{\hypertarget{ref-MetallographieRostfreiemStahl}{}}%
-\emph{Metallographie von rostfreiem {Stahl}}. (n.d.). Retrieved December 14, 2021, from \url{https://www.struers.com/de-DE/Knowledge/Materials/Stainless-Steel\#etching}
+\emph{Metallographie von rostfreiem Stahl}. (n.d.). Retrieved December 14, 2021, from \url{https://www.struers.com/de-DE/Knowledge/Materials/Stainless-Steel\#etching}
 
 \leavevmode\vadjust pre{\hypertarget{ref-NormalizedCutSkimage}{}}%
 \emph{Normalized {Cut} --- skimage v0.20.0.Dev0 docs}. (n.d.). Retrieved June 23, 2022, from \url{https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_ncut.html?highlight=normalization}
@@ -474,8 +687,29 @@ Maitre, J., Bouchard, K., \& Bédard, L. P. (2019). Mineral grains recognition u
 \leavevmode\vadjust pre{\hypertarget{ref-offentlichkeitsarbeitStudiumUndLehre}{}}%
 Öffentlichkeitsarbeit, G.-A.-U. G.-. (n.d.-b). \emph{Studium und Lehre - Georg-August-Universität Göttingen}. Retrieved May 9, 2022, from \url{https://www.uni-goettingen.de/de/626487.html}
 
+\leavevmode\vadjust pre{\hypertarget{ref-OpencvpythonWrapperPackage}{}}%
+\emph{Opencv-python: {Wrapper} package for {OpenCV} python bindings.} (Version 4.6.0.66). (n.d.). Retrieved July 1, 2022, from \url{https://github.com/skvark/opencv-python}
+
+\leavevmode\vadjust pre{\hypertarget{ref-PandasPowerfulPython2022}{}}%
+\emph{Pandas: Powerful {Python} data analysis toolkit}. (2022). {pandas}. \url{https://github.com/pandas-dev/pandas} (Original work published 2010)
+
 \leavevmode\vadjust pre{\hypertarget{ref-princePartIVPreprocessing2012}{}}%
 Prince, S. J. (2012). Part {IV}: {Preprocessing}. In \emph{Computer vision: Models, learning, and inference} (pp. 321--354). {Cambridge University Press}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pysimpleguiPySimpleGUIPythonGUIs}{}}%
+PySimpleGUI. (n.d.). \emph{{PySimpleGUI}: {Python GUIs} for {Humans}. {Launched} in 2018. {It}'s 2022 \& {PySimpleGUI} is an {ACTIVE} \& supported project. {Super-simple} to create custom {GUI}'s. 325+ {Demo} programs \& {Cookbook} for rapid start. {Extensive} documentation. {Main} docs at www.{PySimpleGUI}.org. {Fun} \& your success are the focus. {Examples} using {Machine Learning} ({GUI}, {OpenCV Integration}), {Rainmeter Style Desktop Widgets}, {Matplotlib} + {Pyplot}, {PIL} support, add {GUI} to command line scripts, {PDF} \& {Image Viewers}. {Great} for beginners \& advanced {GUI} programmers.} (Version 4.60.1) {[}Computer software{]}. Retrieved July 2, 2022, from \url{https://github.com/PySimpleGUI/PySimpleGUI}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rodriguezClusteringAlgorithmsComparative2019a}{}}%
+Rodriguez, M. Z., Comin, C. H., Casanova, D., Bruno, O. M., Amancio, D. R., Costa, L. da F., \& Rodrigues, F. A. (2019). Clustering algorithms: {A} comparative approach. \emph{PLOS ONE}, \emph{14}(1), e0210236. \url{https://doi.org/10.1371/journal.pone.0210236}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ScikitimageImageProcessing2022}{}}%
+\emph{Scikit-image: {Image} processing in {Python}}. (2022). {Image Processing Toolbox for SciPy}. \url{https://github.com/scikit-image/scikit-image} (Original work published 2011)
+
+\leavevmode\vadjust pre{\hypertarget{ref-ScikitlearnScikitlearn2022}{}}%
+\emph{Scikit-learn/scikit-learn}. (2022). {scikit-learn}. \url{https://github.com/scikit-learn/scikit-learn} (Original work published 2010)
+
+\leavevmode\vadjust pre{\hypertarget{ref-ScipyScipy2022}{}}%
+\emph{Scipy/scipy}. (2022). {SciPy}. \url{https://github.com/scipy/scipy} (Original work published 2011)
 
 \leavevmode\vadjust pre{\hypertarget{ref-shenRealTimeSuperpixelSegmentation2016}{}}%
 Shen, J., Hao, X., Liang, Z., Liu, Y., Wang, W., \& Shao, L. (2016). Real-{Time Superpixel Segmentation} by {DBSCAN Clustering Algorithm}. \emph{IEEE Transactions on Image Processing}, \emph{25}(12), 5933--5942. \url{https://doi.org/10.1109/TIP.2016.2616302}
@@ -483,8 +717,17 @@ Shen, J., Hao, X., Liang, Z., Liu, Y., Wang, W., \& Shao, L. (2016). Real-{Time 
 \leavevmode\vadjust pre{\hypertarget{ref-shiNormalizedCutsImage2000}{}}%
 Shi, J., \& Malik, J. (2000). Normalized cuts and image segmentation. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, \emph{22}(8), 888--905. \url{https://doi.org/10.1109/34.868688}
 
+\leavevmode\vadjust pre{\hypertarget{ref-snoekPracticalBayesianOptimization2012}{}}%
+Snoek, J., Larochelle, H., \& Adams, R. P. (2012). Practical bayesian optimization of machine learning algorithms. \emph{Advances in Neural Information Processing Systems}, \emph{25}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-StandardTestMethods2021}{}}%
 \emph{Standard {Test Methods} for {Determining Average Grain Size}}. (2021, November 17). \url{https://www.astm.org/e0112-13.html}
+
+\leavevmode\vadjust pre{\hypertarget{ref-stephensEDFStatisticsGoodness1974}{}}%
+Stephens, M. A. (1974). {EDF Statistics} for {Goodness} of {Fit} and {Some Comparisons}. \emph{Journal of the American Statistical Association}, \emph{69}(347), 730--737. \url{https://doi.org/10.1080/01621459.1974.10480196}
+
+\leavevmode\vadjust pre{\hypertarget{ref-stutzSuperpixelsEvaluationStateoftheart2018}{}}%
+Stutz, D., Hermans, A., \& Leibe, B. (2018). Superpixels: {An} evaluation of the state-of-the-art. \emph{Computer Vision and Image Understanding}, \emph{166}, 1--27. \url{https://doi.org/10.1016/j.cviu.2017.03.007}
 
 \leavevmode\vadjust pre{\hypertarget{ref-wangSuperpixelSegmentationBenchmark2017}{}}%
 Wang, M., Liu, X., Gao, Y., Ma, X., \& Soomro, N. Q. (2017). Superpixel segmentation: {A} benchmark. \emph{Signal Processing: Image Communication}, \emph{56}, 28--39. \url{https://doi.org/10.1016/j.image.2017.04.007}

@@ -241,13 +241,14 @@ def analyse(self, type, *args, **kwargs):
 
 
 if __name__ == "__main__":
-    import sys
-    import matplotlib.pyplot as plt
+    # import sys
+    # import matplotlib.pyplot as plt
 
-    sys.path.append("scripts")
-    from model import GrainImage
+    # sys.path.append("scripts")
+    # from model import GrainImage
 
-    self = GrainImage("../data/17 0 650 cbs 01_002.tif")
-    analyse(self, 'ncuts')
-    data = self.generated_areas['size']
-    dists = self.distros
+    # self = GrainImage("../data/17 0 650 cbs 01_002.tif")
+    # analyse(self, 'ncuts')
+    # data = self.generated_areas['size']
+    # dists = self.distros
+    pass

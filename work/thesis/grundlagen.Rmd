@@ -1,7 +1,7 @@
 # Grundlagen
 
 Dieses Kapitel beschäftigt sich zuerst mit den zur Bildvorbereitung betrachteten und verwendeten Algorithmen. Darauf folgt eine Beschreibung der getesteten Ansätze zur Flächen-Gruppierung um dann dazu überzugehen, die Implementation des Körner-Tools zu beschreiben.
-Im Anschluss werden die verwendeten Ansätze zur Stapelverarbeitung der Bilder beschrieben.
+Im Anschluss werden die notwendigen Ansätze zur Extraktion der Kornstrukturen und ihrer Automatisierung erklärt.
 
 
 ## Bildvorverarbeitung
@@ -200,10 +200,10 @@ knitr::include_graphics(c('../imgs/hist_kum1.png','../imgs/savgol1.png',
 
 
 
-## Bild-Auswertung
+## Extraktion der Kornstrukturen 
 
-Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung der Kornflächen. 
-Für einen Überblick über Methoden zur Erkennung von Superpixeln und mögliche Architekturen zur Vermessung von Kornbildern.
+Der folgende Abschnitt beschäftigt sich mit den möglichen Ansätzen zur Erkennung und Extraktion der Kornflächen. 
+<!-- Für einen Überblick über Methoden zur Erkennung von Superpixeln und mögliche Architekturen zur Vermessung von Kornbildern. -->
 
 
 ### DBSCAN
@@ -265,7 +265,7 @@ ggsave(filename = '../imgs/dbscan.png',
 ### SLIC
 
 Beim als Superpixel-Segmentierungsansatz weit verbreiteten Simple Linear Iterative Clustering (SLIC) [@achantaSLICSuperpixelsCompared2012] wird ein k-Means basiertes Verfahren genutzt, um näherungsweise gleich große Superpixel im Bild zu detektieren.
-Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von @achantaSLICSuperpixelsCompared2012 die räumliche Distanz gewichtet, wodurch mit hohen Werten des Hyperparameters *m* die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
+Dabei wird sowohl für den Farb- als auch den Pixelraum je eine euklidische Distanz aller Pixel zueinander berechnet, die dann gewichtet aufsummiert wird. Dabei wird in der Arbeit von @achantaSLICSuperpixelsCompared2012 die räumliche Distanz gewichtet, wodurch mit hohen Werten des Parameters *m* die räumliche Nähe, mit niedrigen Werten die farbliche Nähe stärker gewichtet wird.
 
 Der weitere Algorithmus ist im Prinzip der des normalen k-Means Clustering, das heißt Cluster-Kerne werden definiert (bei SLIC in regelmäßigen Abständen), Pixel werden den nächsten Clustern zugeordnet und die Zentroide dann auf die Zentroide der neuen Cluster verschoben.
 Im Gegensatz zum regulären k-Means wird bei SLIC aber nicht im gesamten Datenraum nach möglichen Cluster-Angehörigen gesucht, sondern nur im doppelten Suchraum der vorgegebenen Clustergröße.
@@ -274,7 +274,7 @@ In \@ref(fig:slicExample) ist ein Beispiel für den ASLIC-Algorithmus mit unters
 
 (ref:slicExampleSubCap) Beispiel für eine Superpixel-Segmentierung mit SLIC.
 
-(ref:slicExampleCap) Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .1, unten mit 2 als Wert für *m* zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei @achantaSLICSuperpixelsCompared2012 beschrieben eingesetzt.
+(ref:slicExampleCap) Beispiel für eine Superpixel-Segmentierung mit SLIC. Dargestellt sind die Cluster-Label als Grauschattierung. Links ist die Segmentierung mit 250 Start-Cluster-Zentren, rechts mit 500 dargestellt, oben je mit .05, unten mit 2 als Wert für *m* zu sehen. In beiden Beispielen wurde die Adaptive Version des SLIC-Algorithmus wie bei @achantaSLICSuperpixelsCompared2012 beschrieben eingesetzt.
 
 ```{r slicExample, echo = F, fig.cap='(ref:slicExampleCap)', fig.align='center',out.width=paste0(.96/2,'\\textwidth'), fig.show='hold', fig.scap='(ref:slicExampleSubCap)'}
 knitr::include_graphics(c('../imgs/slic_5_250.png', 
@@ -290,21 +290,79 @@ Beim Normalized Cuts Verfahren zur Extraktion von Superpixeln [@shiNormalizedCut
 Im Orginal-Paper wird die Wahrscheinlichkeit durch eine gewichtete Exponential-Funktion mit den Kontrastwerte und den geometrischen Distanzen im Exponenten ausgedrückt. Für beide Werte ist je eine Gewichtung vorgesehen, die angepasst werden kann - außerdem ein maximal zu berücksichtigender Radius für den geometrischen Abstand.
 
 Unabhängig von der genauen Gewichtung der Kanten wird anschließend derjenige Schnitt gesucht, der die geringste Summe an Kantengewichten "durchtrennt". Dieser *Normalized Cut* wird so bestimmt, dass die durch den Schnitt getrennten Gruppen möglichst unterschiedlich und die verbleibenden Gruppen in sich möglichst homogen sind.  Die Lösung dieses Problem für ein ganzes Bild kann sehr aufwendig sein, weswegen zur Optimierung nur im geometrischen Umfeld der betrachteten Nodes gesucht wird.
-Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von @shiNormalizedCutsImage2000 zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls[@NormalizedCutSkimage] präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von @shiNormalizedCutsImage2000 präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens $N_{Pixel}^2\over{2}$ Einträgen nötig.
-Da SLIC aber in gewisser Form auch eine "Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt" abdeckt, ist die Vorverarbeitung in diesem Sinne nicht wirklich gegen den intendierten Einsatz von NCuts.
+Statt die Kanten mit der Wahrscheinlichkeits-Formel aus dem Papier von @shiNormalizedCutsImage2000 zu gewichten, können auch beliebige andere Gewichte gesetzt werden. So ist in der Implementation von NCuts, die in der Dokumentation des scikit-image-Python-Moduls[@NormalizedCutSkimage] präsentiert wird, der Graph mit den Ergebnissen einer SLIC-Voranalyse gewichtet. Vor allem bei großen Bildern wird die von @shiNormalizedCutsImage2000 präsentierte Berechnung nahezu unmöglich, ohne große Optimierung ist allein eine Ergebnis-Matrix mit mindestens $\frac{N_{Pixel}^2}{2}$ Einträgen nötig.
+Da SLIC aber in gewisser Form auch eine "Wahrscheinlichkeit der Zugehörigkeit zum selben Objekt" abdeckt und besonders bei großen Bildern die Findung einer Lösung für den optimalen Schnitt aufwendig wird, ist die Vorverarbeitung in diesem Sinne eine sinnvolle Optimierungs-Option.
+Bei der Findung der optimalen Lösung können eine Reihe von Einstellungen gesetzt werden. Neben den Einstellung für die SLIC-Vorsegmentierung kann die Anzahl der gesuchten Schnitte, die maximale Distanz zwischen zwei Farben um als ähnlich erkannt zu werden und zuletzt der minimale Wert , den ein  Schnitt haben darf um durchgeführt zu werden.
 
-\@ref(fig:ncutsClassic) 
+In Abb. \@ref(fig:ncutsClassic) sind Beispiele für NCuts-Anwendungen mit unterschiedlichen Einstellungen zu sehen.
 
 (ref:ncutsClassicSubCap) Beispiel für eine Superpixel-Segmentierung mit NCuts
 
-(ref:ncutsClassicCap) Beispiel für eine Superpixel-Segmentierung mit NCuts mit vorgeschalteter SLIC-Segmentierung. Die Einstellungen wurden
+(ref:ncutsClassicCap) Beispiel für eine Superpixel-Segmentierung mit NCuts mit vorgeschalteter SLIC-Segmentierung. Die SLIC-Segmentierung wurde mit .05 als geometrisches Gewicht und 2000 Start-Clustern durchgeführt. In der oberen Zeile wurde der minimale Schnittwert auf .001, in der unteren Zeile auf .5 gesetzt. Die linken Bilder wurden mit 10, die rechten mit 100 Schnitten geteilt. Zusätzlich sind die Bilder links oben und recht oben mit einer maximalen Farbdistanz von 20, die anderen beiden mit je 100 erstellt.
 
-```{r ncutsClassic, echo = F, fig.cap='(ref:ncutsClassicCap)', fig.align='center',out.width=paste0(.96/1,'\\textwidth'), fig.show='hold', fig.scap='(ref:ncutsClassicSubCap)'}
-#knitr::include_graphics(path_to_image)
+```{r ncutsClassic, echo = F, fig.cap='(ref:ncutsClassicCap)', fig.align='center',out.width=paste0(.96/2,'\\textwidth'), fig.show='hold', fig.scap='(ref:ncutsClassicSubCap)'}
+knitr::include_graphics(c('../imgs/ncuts_5_2000_1.0_10_20.png', 
+                          '../imgs/ncuts_5_2000_1.0_100_100.png'), dpi = 300) 
+knitr::include_graphics(c('../imgs/ncuts_5_2000_500.0_10_100.png', 
+                          '../imgs/ncuts_5_2000_500.0_100_20.png'), dpi = 300)
 ```
 
-### 
 
-### Bayesian Optimization and Hyperband
+### Hyperband und Bayesianische Optimierung
 
-Nicht analytisch lösbare Optimierungsprobleme, insbesondere Hyperparameter-Auswahl, stellen einen zentralen Bestandteil der Data Science dar.
+Die Performance von Verfahren des maschinellen Lernens, zu denen auch Cluster-Verfahren wie DBSCAN und k-Means zählen, ist stark abhängig von der Wahl der richtigen Einstellungen des Verfahrens [z.B. @snoekPracticalBayesianOptimization2012]. @rodriguezClusteringAlgorithmsComparative2019a konnten zum Beispiel zeigen, dass die zufällige Auswahl von Einstellungen in einer besseren Performance bei ihrem Test gängiger Clusterverfahren resultierte, als die Verfahren mit ihren Grundeinstellungen anzuwenden. 
+Die zufällige Auswahl dieser auch *Hyperparameter* genannter Einstellungen ist ein gängiges, auch *random search* genanntes Verfahren zum Tuning, also der Verbesserung der Performance von Anwendungen im Deep Learning. Hier ist die Auswahl geeigneter Einstellungen für das Modell insbesondere wichtig aber auch zeitaufwändig, da die möglichen Stellschrauben für ein genügend komplexes Modell so viele mögliche Kombinationen bieten können, dass die geeignete Wahl an Parametern *"more of an art than a science."* ist , wie @bergstraAlgorithmsHyperParameterOptimization2011 schreiben. Das Problem wird zusätzlich erschwert, da Hyperparameter-Optimierungen in den meisten Fällen Black-Box Optimierungen sind, in denen keine verlässliche Annahmen über die Form und Art der Zielfunktion (zum Beispiel in Form eines Gütemaßes der Modellvorhersage) getroffen werden kann, außer durch die systematische Eingabe und Aufzeichnung der Ausgabe ausgewählter Hyperparameter. Neben dem Random Search, sind in diesem Forschungsbereich auch eine Reihe von wesentlich effizienteren Algorithmen zur Auswahl von Modell-Einstellungen publiziert worden [@eggenspergerHPOBenchCollectionReproducible2021 für eine erste Übersicht].
+Ein Beispiel für eine solche Vorgehensweise zum Optimieren der Modelleinstellungen mit dem Ziel, die optimale Vorhersage zu treffen, ist die von @falknerBOHBRobustEfficient2018 vorgeschlagene *Bayesian Optimization and Hyperband* (BOHB)-Methode, die als Kombination von Hyperband- und Bayesianischen Hyperparameter-Optimierungslösungen eine effizientere Optimierungs-Alternative zur Random Search darstellt. Diese Methode hat im Gegenteil zur komplett Zwischen-Ergebnis-agnostischen Black Box-Methode Random Search unter anderem den großen Vorteil, dass Zwischenergebnisse genutzt und damit die Optimierungszeit mit gesteigerter Effizienz gesenkt werden kann.
+
+BOHB arbeitet dabei mit einer Kombination eines Tree-structured Parzen Estimators [@bergstraAlgorithmsHyperParameterOptimization2011] und eines durch dieses Bayesianische Schätzverfahren informierten Hyperband-Verfahrens [@liHyperbandBanditbasedConfiguration2017]. Beim Tree-structured Parzen Estimators (TPE) wird der Parameter-Raum als Entscheidungsbaum formalisiert. Aus diesem Baum werden dann die Äste ausgewählt, für die ein möglichst minimaler Wert der Zielfunktion mit dem nicht-parametrischen Parzen-Fenster-Kerndichteschätzer vorhergesagt wird. Die so ausgewählte Parameter-Kombination wird genutzt um das Modell zu trainieren und die Performance des Ergebnisses genutzt, um die Dichteschätzung zu aktualisieren.
+An dem Punkt des nötigen Modelltrainings zur Aktualisierung der Performance-Prognose setzt der Hyperband-Teil des BOHB-Verfahrens an. Statt für jede zu testende Parameterkombination das ganze Modell zu trainieren, führen @liHyperbandBanditbasedConfiguration2017 ein Budget als weiteren Parameter ein. Dieses Budget ist so definiert, dass geringere Werte zu einem Modell führen, dass zeitlich und computational weniger aufwendig ist, dabei aber eine Idee für die Performance eines Modells auf Basis dieser Werte gibt. Bei Modellen aus dem Deep Learning kann das Budget zum Beispiel als die Anzahl der Trainingsepochen operationalisiert werden, bei Cluster-Algorithmen zum Beispiel als eine Beschränkung der jeweils zur Distanzberechnung genutzten Datenpunkte. Beim Hyperband-Verfahren wird also auf niedrigem Budget zuerst eine Reihe an schnellen, "nicht vollständigen" Tests durchgeführt, deren Settings im Original zufällig ausgewählt wurden. Die Settings der besten *n* dieser Tests wird im folgenden genutzt, um eine Reihe höher budgetierter Tests durchzuführen. Diese fortschreitende Verkleinerung des Suchraums auf größerem Budget wird fortgeführt, bis eine kleine Anzahl von Modellen bei vollem Budget mit den vielversprechendsten Parametern getestet wird.
+Im Gegensatz zum Original nutzt nun BOHB nicht Zufallsauswahl zur Auswahl der jeweiligen Parameter pro Budget, sondern die mit dem Parzen-Kernel als optimal vorhergesagten Parameter - braucht dafür aber nicht wie die reine Bayesianische Optimierung das gesamte Budget für jeden Test. 
+Um eine Über-Betonung eines Teils des Parameter-Raums zu verhindern wird außerdem ein festgelegter Anteil der im Hyperband-Teil versuchten Kombinationen wie im Originalverfahren zufällig gezogen wird.
+
+In Abb. \@ref(fig:bohb) ist die Performance von BOHB im Vergleich zu Random Search, Hyperband und TPE zu sehen. In @biedenkappAutoMLBOHBRobust2018 führen einige der Autoren von BOHB als Grenzen des Algorithmus zwei Einschränkungen ein. Zum Einen muss die Optimierungsaufgabe ein sinnvolles Budget möglich machen. Sollte kein sinnvolles Budget zu definieren sein, sei BOHB im schlimmsten Fall um die Anzahl der Halbierungen schlechter als die einfache TPE-Optimierung. 
+Zum Anderen ist das Verfahren in dem eher akademischen Fall schlechter als Hyperband, in dem das globale Optimum so liegt, dass es in einer sonst sehr schlechten Parameter-Region liegt. In diesem Fall konvergiert BOHB dank des festen Anteils zufälliger Parameterkombinationen aber auch zur selben Lösung wie Hyperband allein, braucht aber um den den Kehrwert des Faktors an zufälligen Kombinationen länger.
+
+(ref:bohbSubCap) Performance von BOHB.
+
+(ref:bohbCap) Performance von BOHB im Vergleich mit anderen Hyperparameter-Optimierungs-Methoden. Abbildung aus @biedenkappAutoMLBOHBRobust2018. Zu sehen ist der Vergleich von BOHB mit Random Search, dem TPE allein und Hyperband allein. BOHB ist durch den Einsatz von Hyperband wesentlich schneller (x-Achse) zu Beginn der Optimierung als Random Search und TPE und dabei deutlich besser im Ergebnis als alle anderen Verfahren (Ziel-Funktion auf der y-Achse).
+
+```{r bohb, echo = F, fig.cap='(ref:bohbCap)', fig.align='center',out.width=paste0(.96/1,'\\textwidth'), fig.show='hold', fig.scap='(ref:bohbSubCap)'}
+knitr::include_graphics('../imgs/bohb.png')
+```
+
+
+### Kolmogorov-Smirnov Teststatistik
+
+Die Kolmogorov-Smirnov (KS) Teststatistik ist die Grundlage für den nonparametrischen KS-Test. Dieses Verfahren ist dafür konstruiert, eine Stichprobe auf die Verträglichkeit mit einer gegebenen Verteilung zu überprüfen. Auch wenn das Verfahren nur noch selten als Voraussetzungstest eingesetzt wird, da er im Vergleich zu anderen Verfahren eine relativ geringe Power aufweist [@stephensEDFStatisticsGoodness1974]. 
+Die Teststatistik $D$ ist aber als die maximale vertikale Distanz zweier Verteilungsfunktionen ein sehr praktisches Werkzeug zum Anpassen einer geschätzten Verteilung, da es im Gegensatz zu zum Beispiel der $\chi^2$-Statistik die gesamte beobachtete Häufigkeistverteilung berücksichtigt. Außerdem ist $D$ relativ einfach zu berechnen. In \@ref(fig:KSExample) ist $D$ illustriert.
+
+(ref:KSExampleSubCap) Beispiel zur Illustration der KS-Teststatistik $D$.
+
+(ref:KSExampleCap) Beispiel zur Illustration der KS-Teststatistik $D$. Dargestellt ist eine zufällig generierte empirische Verteilungsfunktion (rot), verglichen mit der Verteilungsfunktion anhand der sie generiert wurde (blau). $D$ ist in schwarz eingezeichnet.
+
+```{r KSExample, echo = F, fig.cap='(ref:KSExampleCap)', fig.align='center',out.width=paste0(.96/1,'\\textwidth'), fig.show='hold', fig.scap='(ref:KSExampleSubCap)'}
+set.seed(424)
+df <- tibble(x = rnorm(10))
+segment <- tibble(x = df$x[which.max(abs(rank(df$x)/length(df$x) - pnorm(df$x)))]) %>% 
+  mutate(ymax = rank(df$x)[x == df$x]/length(df$x),
+         ymin = pnorm(x))
+
+ggplot(df, aes(x)) + 
+  stat_ecdf(geom = 'step', color = 'red') +
+  stat_function(fun = pnorm, color = 'blue') +
+  geom_linerange(data = segment, aes(x, ymin = ymin, ymax = ymax)) +
+  theme_minimal() +
+  labs(x = 'x',
+       y = expression(P(X <= x))) +
+  xlim(-3,3)
+
+```
+
+
+### Maximum-Likelihood-Methode
+
+Bei der Maximum-Likelihood-Methode wird versucht, für empirische Werte einer Zufallsvariable die Verteilung zu finden, die am wahrscheinlichsten die wahre Verteilung der Zufallsvariable ist. Dazu wird für eine festgelegte Verteilungsklasse nach den beschreibenden Parametern gesucht, die das Auftreten der beobachteten Daten unter der Voraussetzung der Verteilung mit den gegebenen Parametern maximiert. Beispielsweise könnte unter Voraussetzung von Normalverteiltheit nach denjenigen Parametern $\mu$ und $\sigma$ gesucht werden, die eine Normalverteilung beschreiben, bei der das Auftreten der beobachteten Ausprägungen der Zufallsvariable mit maximalen Dichtewerten einhergehen.
+Um eine Maximum-Likelihood-Methode einzusetzen muss vorausgesetzt werden, dass die Beobachtungen alle unabhängig und alle auf Basis derselben Verteilung geschehen sind. Diese Unabhängigkeit heißt aber für das Schätzverfahren auch, dass die Wahrscheinlichkeit aller Beobachtungen zusammen als Produkt der Einzelwahrscheinlichkeiten ausgedrückt werden kann. Dieses Produkt der Einzelwahrscheinlichkeiten gilt es nun zu maximieren.
+Da das Finden eines Maximums im relativ komplexen Fall von Dichten mit mehreren Ziel-Parametern aber schwer zu lösen ist, wird stattdessen zum natürlichen Logarithmus des Produkts gegriffen. 
+Diese logarithmische Wahrscheinlichkeit - oder häufiger Log Likelihood genannt - wird dann entweder wo möglich analytisch oder per numerischer Integration und root-finding maximiert. Im Normalverteilungsbeispiel ergibt die analytische Lösung gerade, dass die wahrscheinlichsten Parameter Mittelwert und Streuung der Stichprobe sind.
+

@@ -52,7 +52,7 @@ class NCuts:
         self.num_cuts=num_cuts
         self.sigma=sigma
 
-    def fit_predict(self, img):
+    def fit_predict(self, img, flatten = True):
         """scikit-learn-like API to fit NCut"""
         out = (
             img.iloc[:, [0,1,2]]
@@ -64,7 +64,10 @@ class NCuts:
         g = graph.rag_mean_color(out, slic_results, mode='similarity', sigma=self.sigma)
         out = graph.cut_normalized(slic_results, g,
                                    thresh=self.thresh, num_cuts=self.num_cuts)
-        return(out.flatten())
+        if flatten:
+            return(out.flatten())
+        else:
+            return(out)
 
 if __name__=='__main__':
     import sys

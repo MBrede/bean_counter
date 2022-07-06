@@ -22,7 +22,7 @@ toc-title: "Inhalt"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, tidy = T)
+knitr::opts_chunk$set(echo = FALSE, tidy = T, warning = F)
 def.chunk.hook <- knitr::knit_hooks$get("chunk")
 knitr::knit_hooks$set(chunk = function(x, options) {
   x <- def.chunk.hook(x, options)

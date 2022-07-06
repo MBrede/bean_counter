@@ -40,6 +40,16 @@ img = cv2.fastNlMeansDenoising(
     )
 cv2.imwrite("../work/imgs/nlMean_30_7_21.png",img)
 
+img = cv2.imread(path, 0)
+img = cv2.equalizeHist(img)
+img = cv2.GaussianBlur(img, (151,151), 0)
+cv2.imwrite("../work/imgs/hist_gauss.png",img)
+
+img = cv2.imread(path, 0)
+img = cv2.GaussianBlur(img, (151,151), 0)
+img = cv2.equalizeHist(img)
+cv2.imwrite("../work/imgs/gauss_hist.png",img)
+
 import _nCuts as nc
 import numpy as np
 import pandas as pd
@@ -63,6 +73,28 @@ fit_export_slic(df, 0.05, 500)
 fit_export_slic(df, 2, 250)
 fit_export_slic(df, 2, 500)
 
+
+import numpy as np
+import pandas as pd
+path = "../work/imgs/geometric.png"
+img = cv2.imread(path, 0)
+df = pd.DataFrame(
+    {
+        "value": img.flatten(),
+        "x": np.tile(range(1, img.shape[1] + 1, 1), img.shape[0]),
+        "y": np.repeat(range(1, img.shape[0] + 1, 1), img.shape[1])
+    }
+)
+def fit_export_nCuts(df, compactness=0.25, n_segments=1000, thresh=.001, num_cuts=10, sigma=100):
+    model = nc.NCuts(compactness, n_segments,thresh,num_cuts,sigma)
+    img = model.fit_predict(df, flatten = False)
+    img = img/n_segments * 256
+    cv2.imwrite(f"../work/imgs/ncuts_{int(compactness*100)}_{n_segments}_{thresh*1000}_{num_cuts}_{sigma}.png",img)
+    
+fit_export_nCuts(df, 0.05, 2000, num_cuts = 10, thresh = .5)
+fit_export_nCuts(df, 0.05, 2000, num_cuts = 100)
+fit_export_nCuts(df, 0.05, 2000, num_cuts = 10, sigma = 20)
+fit_export_nCuts(df, 0.05, 2000, num_cuts = 100, sigma = 20, thresh = .5)
 
 from skimage.future import graph
 
