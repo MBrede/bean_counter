@@ -229,9 +229,3 @@ def run_app(distros):
             gh.refresh_images(grain_picture, window, viridis)
     window.close()
 
-
-if __name__ == "__main__":
-    distros = {'norm': scipy.stats.norm,
-               'lognorm': scipy.stats.lognorm,
-               'f': scipy.stats.f}
-    run_app(distros)

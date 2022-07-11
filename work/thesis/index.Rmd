@@ -1,15 +1,16 @@
 --- 
-title: "Entwicklung eines ML-basierten Tools zur Unterstützung der Bestimmung von Kornverteilungen in elektronenmikroskopischen Aufnahmen."
-subtitle: "Thesis Beschreibung dies das."
-author: "Max Brede"
-date: "`r Sys.Date()`"
+#title: "Entwicklung eines ML-basierten Tools zur Unterstützung der Bestimmung von Kornverteilungen in elektronenmikroskopischen Aufnahmen."
+# subtitle: "Thesis Beschreibung dies das."
+#author: "Max Brede"
+#date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+classoption: openany
 biblio-style: apa
 link-citations: yes
 bibliography: ../Koerner.bib
 lof: yes
-lot: yes
+lot: no
 fontsize: 12pt
 linestretch: 1.5
 toc-depth: 1
@@ -22,7 +23,7 @@ toc-title: "Inhalt"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, tidy = T, warning = F)
+knitr::opts_chunk$set(echo = FALSE, tidy = T, warning = F, message = F)
 def.chunk.hook <- knitr::knit_hooks$get("chunk")
 knitr::knit_hooks$set(chunk = function(x, options) {
   x <- def.chunk.hook(x, options)

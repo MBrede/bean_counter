@@ -1,0 +1,26 @@
+.. _daten_akquise:
+
+Dokumentation der Datenakquise
+==========================================
+
+In diesem Bereich wird die Inbetriebnahme der Datenakquise demonstriert. Die Datenakquise befindet sich im Ordner "<Pfad des Projektordners>/Daten_Akquise".  Die Skripte, welche in Rahmen der Datenakquise genutzt werden finden sich direkt in diesem Ordner, währenddessen die verwendeten Datensätze sich im Unterordner data finden lassen.
+
+
+Ablauf der Datenakquise 
+-----------------------
+
+Die Datenakquise folgt einer Reihenfolge, da einige Datenabfragen auf einen vorigen Datensatz aufbauen:
+
+.. image:: ../_static/img/datenaggregation.png
+   :width: 700
+   :alt: Daten Aggregation
+
+
+Start der Skripte 
+-----------------------
+
+Die Daten die neu generiert werden sollen, lassen sich durch die Ausführung des zugehörigen Skriptes gewinnen:
+
+.. code-block:: bash
+
+   python <skript_name>.py

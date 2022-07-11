@@ -145,16 +145,19 @@ class MyWorker(Worker):
 
 
     def compute(self, config, budget, **kwargs):
+        keras.backend.clear_session()
         layer=[{'n': config[f'layer{i}Depth'], 'activation': config[f'layer{i}Acti']} for i in range(1, config['hiddenLayer']+1)]
         model = baseline_model(self.X, self.Y, layer)
         estimators = []
-        estimators.append(('mlp', KerasRegressor(model=model, epochs=int(round(budget)), batch_size=config['batchSize'], verbose=2)))
+        estimators.append(('mlp', KerasRegressor(model=model, epochs=int(round(budget)), batch_size=config['batchSize'], verbose=0)))
         pipeline = Pipeline(estimators)
         kfold = KFold(n_splits=5)
         results = cross_val_score(pipeline, self.X, self.Y, cv=kfold, scoring='r2')
+        loss = 1 - float(np.mean(results))
+        info = [config, list(results)]
         return({
-                    'loss': 1 - float(np.mean(results)),  # this is the a mandatory field to run hyperband
-                    'info': [config, list(results)]  # can be used for any user-defined information - also mandatory
+                    'loss': loss,  # this is the a mandatory field to run hyperband
+                    'info': info  # can be used for any user-defined information - also mandatory
                 })
 
 

@@ -158,9 +158,58 @@ for i in range(len(df)):
 out = graph.cut_normalized(out, g,thresh=.01, num_cuts=10)
 cv2.imwrite("../work/imgs/ncuts.png",out)
 
+def min_max_scale(x, min=0, max=1):
+    """Rescale values to lie between limits.
 
+    Args:
+        x (numpy.array): One-dimensional array to scale between min and max.
+        min (float): New minimum.
+        max (float): New maximum.
 
+    Returns:
+        numpy.array: Rescaled values
 
+    """
+    return (x - np.min(x)) / (np.max(x) - np.min(x)) * max + min
+
+import cv2
+from sklearn.cluster import DBSCAN
+import pandas as pd
+import numpy as np
+path = "../work/imgs/geometric.png"
+img = cv2.imread(path, 0)
+for i in range(2):
+    img = cv2.pyrDown(img)
+df = pd.DataFrame(
+    {
+        "value": np.multiply(min_max_scale(img.flatten(), 0, 100), 1),
+        "x": min_max_scale(
+            np.tile(range(1, img.shape[1] + 1, 1), img.shape[0]), 0, 100
+        ),
+        "y": min_max_scale(
+            np.repeat(range(1, img.shape[0] + 1, 1),img.shape[1]), 0, 100
+        ),
+    }
+)
+
+for i in [1,2]:
+    for j in [5,10]:
+        model = DBSCAN(eps=i, min_samples=j,
+                       n_jobs=-2)
+        ret_df = pd.DataFrame(
+            {
+                "value": img.flatten(),
+                "x": np.tile(range(1, img.shape[1] + 1, 1), img.shape[0]),
+                "y": np.repeat(range(1, img.shape[0] + 1, 1), img.shape[1]),
+                "cluster": model.fit_predict(df)
+            }
+        )
+        img_out = (
+            ret_df.iloc[:, [1, 2, 3]]
+            .pivot(index="y", columns="x", values="cluster")
+            .to_numpy()
+        )
+        cv2.imwrite(f"../work/imgs/dbscan_{i}_{j}.png", img_out)
 
 
 # path = "../work/imgs/geom_small.png"

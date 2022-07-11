@@ -14,6 +14,7 @@ rmd_files: [
   'design.Rmd',
   'umsetzung.Rmd',
   'evaluation.Rmd',
+  'schluss.Rmd',
   'references.Rmd'
 ]
 output_dir: "output"

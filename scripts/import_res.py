@@ -14,6 +14,7 @@ import pandas as pd
 def import_n_summarise(folder):
     path = os.path.join('res/', folder)
     fs = os.listdir(path)
+    fs = [f for f in fs if f[-4:]=='.pkl']
     best_runs = {}
     all_runs = {'file': [],
                 'time': [],
@@ -37,6 +38,7 @@ def import_n_summarise(folder):
     best_runs.to_csv(f'../work/thesis/data/{folder}.csv', index=False)
     all_runs = pd.DataFrame(all_runs)
     all_runs.to_csv(f'../work/thesis/data/{folder}_all_runs.csv', index=False)
+
 
 if __name__ == '__main__':
     folders = ['dbscan_100','dbscan_500', 'slic_100', 'slic_500','ncuts_100']
