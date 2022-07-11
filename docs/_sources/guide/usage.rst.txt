@@ -12,7 +12,7 @@ The Tool can be started by running the `__init__.py`-script located in the tool-
 
 On the left side of the GUI you will see the Interfaces to run the data-handling, -preprocessing and -analysis algorithms the tool provides.
 
-.. image:: ../_static/gui.png
+.. image:: ../docs/_static/gui.png
    :width: 700
    :alt: GUI of the tool, used in an exemplary data analysis
    
