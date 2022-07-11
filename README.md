@@ -1,4 +1,4 @@
-Scripts and files to comile my Master-Thesis. 
+Scripts and files to compile my Master-Thesis. 
 
 The Tools documentation can be found [here](https://mbrede.github.io/bean_counter/).
 
