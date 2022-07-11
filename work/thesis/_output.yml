@@ -1,7 +1,0 @@
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-    before_body: titlepage.tex
-    after_body: eigenstaendigkeit.tex
-  latex_engine: xelatex
-  keep_tex: yes
