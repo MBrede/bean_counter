@@ -1,0 +1,27 @@
+.. usage:
+
+Tool-Usage
+==========
+
+After installing the following requirements:
+
+.. include:: ../tool/requirements.txt
+   :literal:
+   
+The Tool can be started by running the `__init__.py`-script located in the tool-folder.
+
+On the left side of the GUI you will see the Interfaces to run the data-handling, -preprocessing and -analysis algorithms the tool provides.
+
+.. image:: ../docs/_static/gui.png
+   :width: 700
+   :alt: GUI of the tool, used in an exemplary data analysis
+   
+The File-Handling element (framed in blue) is used to import `.tif`-images and export generated grain-size-distributions. Preprocessing-steps can be added to the batch-list (framed in yellow) by setting values for the parameters and clicking the "Add"-button in the "Filtering"-element (upper element framed in red).  
+If you want to run your Preprocessing, just click the "Run Batch"-Button. The Batch-List can also be cleared, exported or imported from a JSON.
+The second segment framed in red ("Analysis") provides an interface to the actual Superpixel-Algorithms implemented. By clicking "Run" next to any of these algorithm names, the preprocessing-stack is executed. The resulting image is then used to run the selected Algorithm with the given settings.
+You will see a Processing-popup that will disappear when the analysis is done and be followed by a message-popup informing you of the success of the analysis.
+
+All results will be visible on the right part of the GUI. The upper image and graphs represent the imported status, i.e. the selected image and eventual `csv`-files providing previously measured "size"-columns with the same name - just ending ind "results".
+The lower image and graphs vizualize the results of preprocessing and or analysis.
+
+The "settings"-frame can be used to change the fitted distribution, to fit ellipses to the grains found (this can be computationally intensive), to change the statistic shown in the summaries to grain-area or approximated radius and to set a maximum side ratio for a found cluster to be considered a grain.
