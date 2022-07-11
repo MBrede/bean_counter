@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>_preprocess &mdash; Bean Counter .2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Bean Counter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/usage.html">Einrichtung der virtuellen Python Umgebung</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GUI.html">GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Data-handling, -preprocessing and analysis-modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bean Counter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>_preprocess</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for _preprocess</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">savgol_filter</span>
+
+
+<span class="k">def</span> <span class="nf">_prep_sav_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w_size</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">grad</span><span class="o">=</span><span class="mi">9</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Savitzky-Golay-Filter: Apply Savitzky-Golay-Filter to smooth image.</span>
+
+<span class="sd">    A filter that smoothes the picture by exchanging the grey-values of an</span>
+<span class="sd">    image with the results of a polynomial regression.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        w_size (int): Window to be smoothed at a time. Even even w_size is</span>
+<span class="sd">                      given, w_size + 1 is used.</span>
+<span class="sd">        grad (int): Polynom to use for smoothing. If grad &gt; w_size, w_size-1</span>
+<span class="sd">                    is used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">w_size</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">w_size</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">grad</span> <span class="o">&gt;=</span> <span class="n">w_size</span><span class="p">:</span>
+        <span class="n">grad</span> <span class="o">=</span> <span class="n">w_size</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="n">savgol_filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="p">,</span> <span class="n">w_size</span><span class="p">,</span> <span class="n">grad</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="n">savgol_filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="p">,</span> <span class="n">w_size</span><span class="p">,</span> <span class="n">grad</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_prep_hist_equalization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Histogram-Equalizer: Equalize the histogram to enhance contrast.</span>
+
+<span class="sd">    A method that stretches histogram of intesities to use</span>
+<span class="sd">    as much of the grey-spectrum as possible. Increases an</span>
+<span class="sd">    images contrast.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">equalizeHist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_prep_gauss_blurr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k_size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot;Gauss-Filter: Blurr the image using a Gaussian filter.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        k_size (tuple): Kernel-size in width and height as tuple. If input</span>
+<span class="sd">                        is even, gets changed by +1</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">k_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">k_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">k_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">k_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">k_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">k_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">k_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="p">,</span> <span class="n">k_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_prep_nlMeans_denoising</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">temp_winSize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">search_winSize</span><span class="o">=</span><span class="mi">21</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Non-Local-Mean-Denoiser: Denoise the image by using non-local means</span>
+
+<span class="sd">    Removes gaussian white noise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">fastNlMeansDenoising</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modImg</span><span class="p">,</span>
+        <span class="n">dst</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">h</span><span class="o">=</span><span class="n">h</span><span class="p">,</span>
+        <span class="n">templateWindowSize</span><span class="o">=</span><span class="n">temp_winSize</span><span class="p">,</span>
+        <span class="n">searchWindowSize</span><span class="o">=</span><span class="n">search_winSize</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="preprocess"><a class="viewcode-back" href="../modules.html#_preprocess.preprocess">[docs]</a><span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Wrapper to ease the preprocess-interface and make batching easier.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        type (type): Preprocessing-filter to apply.</span>
+<span class="sd">        **kwargs (type): Settings for filter.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;gauss&quot;</span><span class="p">:</span>
+        <span class="n">_prep_gauss_blurr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;sav&quot;</span><span class="p">:</span>
+        <span class="n">_prep_sav_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;hist&quot;</span><span class="p">:</span>
+        <span class="n">_prep_hist_equalization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;nlMeans&quot;</span><span class="p">:</span>
+        <span class="n">_prep_nlMeans_denoising</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not implemented yet&quot;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Max Brede.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

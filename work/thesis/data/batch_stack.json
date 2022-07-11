@@ -1,0 +1,1 @@
+[{"category": "prep", "type": "gauss", "k_size": [6, 6]}, {"category": "prep", "type": "hist"}, {"category": "prep", "type": "nlMeans", "h": 12, "temp_winSize": 9, "search_winSize": 19}]

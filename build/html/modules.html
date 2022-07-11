@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data-handling, -preprocessing and analysis-modules &mdash; Bean Counter .2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="GUI" href="GUI.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Bean Counter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="guide/usage.html">Einrichtung der virtuellen Python Umgebung</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GUI.html">GUI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data-handling, -preprocessing and analysis-modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-model">Data-handling and control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-_preprocess">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-_analysis">Analysis</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Bean Counter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Data-handling, -preprocessing and analysis-modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-handling-preprocessing-and-analysis-modules">
+<h1>Data-handling, -preprocessing and analysis-modules<a class="headerlink" href="#data-handling-preprocessing-and-analysis-modules" title="Permalink to this heading"></a></h1>
+<section id="module-model">
+<span id="data-handling-and-control"></span><h2>Data-handling and control<a class="headerlink" href="#module-model" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="model.GrainImage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">model.</span></span><span class="sig-name descname"><span class="pre">GrainImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to read and Preprocess GrainImages.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.img">
+<span class="sig-name descname"><span class="pre">img</span></span><a class="headerlink" href="#model.GrainImage.img" title="Permalink to this definition"></a></dt>
+<dd><p>Matrix-representation of the image
+(this one is getting pre-processed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.origImage">
+<span class="sig-name descname"><span class="pre">origImage</span></span><a class="headerlink" href="#model.GrainImage.origImage" title="Permalink to this definition"></a></dt>
+<dd><p>Matrix-representation of the original image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.len_pro_pixel">
+<span class="sig-name descname"><span class="pre">len_pro_pixel</span></span><a class="headerlink" href="#model.GrainImage.len_pro_pixel" title="Permalink to this definition"></a></dt>
+<dd><p>mm pro pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.existing_areas">
+<span class="sig-name descname"><span class="pre">existing_areas</span></span><a class="headerlink" href="#model.GrainImage.existing_areas" title="Permalink to this definition"></a></dt>
+<dd><p>List of measured grain sizes. Empty if none were
+found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.generated_areas">
+<span class="sig-name descname"><span class="pre">generated_areas</span></span><a class="headerlink" href="#model.GrainImage.generated_areas" title="Permalink to this definition"></a></dt>
+<dd><p>Dict of calculated grains. Initialized as
+dict with empty list fields <cite>size</cite>,
+<cite>center</cite>, <cite>angle</cite>, <cite>major</cite> and <cite>minor</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="model.GrainImage.distros">
+<span class="sig-name descname"><span class="pre">distros</span></span><a class="headerlink" href="#model.GrainImage.distros" title="Permalink to this definition"></a></dt>
+<dd><p>Dict of distributions fit to data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.add_batch_op">
+<span class="sig-name descname"><span class="pre">add_batch_op</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.add_batch_op"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.add_batch_op" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper to add operation to batch-stack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>op</strong> (<em>Union</em><em>[</em><em>dict</em><em>, </em><em>str</em><em>]</em>) – see <cite>parse_batch_op</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Description of returned object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.calc_KS_gen">
+<span class="sig-name descname"><span class="pre">calc_KS_gen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.calc_KS_gen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.calc_KS_gen" title="Permalink to this definition"></a></dt>
+<dd><p>Return KS-Distance between cdfs of generated and pre-generated grainsizes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.change_distro">
+<span class="sig-name descname"><span class="pre">change_distro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distro</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.change_distro"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.change_distro" title="Permalink to this definition"></a></dt>
+<dd><p>Recalculate grain distribution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.parse_batch_op">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_batch_op</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.parse_batch_op"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.parse_batch_op" title="Permalink to this definition"></a></dt>
+<dd><p>Parse operation to usable dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>op</strong> (<em>Union</em><em>[</em><em>dict</em><em>, </em><em>str</em><em>]</em>) – Operation to add to batch-stack.
+Can be one of the two inputs:
+* a dictionary containing the
+‘category’ of the operation
+(preprocessing/analysis) as str: str-pair
+and the type of operation to run in the same
+format in addition to the arguments to use
+* a string in the format
+<cite>&lt;category&gt;.&lt;type&gt;.(&lt;argument&gt;=&lt;value&gt;, …)</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Interpretable operation-dict.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.parsenumkey">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parsenumkey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.parsenumkey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.parsenumkey" title="Permalink to this definition"></a></dt>
+<dd><p>Extract meta-info from <cite>.tif</cite>-file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – Label of meta-information to extract.</p></li>
+<li><p><strong>fname</strong> (<em>str</em>) – Path to file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Extracted meta-information.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.printable_batch">
+<span class="sig-name descname"><span class="pre">printable_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.printable_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.printable_batch" title="Permalink to this definition"></a></dt>
+<dd><p>Get Ith element of batch-stack as printable string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>i</strong> (<em>int</em>) – Place in the stack to get.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Printable description of Batch operation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.run_analysis">
+<span class="sig-name descname"><span class="pre">run_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.run_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.run_analysis" title="Permalink to this definition"></a></dt>
+<dd><p>Process analysis call</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.run_batch">
+<span class="sig-name descname"><span class="pre">run_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.run_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.run_batch" title="Permalink to this definition"></a></dt>
+<dd><p>Process batch-stack</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.sample_window">
+<span class="sig-name descname"><span class="pre">sample_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.sample_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.sample_window" title="Permalink to this definition"></a></dt>
+<dd><p>Cuts random area from image, good for hyper-optimization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="model.GrainImage.set_max_ratio">
+<span class="sig-name descname"><span class="pre">set_max_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/model.html#GrainImage.set_max_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#model.GrainImage.set_max_ratio" title="Permalink to this definition"></a></dt>
+<dd><p>Changes maximum acceptable grain-side-ratio</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-_preprocess">
+<span id="preprocessing"></span><h2>Preprocessing<a class="headerlink" href="#module-_preprocess" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocess.preprocess">
+<span class="sig-prename descclassname"><span class="pre">_preprocess.</span></span><span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_preprocess.html#preprocess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#preprocess.preprocess" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper to ease the preprocess-interface and make batching easier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>type</em>) – Preprocessing-filter to apply.</p></li>
+<li><p><strong>**kwargs</strong> (<em>type</em>) – Settings for filter.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-_analysis">
+<span id="analysis"></span><h2>Analysis<a class="headerlink" href="#module-_analysis" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="analysis.analyse">
+<span class="sig-prename descclassname"><span class="pre">_analysis.</span></span><span class="sig-name descname"><span class="pre">analyse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_analysis.html#analyse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#analysis.analyse" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper to ease the analysis-interface and make batching easier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>type</em>) – Analysis to apply.</p></li>
+<li><p><strong>**kwargs</strong> (<em>type</em>) – Settings for analysis.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="analysis.build_cdf">
+<span class="sig-prename descclassname"><span class="pre">_analysis.</span></span><span class="sig-name descname"><span class="pre">build_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_analysis.html#build_cdf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#analysis.build_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>Build cdf with grain-size resolution</p>
+<p>Calculates cdf for all possible grain sizes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>numpy.array</em>) – array of values to calculate cdf for</p></li>
+<li><p><strong>pixel_len</strong> (<em>numpy.float64</em>) – length of pixel, used as resolution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>grain sizes and frequency of values less then/equal of given size</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="analysis.cluster_summary">
+<span class="sig-prename descclassname"><span class="pre">_analysis.</span></span><span class="sig-name descname"><span class="pre">cluster_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calcElipses</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_analysis.html#cluster_summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#analysis.cluster_summary" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate cluster statistics.</p>
+<p>A Helper to calculate summary statistics for a given cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cluster</strong> (<em>pandas.DataFrame</em>) – x,y coordinates and color values of found cluster.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>sumamry statistics for given cluster.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="analysis.fit_distro">
+<span class="sig-prename descclassname"><span class="pre">_analysis.</span></span><span class="sig-name descname"><span class="pre">fit_distro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_fit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_len</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_analysis.html#fit_distro"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#analysis.fit_distro" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper to fit scikit continuos functions.</p>
+<p>Uses the maximum likelihood estimation for distributions as implemented in
+scikit stats to fit a density function to the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dist</strong> (<em>scipy.stats._continuous_distns</em>) – continuous distribution to fit</p></li>
+<li><p><strong>to_fit</strong> (<em>numpy.array</em>) – values to fit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Dictionary containing the fitted pdf as a lambda function,</dt><dd><p>the parameters of the fitted function and the scikit distribution.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – description</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="analysis.min_max_scale">
+<span class="sig-prename descclassname"><span class="pre">_analysis.</span></span><span class="sig-name descname"><span class="pre">min_max_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_analysis.html#min_max_scale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#analysis.min_max_scale" title="Permalink to this definition"></a></dt>
+<dd><p>Rescale values to lie between limits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.array</em>) – One-dimensional array to scale between min and max.</p></li>
+<li><p><strong>min</strong> (<em>float</em>) – New minimum.</p></li>
+<li><p><strong>max</strong> (<em>float</em>) – New maximum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rescaled values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-_nCuts"></span><dl class="py class">
+<dt class="sig sig-object py" id="nCuts.NCuts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">_nCuts.</span></span><span class="sig-name descname"><span class="pre">NCuts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compactness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_segments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cuts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_nCuts.html#NCuts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nCuts.NCuts" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper-Class to perform Normalized Cuts-Superpixel extraction with scikit-learn interface.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.NCuts.compactness">
+<span class="sig-name descname"><span class="pre">compactness</span></span><a class="headerlink" href="#nCuts.NCuts.compactness" title="Permalink to this definition"></a></dt>
+<dd><p>Ratio of spatial to color-weighing. Higher values indicate higher spatial weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.NCuts.thresh">
+<span class="sig-name descname"><span class="pre">thresh</span></span><a class="headerlink" href="#nCuts.NCuts.thresh" title="Permalink to this definition"></a></dt>
+<dd><p>Stop-criterion for cuts on teh sub-graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.NCuts.num_cuts">
+<span class="sig-name descname"><span class="pre">num_cuts</span></span><a class="headerlink" href="#nCuts.NCuts.num_cuts" title="Permalink to this definition"></a></dt>
+<dd><p>Number of cuts to test to determine optimal one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.NCuts.sigma">
+<span class="sig-name descname"><span class="pre">sigma</span></span><a class="headerlink" href="#nCuts.NCuts.sigma" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum distance of two colors to be treated as similar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nCuts.NCuts.fit_predict">
+<span class="sig-name descname"><span class="pre">fit_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_nCuts.html#NCuts.fit_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nCuts.NCuts.fit_predict" title="Permalink to this definition"></a></dt>
+<dd><p>scikit-learn-like API to fit NCut</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nCuts.SLIC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">_nCuts.</span></span><span class="sig-name descname"><span class="pre">SLIC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compactness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_segments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_nCuts.html#SLIC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nCuts.SLIC" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper-Class to perform SLIC-Superpixel extraction with scikit-learn interface.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.SLIC.compactness">
+<span class="sig-name descname"><span class="pre">compactness</span></span><a class="headerlink" href="#nCuts.SLIC.compactness" title="Permalink to this definition"></a></dt>
+<dd><p>Ratio of spatial to color-weighting. Higher values indicate higher spatial weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nCuts.SLIC.n_segments">
+<span class="sig-name descname"><span class="pre">n_segments</span></span><a class="headerlink" href="#nCuts.SLIC.n_segments" title="Permalink to this definition"></a></dt>
+<dd><p>The (approximate) number of labels in the segmented output image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nCuts.SLIC.fit_predict">
+<span class="sig-name descname"><span class="pre">fit_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/_nCuts.html#SLIC.fit_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nCuts.SLIC.fit_predict" title="Permalink to this definition"></a></dt>
+<dd><p>scikit-learn-like API to fit SLIC</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GUI.html" class="btn btn-neutral float-left" title="GUI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Max Brede.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

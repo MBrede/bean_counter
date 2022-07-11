@@ -1,0 +1,5256 @@
+[
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=20, color_weight=0.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 99,
+        "comment": "no discriminance"
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=20, color_weight=0.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 99
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9806949806949807
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998582699485048
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9936286253121973
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9613899613899614
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9536679536679536
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.827454361434944
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8685577775287537
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8770805228636553
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9959216965742251
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8794057215109846
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8574528647521348
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9576774576774577
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.5, min_samples=6, color_weight=0.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 99,
+        "comment": "no discriminance"
+    },
+    {
+        "image": "17 2 nach 600 cbs_004.tif",
+        "clust": "analyse.dbscan.(eps=2.5, min_samples=6, color_weight=0.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9400229943791517
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9228801169590644
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9997973246858533
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9517543859649122
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9987630249281926
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9358777937995674
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.930921052631579
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8633534850640113
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8593591416557924
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8650136902951019
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9872272485364556
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8836032388663968
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.99981426448737
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8403784414826345
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9419504643962848
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9849246231155779
+    },
+    {
+        "image": "28-f-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9913793103448276
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9648161499639509
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9269207501512402
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9930088233780933
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9781613131466194
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9499796001631987
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9282726045883941
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8797708557107053
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8355127724298871
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8271406994306959
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9897084048027445
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.894724036368293
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9994976233721065
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8241486068111455
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9461921850079745
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9964912280701754
+    },
+    {
+        "image": "17-3-nach-500-cbs_006.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9964912280701754
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9617639685811376
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.961791350087668
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9984183952795183
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9696969696969697
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9922820194638643
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9639436234263821
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9741379310344828
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8918187964841109
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8591070238167384
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8702513150204558
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9854129753305165
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8966594827586207
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9995837669094693
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8512229350441058
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9681667193925972
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9873794058649346
+    },
+    {
+        "image": "32-pre-hochaufloesung_004.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9660377358490566
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9049019607843137
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998071080677051
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8907239819004525
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9961074252699097
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9388746803069054
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9356037151702786
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8152406417112299
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8650468883205457
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8587936697521649
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9902491874322861
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8436354869816779
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998084658111472
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8484829721362229
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9549019607843138
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9759036144578314
+    },
+    {
+        "image": "17 0 nach 600 cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.973404255319149
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.936923076923077
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9997189136010681
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9968575996471691
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9576923076923077
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9692307692307692
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.867948717948718
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.905
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8885455156197515
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9955654101995566
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9054074638233054
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9999749668310511
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8893772893772893
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9733333333333334
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 650 cbs 01_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9762406757496097
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9890510948905109
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9989426940156482
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8181818181818182
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9962368936490519
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9963503649635036
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9963503649635036
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9292179353493222
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9004319115512618
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9016783306948991
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9945255474452555
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9341876887229844
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9996931260229133
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8876982169123581
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9875008074413798
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9661016949152542
+    },
+    {
+        "image": "17 1 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9868376502454714
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9989655446805125
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9444134078212291
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9966625408893997
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9354838709677419
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9497388677597219
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9486808302409983
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9992846924177397
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9423300744878957
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9994485149294887
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9445132082204306
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9734343868422081
+    },
+    {
+        "image": "17 3 650 cbs_11.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9777777777777777
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.965372907153729
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9947368421052631
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.96
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8693556570268899
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8909011961789506
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9048623966432185
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9993045897079277
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8901999610465494
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8600468830122335
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9872611464968153
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 550_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9557891469829135
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9437134502923976
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9903126506750815
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9970760233918129
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9712407122275077
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.945441254651781
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9042397660818714
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8965028081755544
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8446571975020807
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8425653294074347
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9805601666503923
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9172289698605488
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9127261232524391
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9960454705305132
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8467167393825592
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9564454614797864
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9941520467836257
+    },
+    {
+        "image": "17 3 nach 450 cbs_01.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9849142630587769
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9431459443310263
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9322095123419627
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9996778350515464
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.996267963703298
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9728248458552181
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.965066225165563
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8524081878386515
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8716554454354236
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8612710286151445
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.990574233661821
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8726839794627577
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998821796759941
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8557529562777595
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9480454785207759
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9966887417218543
+    },
+    {
+        "image": "28-e-p-1_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9956709956709957
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9526462395543176
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9193548387096774
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9993853214768676
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9944518624246051
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9113486664507072
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9325684190726982
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8722710681572967
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8132475427308254
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8176212667294139
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9871175523349437
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 99,
+        "comment": "no discriminance"
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.5, min_samples=6, color_weight=0.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9871175523349437
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9999675545894033
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7884410907220031
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9174831525115901
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 550_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9609813130412381
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9368289637952559
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9996851385390428
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9554723262588432
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9974358371168458
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9010165864098448
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9272919719915323
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9096679997460801
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8820339293761792
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8906332038223249
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9903038138332256
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9308655276794418
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998293224099676
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8679955179538843
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9521867826507189
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9893617021276596
+    },
+    {
+        "image": "17 1 nach 600 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9896907216494846
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.957237068550108
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.923887834703774
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9949263001589639
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9834367117553245
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9481120280070018
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8982630272952854
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.827600053540356
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8262120000323147
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8356828380323428
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9802052785923754
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8880242721499089
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9994532531437944
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.808248264597795
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9018520402971405
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9973118279569892
+    },
+    {
+        "image": "17 2 nach 450 cbs_001.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9919354838709677
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9704651020657621
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9720083119423053
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.999241964827168
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 99,
+        "comment": "no discriminance"
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=16, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.999241964827168
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.962216911346307
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9532214090974315
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8817825881967079
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8793435422712865
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8781194465600406
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9929855326611136
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9040455974380821
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.999856938483548
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8488873932115931
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9810133954571928
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9966996699669967
+    },
+    {
+        "image": "17-1-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9684441312348289
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9730639730639731
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9925273552175073
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9887676637076342
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9966329966329966
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9730639730639731
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9484848484848485
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.854737217651125
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8726455180129301
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.991106170094497
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9397585193763538
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9959312839059674
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8842921973356755
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9768270944741533
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.39730639730639733
+    },
+    {
+        "image": "34-c-l-0_ungefaehr_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9920247017021211
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9357906464705414
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8965143970556397
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9995044598612488
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.985704844053734
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9165548098434004
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8832214765100671
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8271623557801071
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8435850654851111
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8541917213019359
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9863099487974542
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8363608095151719
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9999333066559958
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8140858164643291
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9395070274174617
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 nach 550_007.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9846682473978218
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9613069912563049
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9576986754966887
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9994123264526555
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9902810867100001
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9801324503311258
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9735099337748344
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9187043640686025
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8650761988350754
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8618319728938857
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9912115505335845
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9009536423841059
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8634530077786295
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9685045433543816
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-2-nach-500-cbs_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9533993399339934
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9474111345560785
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9894530291881285
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.997911794186435
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9702970297029703
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9286303630363036
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8873074807480749
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8577557755775578
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8495527670765582
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9939024390243902
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8944656004061945
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9918050010506408
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8633852832307292
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.943502824858757
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.773609471038847
+    },
+    {
+        "image": "34-b-l-0_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9940828402366864
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8255737081163349
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7678706744127305
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9626585913433927
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9463574209901316
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8112789655613878
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7899273104880582
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.5954801195885026
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.6330534413515263
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.5886354715860269
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9308865939904508
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.6313672882290688
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9830856401738718
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.6116118527062097
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8251309074037251
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8038778072255545
+    },
+    {
+        "image": "28-run1-c-CBS-p-1-50k.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9312564901349948
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9790558510638298
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9157334826427772
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9981240473678039
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9962381379996602
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9583172147001934
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9470618034447822
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8803951367781155
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9499524165590375
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9274293890755257
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9939577039274925
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9251156336725255
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9982705152671756
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.945468252638633
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9811673375503163
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9424720157224643
+    },
+    {
+        "image": "17 2 650 cbs_04.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9946808510638298
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9661305257025146
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9549224314567275
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9973974599208828
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9931735301965667
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9350180505415162
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9072893463399647
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8784119982683372
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8822855481445843
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9898286937901499
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9118441224469611
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8596411661194057
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9703017505619508
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 nach 450 cbs.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9689601539683783
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9648446534577133
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9925026507778253
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9927858424550142
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9915966386554622
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9831932773109243
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9319112260288731
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9054062556803087
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.900651275850004
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.988317950130872
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9309739561620993
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9931504817284372
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8941487550497939
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9736325667991748
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.88942406230785
+    },
+    {
+        "image": "32-pre-hochaufloesung_001.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9915966386554622
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9026071813164626
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8407409967512269
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9768912673315495
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9883173143374391
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9206440690176867
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.827152600170503
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7535410182931214
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7722010922831258
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7518863784258236
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9782098220574342
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7602469168864905
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9834795023455027
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7650547673863405
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9181585677749361
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.6469360613810742
+    },
+    {
+        "image": "34-b-p-1_ungefaehr_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.975609756097561
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9742895241270105
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9645994245040134
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9989051709617652
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.99668450820205
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.963691987993535
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9366197183098591
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9210042865890998
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8856275729691959
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8763301077860808
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.992
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.935626946261749
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8796261484030811
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9701440582659455
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17-0-nach-500-cbs _004.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.952068075436278
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.959579180509413
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998116406102844
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.999383595128276
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9811320754716981
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9743589743589743
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8409912451158612
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8819706668827486
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.879456299514439
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9950920245398773
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8976643511527232
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9998282868753935
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8586668610726349
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9698492462311558
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9856459330143541
+    },
+    {
+        "image": "28-f-l-0_002.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9286227551878325
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9102172342907939
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9967032967032967
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9834136882926318
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9440615899195525
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9091007701486061
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8441599245935119
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.804030049512839
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.808627202214469
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9820224719101124
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8411128813514688
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7919187600817748
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9233864844343205
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 0 nach 450 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9778545460031076
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9565816265421009
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.923671497584541
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9991829397826619
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9882154572511921
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9523809523809523
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9855072463768116
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7701226309921962
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8281633302355177
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8235766306172191
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.992744860943168
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8095813204508857
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7900758063092039
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9545794113252652
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 3 nach 600 cbs_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9714285714285714
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8521428571428571
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9990373935579415
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.999064230199371
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.96875
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8760989010989011
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.924778933680104
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8996575342465754
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9974204643164231
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8848936170212766
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9991171041014527
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9272289156626506
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9717441860465116
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9280530973451327
+    },
+    {
+        "image": "17 1 650 cbs_05.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9526313044385334
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9302232854864434
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9999359877096402
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9986292414433033
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.933939393939394
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8759469696969697
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8198198198198198
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8773789726533628
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8690518084066471
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9924242424242424
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.850720620842572
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8377592964343753
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9296121840163291
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "28-e-l-0_003.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 1.0
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.9, min_samples=10, color_weight=2.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9614462380817521
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.8, min_samples=18, color_weight=3.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9844236760124611
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=0.4, min_samples=10, color_weight=1.2)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9860523520782049
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=0.7, min_samples=8, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9949277880400655
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=14, color_weight=1.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9844236760124611
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.9, min_samples=20, color_weight=2.3)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9968847352024922
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=28, color_weight=1.8)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.896188381894814
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.4, min_samples=24, color_weight=2.0)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8521456349933535
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=28, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8558104926907806
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.7, min_samples=2, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9908540334481063
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.1, min_samples=22, color_weight=2.6)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8882238723168182
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=0.2, min_samples=6, color_weight=1.7)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9876931254923814
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.0, min_samples=20, color_weight=0.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.8660975678414593
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=1.8, min_samples=10, color_weight=2.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9702889905216412
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=0.3, min_samples=20, color_weight=1.1)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.7045523063008743
+    },
+    {
+        "image": "34-c-p-2_ungefaehr_001.tif",
+        "clust": "analyse.dbscan.(eps=2.2, min_samples=4, color_weight=1.9)",
+        "stack": [
+            "prep.sav.(w_size=19, grad=10)",
+            "prep.nlMeans.(h=5, temp_winSize=4, search_winSize=16)",
+            "prep.gauss.(k_size=(2, 2))"
+        ],
+        "ks": 0.9968847352024922
+    }
+]
